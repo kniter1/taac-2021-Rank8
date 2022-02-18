@@ -57,13 +57,13 @@ class Tagging_Classifier(nn.Module):
         return output
 
     
-class UniVLPreTrainedModel(PreTrainedModel, nn.Module):   #预训练模型
+class TaggingUniVLPreTrainedModel(PreTrainedModel, nn.Module):   #预训练模型
     """ An abstract class to handle weights initialization and
         a simple interface for dowloading and loading pretrained models.
     """
     def __init__(self, bert_config, visual_config, audio_config, cross_config, *inputs, **kwargs):
         # utilize bert config as base config
-        super(UniVLPreTrainedModel, self).__init__(bert_config)
+        super(TaggingUniVLPreTrainedModel, self).__init__(bert_config)
 
         self.bert_config = bert_config
         self.visual_config = visual_config
@@ -149,7 +149,7 @@ def check_attr(target_name, task_config):
     return hasattr(task_config, target_name) and task_config.__dict__[target_name]
 
 
-class Tagging_UniVL(UniVLPreTrainedModel): #UniVL模型
+class Tagging_UniVL(TaggingUniVLPreTrainedModel): 
     def __init__(self, bert_config, visual_config, audio_config, cross_config, task_config):
         super(Tagging_UniVL, self).__init__(bert_config, visual_config, audio_config, cross_config)
         self.task_config = task_config
