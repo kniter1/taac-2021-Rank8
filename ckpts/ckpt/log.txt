@@ -1,0 +1,434 @@
+2021-07-07 01:30:01,606:INFO: Effective parameters:
+2021-07-07 01:30:01,607:INFO:   <<< audio_dim: 128
+2021-07-07 01:30:01,607:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-07 01:30:01,607:INFO:   <<< audio_model: audio-base
+2021-07-07 01:30:01,607:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-07 01:30:01,607:INFO:   <<< batch_size: 16
+2021-07-07 01:30:01,607:INFO:   <<< bert_model: bert-base-chinese
+2021-07-07 01:30:01,607:INFO:   <<< bert_model_path: None
+2021-07-07 01:30:01,608:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-07 01:30:01,608:INFO:   <<< coef_lr: 0.1
+2021-07-07 01:30:01,608:INFO:   <<< cross_model: cross-base
+2021-07-07 01:30:01,608:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-07 01:30:01,608:INFO:   <<< datatype: tagging
+2021-07-07 01:30:01,608:INFO:   <<< decoder_model: decoder-base
+2021-07-07 01:30:01,608:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-07 01:30:01,608:INFO:   <<< do_lower_case: True
+2021-07-07 01:30:01,609:INFO:   <<< do_pretrain: False
+2021-07-07 01:30:01,609:INFO:   <<< do_test: False
+2021-07-07 01:30:01,609:INFO:   <<< do_train: True
+2021-07-07 01:30:01,609:INFO:   <<< epochs: 15
+2021-07-07 01:30:01,609:INFO:   <<< feature_framerate: 1
+2021-07-07 01:30:01,609:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-07 01:30:01,609:INFO:   <<< hard_negative_rate: 0.5
+2021-07-07 01:30:01,610:INFO:   <<< init_model: /home/tione/notebook/taac-2021-神奈川冲浪里/pretrained_models/UniVL_Pretrained_models/pytorch_model.bin.pretrain
+2021-07-07 01:30:01,610:INFO:   <<< k_fold: 5
+2021-07-07 01:30:01,610:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-07 01:30:01,610:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-07 01:30:01,610:INFO:   <<< local_rank: 0
+2021-07-07 01:30:01,610:INFO:   <<< lr: 3e-05
+2021-07-07 01:30:01,610:INFO:   <<< lr_decay: 0.9
+2021-07-07 01:30:01,610:INFO:   <<< margin: 0.1
+2021-07-07 01:30:01,611:INFO:   <<< max_frames: 100
+2021-07-07 01:30:01,611:INFO:   <<< max_sequence: 100
+2021-07-07 01:30:01,611:INFO:   <<< max_words: 200
+2021-07-07 01:30:01,611:INFO:   <<< n_display: 10
+2021-07-07 01:30:01,611:INFO:   <<< n_gpu: 1
+2021-07-07 01:30:01,611:INFO:   <<< n_pair: 1
+2021-07-07 01:30:01,611:INFO:   <<< negative_weighting: 1
+2021-07-07 01:30:01,611:INFO:   <<< num_labels: 82
+2021-07-07 01:30:01,612:INFO:   <<< num_thread_reader: 12
+2021-07-07 01:30:01,612:INFO:   <<< output_dir: ckpts/ckpt
+2021-07-07 01:30:01,612:INFO:   <<< output_json_file: None
+2021-07-07 01:30:01,612:INFO:   <<< sampled_use_mil: False
+2021-07-07 01:30:01,612:INFO:   <<< seed: 666
+2021-07-07 01:30:01,612:INFO:   <<< text_num_hidden_layers: 12
+2021-07-07 01:30:01,612:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-07 01:30:01,613:INFO:   <<< video_dim: 1024
+2021-07-07 01:30:01,613:INFO:   <<< video_features_path: /home/tione/notebook/taac-2021-神奈川冲浪里/pre/VIT_L_train_5k_features
+2021-07-07 01:30:01,613:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-07 01:30:01,613:INFO:   <<< visual_model: visual-base
+2021-07-07 01:30:01,613:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-07 01:30:01,613:INFO:   <<< warmup_proportion: 0.1
+2021-07-07 01:30:01,613:INFO:   <<< world_size: 0
+2021-07-07 01:30:01,614:INFO: device: cuda:0 n_gpu: 1
+2021-07-07 01:30:37,454:INFO: Effective parameters:
+2021-07-07 01:30:37,454:INFO:   <<< audio_dim: 128
+2021-07-07 01:30:37,454:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-07 01:30:37,454:INFO:   <<< audio_model: audio-base
+2021-07-07 01:30:37,454:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-07 01:30:37,454:INFO:   <<< batch_size: 16
+2021-07-07 01:30:37,454:INFO:   <<< bert_model: bert-base-chinese
+2021-07-07 01:30:37,454:INFO:   <<< bert_model_path: None
+2021-07-07 01:30:37,454:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-07 01:30:37,454:INFO:   <<< coef_lr: 0.1
+2021-07-07 01:30:37,454:INFO:   <<< cross_model: cross-base
+2021-07-07 01:30:37,454:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-07 01:30:37,454:INFO:   <<< datatype: tagging
+2021-07-07 01:30:37,454:INFO:   <<< decoder_model: decoder-base
+2021-07-07 01:30:37,454:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-07 01:30:37,454:INFO:   <<< do_lower_case: True
+2021-07-07 01:30:37,454:INFO:   <<< do_pretrain: False
+2021-07-07 01:30:37,454:INFO:   <<< do_test: False
+2021-07-07 01:30:37,455:INFO:   <<< do_train: True
+2021-07-07 01:30:37,455:INFO:   <<< epochs: 15
+2021-07-07 01:30:37,455:INFO:   <<< feature_framerate: 1
+2021-07-07 01:30:37,455:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-07 01:30:37,455:INFO:   <<< hard_negative_rate: 0.5
+2021-07-07 01:30:37,455:INFO:   <<< init_model: /home/tione/notebook/taac-2021-神奈川冲浪里/pretrained_models/UniVL_Pretrained_models/pytorch_model.bin.pretrain
+2021-07-07 01:30:37,455:INFO:   <<< k_fold: 5
+2021-07-07 01:30:37,455:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-07 01:30:37,455:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-07 01:30:37,455:INFO:   <<< local_rank: 0
+2021-07-07 01:30:37,455:INFO:   <<< lr: 3e-05
+2021-07-07 01:30:37,455:INFO:   <<< lr_decay: 0.9
+2021-07-07 01:30:37,455:INFO:   <<< margin: 0.1
+2021-07-07 01:30:37,455:INFO:   <<< max_frames: 100
+2021-07-07 01:30:37,455:INFO:   <<< max_sequence: 100
+2021-07-07 01:30:37,455:INFO:   <<< max_words: 200
+2021-07-07 01:30:37,455:INFO:   <<< n_display: 10
+2021-07-07 01:30:37,455:INFO:   <<< n_gpu: 1
+2021-07-07 01:30:37,455:INFO:   <<< n_pair: 1
+2021-07-07 01:30:37,455:INFO:   <<< negative_weighting: 1
+2021-07-07 01:30:37,455:INFO:   <<< num_labels: 82
+2021-07-07 01:30:37,455:INFO:   <<< num_thread_reader: 12
+2021-07-07 01:30:37,455:INFO:   <<< output_dir: ckpts/ckpt
+2021-07-07 01:30:37,455:INFO:   <<< output_json_file: None
+2021-07-07 01:30:37,455:INFO:   <<< sampled_use_mil: False
+2021-07-07 01:30:37,455:INFO:   <<< seed: 666
+2021-07-07 01:30:37,455:INFO:   <<< text_num_hidden_layers: 12
+2021-07-07 01:30:37,455:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-07 01:30:37,456:INFO:   <<< video_dim: 1024
+2021-07-07 01:30:37,456:INFO:   <<< video_features_path: /home/tione/notebook/taac-2021-神奈川冲浪里/pre/VIT_L_train_5k_features
+2021-07-07 01:30:37,456:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-07 01:30:37,456:INFO:   <<< visual_model: visual-base
+2021-07-07 01:30:37,456:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-07 01:30:37,456:INFO:   <<< warmup_proportion: 0.1
+2021-07-07 01:30:37,456:INFO:   <<< world_size: 0
+2021-07-07 01:30:37,456:INFO: device: cuda:0 n_gpu: 1
+2021-07-07 01:30:38,417:INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at /home/tione/.pytorch_pretrained_bert/8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+2021-07-07 01:30:38,466:INFO: ***** k_fold traing:5 *****
+2021-07-07 01:30:38,476:INFO: ***** 1 fold strat *****
+2021-07-07 01:30:55,516:INFO: loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese.tar.gz from cache at /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache/42d4a64dda3243ffeca7ec268d5544122e67d9d06b971608796b483925716512.02ac7d664cff08d793eb00d6aac1d04368a1322435e5fe0a27c70b0b3a85327f
+2021-07-07 01:30:55,518:INFO: extracting archive file /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache/42d4a64dda3243ffeca7ec268d5544122e67d9d06b971608796b483925716512.02ac7d664cff08d793eb00d6aac1d04368a1322435e5fe0a27c70b0b3a85327f to temp dir /tmp/tmpwq0j0k9i
+2021-07-07 01:30:59,293:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+
+2021-07-07 01:30:59,375:INFO: loading archive file /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/visual-base
+2021-07-07 01:30:59,375:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 1,
+  "type_vocab_size": 2,
+  "vocab_size": 1024
+}
+
+2021-07-07 01:30:59,375:INFO: Weight doesn't exsits. /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/visual-base/visual_pytorch_model.bin
+2021-07-07 01:30:59,375:INFO: loading archive file /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/audio-base
+2021-07-07 01:30:59,376:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 1,
+  "type_vocab_size": 2,
+  "vocab_size": 128
+}
+
+2021-07-07 01:30:59,376:INFO: Weight doesn't exsits. /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/audio-base/audio_model.bin
+2021-07-07 01:30:59,376:INFO: loading archive file /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/cross-base
+2021-07-07 01:30:59,376:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 1024,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 2,
+  "type_vocab_size": 2,
+  "vocab_size": 768
+}
+
+2021-07-07 01:30:59,376:INFO: Weight doesn't exsits. /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/cross-base/cross_pytorch_model.bin
+2021-07-07 01:30:59,376:WARNING: Set bert_config.num_hidden_layers: 12.
+2021-07-07 01:31:00,928:WARNING: Set visual_config.num_hidden_layers: 6.
+2021-07-07 01:31:01,528:WARNING: Set audio_config.num_hidden_layers: 3.
+2021-07-07 01:31:01,863:WARNING: Set cross_config.num_hidden_layers: 2.
+2021-07-07 01:31:04,964:INFO: --------------------
+2021-07-07 01:31:04,964:INFO: Weights from pretrained model not used in Tagging_UniVL: 
+   cls.predictions.bias
+   cls.predictions.transform.dense.weight
+   cls.predictions.transform.dense.bias
+   cls.predictions.transform.LayerNorm.weight
+   cls.predictions.transform.LayerNorm.bias
+   cls.predictions.decoder.weight
+   cls_visual.predictions.weight
+   cls_visual.predictions.bias
+   cls_visual.predictions.transform.dense.weight
+   cls_visual.predictions.transform.dense.bias
+   cls_visual.predictions.transform.LayerNorm.weight
+   cls_visual.predictions.transform.LayerNorm.bias
+   cls_audio.predictions.weight
+   cls_audio.predictions.bias
+   cls_audio.predictions.transform.dense.weight
+   cls_audio.predictions.transform.dense.bias
+   cls_audio.predictions.transform.LayerNorm.weight
+   cls_audio.predictions.transform.LayerNorm.bias
+2021-07-07 01:32:51,158:INFO: ***** Running training *****
+2021-07-07 01:32:51,158:INFO:   Num examples = 4000
+2021-07-07 01:32:51,158:INFO:   Batch size = 16
+2021-07-07 01:32:51,158:INFO:   Num steps = 3750
+2021-07-07 01:32:58,264:INFO: Epoch: 1/15, Step: 10/250, Lr: 0.000001, Text_Loss: 10.836533, Visual_Loss: 10.322155, Audio_Loss: 10.368849, Cross_Loss: 9.715611, Totual_Loss: 9.953681,  Time/step: 0.710368, text_gap: 0.053052, viusal_gap: 0.037331, audio_gap: 0.030511, cross_gap: 0.049140, gap: 0.064389
+2021-07-07 01:33:03,902:INFO: Epoch: 1/15, Step: 20/250, Lr: 0.000002, Text_Loss: 10.145945, Visual_Loss: 9.839502, Audio_Loss: 9.435015, Cross_Loss: 8.179739, Totual_Loss: 8.667864,  Time/step: 0.563761, text_gap: 0.077450, viusal_gap: 0.041657, audio_gap: 0.070398, cross_gap: 0.105548, gap: 0.148504
+2021-07-07 01:33:09,605:INFO: Epoch: 1/15, Step: 30/250, Lr: 0.000002, Text_Loss: 9.233702, Visual_Loss: 9.066969, Audio_Loss: 8.154343, Cross_Loss: 6.283161, Totual_Loss: 7.043714,  Time/step: 0.570271, text_gap: 0.120440, viusal_gap: 0.088825, audio_gap: 0.110862, cross_gap: 0.191419, gap: 0.274166
+2021-07-07 01:33:15,245:INFO: Epoch: 1/15, Step: 40/250, Lr: 0.000003, Text_Loss: 7.700859, Visual_Loss: 7.866234, Audio_Loss: 6.458732, Cross_Loss: 4.595869, Totual_Loss: 5.419690,  Time/step: 0.563979, text_gap: 0.197501, viusal_gap: 0.166997, audio_gap: 0.216909, cross_gap: 0.371080, gap: 0.421524
+2021-07-07 01:33:20,913:INFO: Epoch: 1/15, Step: 50/250, Lr: 0.000004, Text_Loss: 6.280438, Visual_Loss: 5.515985, Audio_Loss: 4.854694, Cross_Loss: 3.669925, Totual_Loss: 4.234059,  Time/step: 0.566769, text_gap: 0.247156, viusal_gap: 0.376521, audio_gap: 0.304970, cross_gap: 0.416227, gap: 0.468231
+2021-07-07 01:33:26,551:INFO: Epoch: 1/15, Step: 60/250, Lr: 0.000005, Text_Loss: 4.778447, Visual_Loss: 3.841323, Audio_Loss: 3.632274, Cross_Loss: 3.280996, Totual_Loss: 3.521902,  Time/step: 0.563736, text_gap: 0.360923, viusal_gap: 0.359887, audio_gap: 0.366461, cross_gap: 0.419283, gap: 0.466858
+2021-07-07 01:33:32,237:INFO: Epoch: 1/15, Step: 70/250, Lr: 0.000006, Text_Loss: 3.810294, Visual_Loss: 3.316073, Audio_Loss: 3.159533, Cross_Loss: 2.928815, Totual_Loss: 3.078761,  Time/step: 0.568591, text_gap: 0.363917, viusal_gap: 0.391613, audio_gap: 0.433752, cross_gap: 0.451086, gap: 0.505432
+2021-07-07 01:33:37,905:INFO: Epoch: 1/15, Step: 80/250, Lr: 0.000006, Text_Loss: 3.108785, Visual_Loss: 2.861879, Audio_Loss: 2.932573, Cross_Loss: 2.798781, Totual_Loss: 2.849471,  Time/step: 0.566802, text_gap: 0.407391, viusal_gap: 0.408153, audio_gap: 0.401481, cross_gap: 0.403247, gap: 0.481120
+2021-07-07 01:33:43,623:INFO: Epoch: 1/15, Step: 90/250, Lr: 0.000007, Text_Loss: 3.101373, Visual_Loss: 2.958055, Audio_Loss: 3.041285, Cross_Loss: 2.919409, Totual_Loss: 2.953658,  Time/step: 0.571712, text_gap: 0.391780, viusal_gap: 0.398126, audio_gap: 0.364420, cross_gap: 0.410761, gap: 0.503830
+2021-07-07 01:33:49,289:INFO: Epoch: 1/15, Step: 100/250, Lr: 0.000008, Text_Loss: 3.362273, Visual_Loss: 3.086785, Audio_Loss: 3.241838, Cross_Loss: 3.160424, Totual_Loss: 3.181386,  Time/step: 0.566669, text_gap: 0.395717, viusal_gap: 0.437436, audio_gap: 0.395446, cross_gap: 0.415082, gap: 0.536874
+2021-07-07 01:33:54,929:INFO: Epoch: 1/15, Step: 110/250, Lr: 0.000009, Text_Loss: 2.943622, Visual_Loss: 2.728754, Audio_Loss: 2.735745, Cross_Loss: 2.599679, Totual_Loss: 2.660588,  Time/step: 0.563889, text_gap: 0.421249, viusal_gap: 0.467891, audio_gap: 0.453596, cross_gap: 0.497802, gap: 0.615875
+2021-07-07 01:34:00,594:INFO: Epoch: 1/15, Step: 120/250, Lr: 0.000010, Text_Loss: 2.928159, Visual_Loss: 2.997453, Audio_Loss: 3.044927, Cross_Loss: 2.864804, Totual_Loss: 2.902416,  Time/step: 0.566495, text_gap: 0.411922, viusal_gap: 0.403892, audio_gap: 0.399846, cross_gap: 0.461155, gap: 0.565060
+2021-07-07 01:34:06,310:INFO: Epoch: 1/15, Step: 130/250, Lr: 0.000010, Text_Loss: 2.985625, Visual_Loss: 2.983752, Audio_Loss: 3.070492, Cross_Loss: 2.666814, Totual_Loss: 2.770757,  Time/step: 0.571557, text_gap: 0.406174, viusal_gap: 0.432083, audio_gap: 0.377641, cross_gap: 0.515553, gap: 0.591225
+2021-07-07 01:34:11,966:INFO: Epoch: 1/15, Step: 140/250, Lr: 0.000011, Text_Loss: 2.848202, Visual_Loss: 2.782145, Audio_Loss: 3.023910, Cross_Loss: 2.828500, Totual_Loss: 2.845376,  Time/step: 0.565578, text_gap: 0.452299, viusal_gap: 0.500613, audio_gap: 0.390906, cross_gap: 0.478400, gap: 0.569845
+2021-07-07 01:34:17,671:INFO: Epoch: 1/15, Step: 150/250, Lr: 0.000012, Text_Loss: 2.881267, Visual_Loss: 2.923572, Audio_Loss: 3.057964, Cross_Loss: 2.892220, Totual_Loss: 2.910835,  Time/step: 0.570496, text_gap: 0.459110, viusal_gap: 0.436508, audio_gap: 0.404694, cross_gap: 0.462736, gap: 0.590175
+2021-07-07 01:34:23,323:INFO: Epoch: 1/15, Step: 160/250, Lr: 0.000013, Text_Loss: 2.704036, Visual_Loss: 2.617007, Audio_Loss: 2.722153, Cross_Loss: 2.501069, Totual_Loss: 2.555068,  Time/step: 0.565147, text_gap: 0.469937, viusal_gap: 0.487539, audio_gap: 0.461299, cross_gap: 0.519606, gap: 0.630619
+2021-07-07 01:34:29,074:INFO: Epoch: 1/15, Step: 170/250, Lr: 0.000014, Text_Loss: 2.618649, Visual_Loss: 2.587168, Audio_Loss: 2.725082, Cross_Loss: 2.382330, Totual_Loss: 2.460721,  Time/step: 0.575127, text_gap: 0.486948, viusal_gap: 0.458890, audio_gap: 0.413822, cross_gap: 0.546184, gap: 0.680112
+2021-07-07 01:34:34,743:INFO: Epoch: 1/15, Step: 180/250, Lr: 0.000014, Text_Loss: 2.784866, Visual_Loss: 2.694513, Audio_Loss: 2.821247, Cross_Loss: 2.501886, Totual_Loss: 2.581383,  Time/step: 0.566847, text_gap: 0.454752, viusal_gap: 0.491596, audio_gap: 0.431747, cross_gap: 0.530557, gap: 0.626049
+2021-07-07 01:34:40,362:INFO: Epoch: 1/15, Step: 190/250, Lr: 0.000015, Text_Loss: 2.819305, Visual_Loss: 2.761692, Audio_Loss: 2.924620, Cross_Loss: 2.525253, Totual_Loss: 2.618239,  Time/step: 0.561880, text_gap: 0.436879, viusal_gap: 0.465487, audio_gap: 0.409194, cross_gap: 0.508465, gap: 0.604133
+2021-07-07 01:34:45,973:INFO: Epoch: 1/15, Step: 200/250, Lr: 0.000016, Text_Loss: 2.607251, Visual_Loss: 2.855825, Audio_Loss: 2.818634, Cross_Loss: 2.578393, Totual_Loss: 2.633046,  Time/step: 0.561135, text_gap: 0.507905, viusal_gap: 0.464378, audio_gap: 0.426455, cross_gap: 0.518684, gap: 0.617666
+2021-07-07 01:34:51,603:INFO: Epoch: 1/15, Step: 210/250, Lr: 0.000017, Text_Loss: 3.035762, Visual_Loss: 2.848275, Audio_Loss: 2.913044, Cross_Loss: 2.690787, Totual_Loss: 2.763259,  Time/step: 0.562894, text_gap: 0.439181, viusal_gap: 0.484932, audio_gap: 0.462635, cross_gap: 0.516331, gap: 0.609674
+2021-07-07 01:34:57,227:INFO: Epoch: 1/15, Step: 220/250, Lr: 0.000018, Text_Loss: 2.603111, Visual_Loss: 2.637631, Audio_Loss: 2.800899, Cross_Loss: 2.516933, Totual_Loss: 2.566017,  Time/step: 0.562366, text_gap: 0.462222, viusal_gap: 0.491324, audio_gap: 0.397860, cross_gap: 0.523347, gap: 0.638856
+2021-07-07 01:35:02,841:INFO: Epoch: 1/15, Step: 230/250, Lr: 0.000018, Text_Loss: 2.710715, Visual_Loss: 2.814582, Audio_Loss: 2.801458, Cross_Loss: 2.593756, Totual_Loss: 2.648305,  Time/step: 0.561454, text_gap: 0.453101, viusal_gap: 0.471367, audio_gap: 0.441875, cross_gap: 0.503981, gap: 0.632776
+2021-07-07 01:35:08,440:INFO: Epoch: 1/15, Step: 240/250, Lr: 0.000019, Text_Loss: 2.637454, Visual_Loss: 2.440896, Audio_Loss: 2.742579, Cross_Loss: 2.411281, Totual_Loss: 2.469990,  Time/step: 0.559841, text_gap: 0.489904, viusal_gap: 0.509564, audio_gap: 0.455351, cross_gap: 0.544453, gap: 0.658911
+2021-07-07 01:35:14,046:INFO: Epoch: 1/15, Step: 250/250, Lr: 0.000020, Text_Loss: 2.397376, Visual_Loss: 2.482811, Audio_Loss: 2.503355, Cross_Loss: 2.096348, Totual_Loss: 2.205797,  Time/step: 0.560589, text_gap: 0.538689, viusal_gap: 0.572165, audio_gap: 0.527118, cross_gap: 0.674907, gap: 0.760958
+2021-07-07 01:35:14,224:INFO: Fold 1 Epoch 1/15 Finished, Train Loss: 3.766500, Train_gap: 0.524655
+2021-07-07 01:35:14,225:INFO: ***** Running valing *****
+2021-07-07 01:35:14,225:INFO:   Num examples = 1000
+2021-07-07 01:35:14,225:INFO:   Batch_size = 16
+2021-07-07 01:35:24,778:INFO: ----- val_dataset text_gap: 0.668866, visual_gap: 0.712912, audio_gap: 0.644083, cross_gap: 0.740323, gap: 0.732109
+2021-07-07 01:35:26,498:INFO: Model saved to ckpts/ckpt/pytorch_model_0flod.bin.
+2021-07-07 01:35:26,498:INFO: The best model is: ckpts/ckpt/pytorch_model_0flod.bin., the gap is: 0.7321
+2021-07-07 01:35:33,638:INFO: Epoch: 2/15, Step: 10/250, Lr: 0.000021, Text_Loss: 2.813983, Visual_Loss: 2.780678, Audio_Loss: 3.017010, Cross_Loss: 2.642923, Totual_Loss: 2.711213,  Time/step: 0.692083, text_gap: 0.473815, viusal_gap: 0.498023, audio_gap: 0.428119, cross_gap: 0.535039, gap: 0.652811
+2021-07-07 01:35:39,220:INFO: Epoch: 2/15, Step: 20/250, Lr: 0.000022, Text_Loss: 2.691622, Visual_Loss: 2.519449, Audio_Loss: 2.730567, Cross_Loss: 2.490799, Totual_Loss: 2.537724,  Time/step: 0.558175, text_gap: 0.480792, viusal_gap: 0.541452, audio_gap: 0.462793, cross_gap: 0.555315, gap: 0.673771
+2021-07-07 01:35:44,826:INFO: Epoch: 2/15, Step: 30/250, Lr: 0.000022, Text_Loss: 2.715482, Visual_Loss: 2.585679, Audio_Loss: 2.807805, Cross_Loss: 2.534505, Totual_Loss: 2.585050,  Time/step: 0.560600, text_gap: 0.496117, viusal_gap: 0.529771, audio_gap: 0.479238, cross_gap: 0.581354, gap: 0.663256
+2021-07-07 01:35:50,436:INFO: Epoch: 2/15, Step: 40/250, Lr: 0.000023, Text_Loss: 2.378787, Visual_Loss: 2.375289, Audio_Loss: 2.615064, Cross_Loss: 2.167679, Totual_Loss: 2.254289,  Time/step: 0.561009, text_gap: 0.538020, viusal_gap: 0.570078, audio_gap: 0.481707, cross_gap: 0.617303, gap: 0.738025
+2021-07-07 01:35:56,080:INFO: Epoch: 2/15, Step: 50/250, Lr: 0.000024, Text_Loss: 2.748654, Visual_Loss: 2.536032, Audio_Loss: 2.929061, Cross_Loss: 2.502278, Totual_Loss: 2.572969,  Time/step: 0.564402, text_gap: 0.474395, viusal_gap: 0.506492, audio_gap: 0.444172, cross_gap: 0.554441, gap: 0.695072
+2021-07-07 01:36:03,885:INFO: Epoch: 2/15, Step: 60/250, Lr: 0.000025, Text_Loss: 2.578533, Visual_Loss: 2.307200, Audio_Loss: 2.684064, Cross_Loss: 2.325166, Totual_Loss: 2.384596,  Time/step: 0.563683, text_gap: 0.502257, viusal_gap: 0.608629, audio_gap: 0.504566, cross_gap: 0.571454, gap: 0.703268
+2021-07-07 01:36:09,495:INFO: Epoch: 2/15, Step: 70/250, Lr: 0.000026, Text_Loss: 2.582749, Visual_Loss: 2.387161, Audio_Loss: 2.794975, Cross_Loss: 2.423190, Totual_Loss: 2.472722,  Time/step: 0.560952, text_gap: 0.527004, viusal_gap: 0.583014, audio_gap: 0.472670, cross_gap: 0.591691, gap: 0.725905
+2021-07-07 01:36:15,103:INFO: Epoch: 2/15, Step: 80/250, Lr: 0.000026, Text_Loss: 2.779325, Visual_Loss: 2.697981, Audio_Loss: 2.735027, Cross_Loss: 2.405763, Totual_Loss: 2.505267,  Time/step: 0.560800, text_gap: 0.469997, viusal_gap: 0.514895, audio_gap: 0.501030, cross_gap: 0.597745, gap: 0.713348
+2021-07-07 01:36:20,722:INFO: Epoch: 2/15, Step: 90/250, Lr: 0.000027, Text_Loss: 2.795020, Visual_Loss: 2.782312, Audio_Loss: 2.909844, Cross_Loss: 2.601753, Totual_Loss: 2.669945,  Time/step: 0.561860, text_gap: 0.484402, viusal_gap: 0.503355, audio_gap: 0.462249, cross_gap: 0.558987, gap: 0.666629
+2021-07-07 01:36:26,347:INFO: Epoch: 2/15, Step: 100/250, Lr: 0.000028, Text_Loss: 2.411164, Visual_Loss: 2.240703, Audio_Loss: 2.545928, Cross_Loss: 2.143083, Totual_Loss: 2.219938,  Time/step: 0.562510, text_gap: 0.560862, viusal_gap: 0.615621, audio_gap: 0.489253, cross_gap: 0.617948, gap: 0.758496
+2021-07-07 01:36:31,963:INFO: Epoch: 2/15, Step: 110/250, Lr: 0.000029, Text_Loss: 2.479665, Visual_Loss: 2.436175, Audio_Loss: 2.675123, Cross_Loss: 2.341046, Totual_Loss: 2.397829,  Time/step: 0.561592, text_gap: 0.492431, viusal_gap: 0.540160, audio_gap: 0.419183, cross_gap: 0.551616, gap: 0.679675
+2021-07-07 01:36:37,614:INFO: Epoch: 2/15, Step: 120/250, Lr: 0.000030, Text_Loss: 2.653611, Visual_Loss: 2.284453, Audio_Loss: 2.511396, Cross_Loss: 2.299006, Totual_Loss: 2.354250,  Time/step: 0.565073, text_gap: 0.482035, viusal_gap: 0.579264, audio_gap: 0.498369, cross_gap: 0.591298, gap: 0.711900
+2021-07-07 01:36:43,235:INFO: Epoch: 2/15, Step: 130/250, Lr: 0.000030, Text_Loss: 2.656688, Visual_Loss: 2.477278, Audio_Loss: 2.790728, Cross_Loss: 2.490860, Totual_Loss: 2.536072,  Time/step: 0.562012, text_gap: 0.475004, viusal_gap: 0.535576, audio_gap: 0.469981, cross_gap: 0.568344, gap: 0.686756
+2021-07-07 01:36:48,861:INFO: Epoch: 2/15, Step: 140/250, Lr: 0.000030, Text_Loss: 2.520604, Visual_Loss: 2.587442, Audio_Loss: 2.737590, Cross_Loss: 2.480946, Totual_Loss: 2.521226,  Time/step: 0.562608, text_gap: 0.536923, viusal_gap: 0.561047, audio_gap: 0.512320, cross_gap: 0.579113, gap: 0.688434
+2021-07-07 01:36:54,495:INFO: Epoch: 2/15, Step: 150/250, Lr: 0.000030, Text_Loss: 2.450618, Visual_Loss: 2.245063, Audio_Loss: 2.552825, Cross_Loss: 2.513436, Totual_Loss: 2.484256,  Time/step: 0.563405, text_gap: 0.536970, viusal_gap: 0.623288, audio_gap: 0.506019, cross_gap: 0.581195, gap: 0.692893
+2021-07-07 01:37:00,125:INFO: Epoch: 2/15, Step: 160/250, Lr: 0.000030, Text_Loss: 2.583642, Visual_Loss: 2.557503, Audio_Loss: 2.745002, Cross_Loss: 2.488175, Totual_Loss: 2.530337,  Time/step: 0.562921, text_gap: 0.503645, viusal_gap: 0.534614, audio_gap: 0.495158, cross_gap: 0.545025, gap: 0.705178
+2021-07-07 01:37:05,745:INFO: Epoch: 2/15, Step: 170/250, Lr: 0.000030, Text_Loss: 2.793295, Visual_Loss: 2.304131, Audio_Loss: 2.579009, Cross_Loss: 2.424924, Totual_Loss: 2.465091,  Time/step: 0.561975, text_gap: 0.471196, viusal_gap: 0.611984, audio_gap: 0.509923, cross_gap: 0.585276, gap: 0.679293
+2021-07-07 01:37:11,378:INFO: Epoch: 2/15, Step: 180/250, Lr: 0.000030, Text_Loss: 2.562526, Visual_Loss: 2.383167, Audio_Loss: 2.484211, Cross_Loss: 2.238045, Totual_Loss: 2.309622,  Time/step: 0.563237, text_gap: 0.510366, viusal_gap: 0.561424, audio_gap: 0.542327, cross_gap: 0.585194, gap: 0.731504
+2021-07-07 01:37:17,020:INFO: Epoch: 2/15, Step: 190/250, Lr: 0.000029, Text_Loss: 2.721315, Visual_Loss: 2.535830, Audio_Loss: 3.059456, Cross_Loss: 2.552276, Totual_Loss: 2.618253,  Time/step: 0.564243, text_gap: 0.517283, viusal_gap: 0.545928, audio_gap: 0.426224, cross_gap: 0.571265, gap: 0.668002
+2021-07-07 01:37:22,643:INFO: Epoch: 2/15, Step: 200/250, Lr: 0.000029, Text_Loss: 2.659968, Visual_Loss: 2.339505, Audio_Loss: 2.693513, Cross_Loss: 2.288210, Totual_Loss: 2.371046,  Time/step: 0.562246, text_gap: 0.475881, viusal_gap: 0.593572, audio_gap: 0.474937, cross_gap: 0.575945, gap: 0.725290
+2021-07-07 01:37:28,274:INFO: Epoch: 2/15, Step: 210/250, Lr: 0.000029, Text_Loss: 2.747493, Visual_Loss: 2.562204, Audio_Loss: 2.945982, Cross_Loss: 2.461405, Totual_Loss: 2.548552,  Time/step: 0.563100, text_gap: 0.520419, viusal_gap: 0.574780, audio_gap: 0.447371, cross_gap: 0.595614, gap: 0.717470
+2021-07-07 01:37:33,916:INFO: Epoch: 2/15, Step: 220/250, Lr: 0.000029, Text_Loss: 2.363562, Visual_Loss: 2.064737, Audio_Loss: 2.430899, Cross_Loss: 2.117535, Totual_Loss: 2.168195,  Time/step: 0.564204, text_gap: 0.569527, viusal_gap: 0.643783, audio_gap: 0.567844, cross_gap: 0.640838, gap: 0.786826
+2021-07-07 01:37:39,539:INFO: Epoch: 2/15, Step: 230/250, Lr: 0.000029, Text_Loss: 2.370358, Visual_Loss: 2.205563, Audio_Loss: 2.530570, Cross_Loss: 2.224731, Totual_Loss: 2.267961,  Time/step: 0.562253, text_gap: 0.567131, viusal_gap: 0.621350, audio_gap: 0.530950, cross_gap: 0.650976, gap: 0.758481
+2021-07-07 01:37:45,158:INFO: Epoch: 2/15, Step: 240/250, Lr: 0.000029, Text_Loss: 2.323337, Visual_Loss: 2.355860, Audio_Loss: 2.473464, Cross_Loss: 2.236251, Totual_Loss: 2.280642,  Time/step: 0.561871, text_gap: 0.569041, viusal_gap: 0.567132, audio_gap: 0.505902, cross_gap: 0.594684, gap: 0.757466
+2021-07-07 01:37:50,787:INFO: Epoch: 2/15, Step: 250/250, Lr: 0.000029, Text_Loss: 2.630030, Visual_Loss: 2.344744, Audio_Loss: 2.709028, Cross_Loss: 2.351304, Totual_Loss: 2.414293,  Time/step: 0.562846, text_gap: 0.505112, viusal_gap: 0.587817, audio_gap: 0.488534, cross_gap: 0.592990, gap: 0.730301
+2021-07-07 01:37:50,967:INFO: Fold 1 Epoch 2/15 Finished, Train Loss: 2.446933, Train_gap: 0.706806
+2021-07-07 01:37:50,968:INFO: ***** Running valing *****
+2021-07-07 01:37:50,968:INFO:   Num examples = 1000
+2021-07-07 01:37:50,968:INFO:   Batch_size = 16
+2021-07-07 01:38:01,588:INFO: ----- val_dataset text_gap: 0.715328, visual_gap: 0.760475, audio_gap: 0.674178, cross_gap: 0.774873, gap: 0.772527
+2021-07-07 01:38:07,363:INFO: Model saved to ckpts/ckpt/pytorch_model_0flod.bin.
+2021-07-07 01:38:07,590:INFO: The best model is: ckpts/ckpt/pytorch_model_0flod.bin., the gap is: 0.7725
+2021-07-07 01:38:14,809:INFO: Epoch: 3/15, Step: 10/250, Lr: 0.000029, Text_Loss: 2.633295, Visual_Loss: 2.510458, Audio_Loss: 2.788264, Cross_Loss: 2.454355, Totual_Loss: 2.511250,  Time/step: 0.695063, text_gap: 0.495741, viusal_gap: 0.539384, audio_gap: 0.471988, cross_gap: 0.529610, gap: 0.710405
+2021-07-07 01:38:20,409:INFO: Epoch: 3/15, Step: 20/250, Lr: 0.000029, Text_Loss: 2.405320, Visual_Loss: 2.168005, Audio_Loss: 2.528975, Cross_Loss: 2.205572, Totual_Loss: 2.254131,  Time/step: 0.559980, text_gap: 0.543248, viusal_gap: 0.607801, audio_gap: 0.498151, cross_gap: 0.621544, gap: 0.743960
+2021-07-07 01:38:26,030:INFO: Epoch: 3/15, Step: 30/250, Lr: 0.000029, Text_Loss: 2.663743, Visual_Loss: 2.564069, Audio_Loss: 2.892900, Cross_Loss: 2.467170, Totual_Loss: 2.539090,  Time/step: 0.562088, text_gap: 0.527744, viusal_gap: 0.578329, audio_gap: 0.474721, cross_gap: 0.593662, gap: 0.694138
+2021-07-07 01:38:31,644:INFO: Epoch: 3/15, Step: 40/250, Lr: 0.000029, Text_Loss: 2.606650, Visual_Loss: 2.278275, Audio_Loss: 2.723288, Cross_Loss: 2.608910, Totual_Loss: 2.587058,  Time/step: 0.561314, text_gap: 0.529934, viusal_gap: 0.609577, audio_gap: 0.462138, cross_gap: 0.533025, gap: 0.701034
+2021-07-07 01:38:37,593:INFO: Epoch: 3/15, Step: 50/250, Lr: 0.000028, Text_Loss: 2.533791, Visual_Loss: 2.055354, Audio_Loss: 2.646226, Cross_Loss: 2.183487, Totual_Loss: 2.251978,  Time/step: 0.594906, text_gap: 0.538624, viusal_gap: 0.643604, audio_gap: 0.494446, cross_gap: 0.649612, gap: 0.763105
+2021-07-07 01:38:43,247:INFO: Epoch: 3/15, Step: 60/250, Lr: 0.000028, Text_Loss: 2.362442, Visual_Loss: 2.193561, Audio_Loss: 2.427155, Cross_Loss: 2.167477, Totual_Loss: 2.215550,  Time/step: 0.565388, text_gap: 0.589029, viusal_gap: 0.613284, audio_gap: 0.553259, cross_gap: 0.629008, gap: 0.767975
+2021-07-07 01:38:48,865:INFO: Epoch: 3/15, Step: 70/250, Lr: 0.000028, Text_Loss: 2.361731, Visual_Loss: 2.156776, Audio_Loss: 2.493772, Cross_Loss: 2.113215, Totual_Loss: 2.180479,  Time/step: 0.561812, text_gap: 0.586940, viusal_gap: 0.631406, audio_gap: 0.515286, cross_gap: 0.645929, gap: 0.758584
+2021-07-07 01:38:54,498:INFO: Epoch: 3/15, Step: 80/250, Lr: 0.000028, Text_Loss: 2.528993, Visual_Loss: 2.413342, Audio_Loss: 2.650124, Cross_Loss: 2.245121, Totual_Loss: 2.330830,  Time/step: 0.563267, text_gap: 0.513298, viusal_gap: 0.571916, audio_gap: 0.478324, cross_gap: 0.625168, gap: 0.756582
+2021-07-07 01:39:00,114:INFO: Epoch: 3/15, Step: 90/250, Lr: 0.000028, Text_Loss: 2.467569, Visual_Loss: 2.291112, Audio_Loss: 2.680910, Cross_Loss: 2.133250, Totual_Loss: 2.237234,  Time/step: 0.561510, text_gap: 0.528847, viusal_gap: 0.615950, audio_gap: 0.502473, cross_gap: 0.649888, gap: 0.747345
+2021-07-07 01:39:05,739:INFO: Epoch: 3/15, Step: 100/250, Lr: 0.000028, Text_Loss: 2.515024, Visual_Loss: 2.257767, Audio_Loss: 2.718697, Cross_Loss: 2.316884, Totual_Loss: 2.370967,  Time/step: 0.562527, text_gap: 0.553559, viusal_gap: 0.625644, audio_gap: 0.494299, cross_gap: 0.642766, gap: 0.781858
+2021-07-07 01:39:11,368:INFO: Epoch: 3/15, Step: 110/250, Lr: 0.000028, Text_Loss: 2.601120, Visual_Loss: 2.531487, Audio_Loss: 2.627219, Cross_Loss: 2.401668, Totual_Loss: 2.457150,  Time/step: 0.562907, text_gap: 0.514668, viusal_gap: 0.585219, audio_gap: 0.522383, cross_gap: 0.610329, gap: 0.757928
+2021-07-07 01:39:17,011:INFO: Epoch: 3/15, Step: 120/250, Lr: 0.000028, Text_Loss: 2.302234, Visual_Loss: 2.127144, Audio_Loss: 2.517443, Cross_Loss: 1.981752, Totual_Loss: 2.081908,  Time/step: 0.564218, text_gap: 0.546818, viusal_gap: 0.618938, audio_gap: 0.492434, cross_gap: 0.653249, gap: 0.773807
+2021-07-07 01:39:22,658:INFO: Epoch: 3/15, Step: 130/250, Lr: 0.000028, Text_Loss: 2.591799, Visual_Loss: 2.587230, Audio_Loss: 2.714848, Cross_Loss: 2.327003, Totual_Loss: 2.418289,  Time/step: 0.564685, text_gap: 0.513234, viusal_gap: 0.547353, audio_gap: 0.465719, cross_gap: 0.608392, gap: 0.716620
+2021-07-07 01:39:28,281:INFO: Epoch: 3/15, Step: 140/250, Lr: 0.000028, Text_Loss: 2.372342, Visual_Loss: 2.313768, Audio_Loss: 2.672568, Cross_Loss: 2.175044, Totual_Loss: 2.258399,  Time/step: 0.562243, text_gap: 0.557193, viusal_gap: 0.565288, audio_gap: 0.489044, cross_gap: 0.634265, gap: 0.746332
+2021-07-07 01:39:33,908:INFO: Epoch: 3/15, Step: 150/250, Lr: 0.000028, Text_Loss: 2.619191, Visual_Loss: 2.241961, Audio_Loss: 2.725406, Cross_Loss: 2.355077, Totual_Loss: 2.407210,  Time/step: 0.562756, text_gap: 0.518421, viusal_gap: 0.599832, audio_gap: 0.491301, cross_gap: 0.567334, gap: 0.729439
+2021-07-07 01:39:39,546:INFO: Epoch: 3/15, Step: 160/250, Lr: 0.000027, Text_Loss: 2.249175, Visual_Loss: 2.201423, Audio_Loss: 2.495899, Cross_Loss: 1.917396, Totual_Loss: 2.036827,  Time/step: 0.563527, text_gap: 0.567455, viusal_gap: 0.628292, audio_gap: 0.508336, cross_gap: 0.706484, gap: 0.812557
+2021-07-07 01:39:45,170:INFO: Epoch: 3/15, Step: 170/250, Lr: 0.000027, Text_Loss: 2.279348, Visual_Loss: 2.066148, Audio_Loss: 2.557227, Cross_Loss: 2.133222, Totual_Loss: 2.183527,  Time/step: 0.562468, text_gap: 0.605819, viusal_gap: 0.651120, audio_gap: 0.498823, cross_gap: 0.646983, gap: 0.775239
+2021-07-07 01:39:50,794:INFO: Epoch: 3/15, Step: 180/250, Lr: 0.000027, Text_Loss: 2.435012, Visual_Loss: 2.367761, Audio_Loss: 2.705111, Cross_Loss: 2.164960, Totual_Loss: 2.266261,  Time/step: 0.562364, text_gap: 0.551000, viusal_gap: 0.582687, audio_gap: 0.469689, cross_gap: 0.607950, gap: 0.751035
+2021-07-07 01:39:56,425:INFO: Epoch: 3/15, Step: 190/250, Lr: 0.000027, Text_Loss: 2.673732, Visual_Loss: 2.786991, Audio_Loss: 2.809891, Cross_Loss: 2.312357, Totual_Loss: 2.445711,  Time/step: 0.563085, text_gap: 0.488714, viusal_gap: 0.521550, audio_gap: 0.459578, cross_gap: 0.608115, gap: 0.703439
+2021-07-07 01:40:02,065:INFO: Epoch: 3/15, Step: 200/250, Lr: 0.000027, Text_Loss: 2.230207, Visual_Loss: 2.034684, Audio_Loss: 2.223156, Cross_Loss: 1.943564, Totual_Loss: 2.009300,  Time/step: 0.563899, text_gap: 0.616210, viusal_gap: 0.702519, audio_gap: 0.607751, cross_gap: 0.734813, gap: 0.834528
+2021-07-07 01:40:07,673:INFO: Epoch: 3/15, Step: 210/250, Lr: 0.000027, Text_Loss: 2.287531, Visual_Loss: 2.155395, Audio_Loss: 2.860010, Cross_Loss: 2.080752, Totual_Loss: 2.186820,  Time/step: 0.560813, text_gap: 0.569536, viusal_gap: 0.628900, audio_gap: 0.456043, cross_gap: 0.643980, gap: 0.747788
+2021-07-07 01:40:13,348:INFO: Epoch: 3/15, Step: 220/250, Lr: 0.000027, Text_Loss: 2.374316, Visual_Loss: 2.155772, Audio_Loss: 2.517782, Cross_Loss: 2.124211, Totual_Loss: 2.191735,  Time/step: 0.567483, text_gap: 0.589429, viusal_gap: 0.656760, audio_gap: 0.506078, cross_gap: 0.638624, gap: 0.800472
+2021-07-07 01:40:19,135:INFO: Epoch: 3/15, Step: 230/250, Lr: 0.000027, Text_Loss: 2.580389, Visual_Loss: 2.209723, Audio_Loss: 2.501708, Cross_Loss: 2.220422, Totual_Loss: 2.283477,  Time/step: 0.578702, text_gap: 0.537403, viusal_gap: 0.634957, audio_gap: 0.550875, cross_gap: 0.664908, gap: 0.765557
+2021-07-07 01:40:24,782:INFO: Epoch: 3/15, Step: 240/250, Lr: 0.000027, Text_Loss: 2.343558, Visual_Loss: 2.131628, Audio_Loss: 2.653913, Cross_Loss: 2.174563, Totual_Loss: 2.235104,  Time/step: 0.564614, text_gap: 0.544848, viusal_gap: 0.630867, audio_gap: 0.477273, cross_gap: 0.632559, gap: 0.742894
+2021-07-07 01:40:30,462:INFO: Epoch: 3/15, Step: 250/250, Lr: 0.000027, Text_Loss: 2.385469, Visual_Loss: 2.079260, Audio_Loss: 2.477343, Cross_Loss: 1.965327, Totual_Loss: 2.069936,  Time/step: 0.567982, text_gap: 0.549756, viusal_gap: 0.650706, audio_gap: 0.530698, cross_gap: 0.664674, gap: 0.798014
+2021-07-07 01:40:30,631:INFO: Fold 1 Epoch 3/15 Finished, Train Loss: 2.276109, Train_gap: 0.761577
+2021-07-07 01:40:30,632:INFO: ***** Running valing *****
+2021-07-07 01:40:30,632:INFO:   Num examples = 1000
+2021-07-07 01:40:30,632:INFO:   Batch_size = 16
+2021-07-07 01:40:41,188:INFO: ----- val_dataset text_gap: 0.729234, visual_gap: 0.774688, audio_gap: 0.681972, cross_gap: 0.789986, gap: 0.789498
+2021-07-07 01:40:46,766:INFO: Model saved to ckpts/ckpt/pytorch_model_0flod.bin.
+2021-07-07 01:40:47,172:INFO: The best model is: ckpts/ckpt/pytorch_model_0flod.bin., the gap is: 0.7895
+2021-07-07 01:40:54,565:INFO: Epoch: 4/15, Step: 10/250, Lr: 0.000027, Text_Loss: 2.234816, Visual_Loss: 2.203861, Audio_Loss: 2.521502, Cross_Loss: 1.931252, Totual_Loss: 2.047894,  Time/step: 0.712464, text_gap: 0.605502, viusal_gap: 0.670448, audio_gap: 0.549785, cross_gap: 0.716971, gap: 0.840366
+2021-07-07 01:41:00,172:INFO: Epoch: 4/15, Step: 20/250, Lr: 0.000026, Text_Loss: 2.125232, Visual_Loss: 1.915394, Audio_Loss: 2.268233, Cross_Loss: 1.818522, Totual_Loss: 1.903851,  Time/step: 0.560710, text_gap: 0.595622, viusal_gap: 0.706991, audio_gap: 0.531143, cross_gap: 0.730187, gap: 0.861190
+2021-07-07 01:41:05,783:INFO: Epoch: 4/15, Step: 30/250, Lr: 0.000026, Text_Loss: 2.332239, Visual_Loss: 2.246663, Audio_Loss: 2.579869, Cross_Loss: 1.891358, Totual_Loss: 2.039828,  Time/step: 0.561125, text_gap: 0.573916, viusal_gap: 0.607752, audio_gap: 0.507531, cross_gap: 0.696937, gap: 0.822414
+2021-07-07 01:41:11,400:INFO: Epoch: 4/15, Step: 40/250, Lr: 0.000026, Text_Loss: 2.169538, Visual_Loss: 1.959976, Audio_Loss: 2.369510, Cross_Loss: 2.060425, Totual_Loss: 2.092200,  Time/step: 0.561663, text_gap: 0.597767, viusal_gap: 0.697708, audio_gap: 0.556413, cross_gap: 0.697685, gap: 0.833651
+2021-07-07 01:41:17,020:INFO: Epoch: 4/15, Step: 50/250, Lr: 0.000026, Text_Loss: 2.278801, Visual_Loss: 2.116197, Audio_Loss: 2.406556, Cross_Loss: 2.019844, Totual_Loss: 2.094046,  Time/step: 0.561932, text_gap: 0.604303, viusal_gap: 0.660854, audio_gap: 0.569191, cross_gap: 0.673815, gap: 0.798548
+2021-07-07 01:41:22,641:INFO: Epoch: 4/15, Step: 60/250, Lr: 0.000026, Text_Loss: 2.331259, Visual_Loss: 2.215282, Audio_Loss: 2.520982, Cross_Loss: 2.124301, Totual_Loss: 2.193763,  Time/step: 0.562048, text_gap: 0.600735, viusal_gap: 0.618111, audio_gap: 0.575570, cross_gap: 0.678095, gap: 0.781885
+2021-07-07 01:41:28,265:INFO: Epoch: 4/15, Step: 70/250, Lr: 0.000026, Text_Loss: 2.373561, Visual_Loss: 2.254654, Audio_Loss: 2.449199, Cross_Loss: 1.814897, Totual_Loss: 1.978169,  Time/step: 0.562391, text_gap: 0.598682, viusal_gap: 0.632815, audio_gap: 0.525947, cross_gap: 0.748661, gap: 0.865400
+2021-07-07 01:41:33,902:INFO: Epoch: 4/15, Step: 80/250, Lr: 0.000026, Text_Loss: 2.419426, Visual_Loss: 2.128983, Audio_Loss: 2.494082, Cross_Loss: 1.999327, Totual_Loss: 2.103778,  Time/step: 0.563723, text_gap: 0.551911, viusal_gap: 0.672972, audio_gap: 0.540705, cross_gap: 0.681916, gap: 0.821168
+2021-07-07 01:41:39,536:INFO: Epoch: 4/15, Step: 90/250, Lr: 0.000026, Text_Loss: 2.571836, Visual_Loss: 2.374706, Audio_Loss: 2.659586, Cross_Loss: 2.156234, Totual_Loss: 2.269977,  Time/step: 0.563336, text_gap: 0.521407, viusal_gap: 0.581624, audio_gap: 0.485502, cross_gap: 0.677593, gap: 0.773238
+2021-07-07 01:41:45,165:INFO: Epoch: 4/15, Step: 100/250, Lr: 0.000026, Text_Loss: 2.437248, Visual_Loss: 2.330260, Audio_Loss: 2.575036, Cross_Loss: 2.242242, Totual_Loss: 2.303824,  Time/step: 0.562911, text_gap: 0.569738, viusal_gap: 0.598931, audio_gap: 0.545456, cross_gap: 0.600038, gap: 0.767628
+2021-07-07 01:41:50,788:INFO: Epoch: 4/15, Step: 110/250, Lr: 0.000026, Text_Loss: 2.291778, Visual_Loss: 1.866655, Audio_Loss: 2.371077, Cross_Loss: 1.792663, Totual_Loss: 1.907815,  Time/step: 0.562252, text_gap: 0.559948, viusal_gap: 0.688808, audio_gap: 0.527091, cross_gap: 0.733904, gap: 0.862892
+2021-07-07 01:41:56,406:INFO: Epoch: 4/15, Step: 120/250, Lr: 0.000026, Text_Loss: 2.424503, Visual_Loss: 2.019840, Audio_Loss: 2.609782, Cross_Loss: 1.844512, Totual_Loss: 1.996571,  Time/step: 0.561797, text_gap: 0.601443, viusal_gap: 0.694237, audio_gap: 0.513332, cross_gap: 0.733153, gap: 0.825461
+2021-07-07 01:42:02,035:INFO: Epoch: 4/15, Step: 130/250, Lr: 0.000026, Text_Loss: 2.387562, Visual_Loss: 1.962314, Audio_Loss: 2.465157, Cross_Loss: 1.915784, Totual_Loss: 2.022552,  Time/step: 0.562821, text_gap: 0.562063, viusal_gap: 0.670936, audio_gap: 0.528498, cross_gap: 0.679984, gap: 0.808619
+2021-07-07 01:42:07,657:INFO: Epoch: 4/15, Step: 140/250, Lr: 0.000025, Text_Loss: 2.198397, Visual_Loss: 2.184254, Audio_Loss: 2.393143, Cross_Loss: 1.995376, Totual_Loss: 2.074342,  Time/step: 0.562240, text_gap: 0.623485, viusal_gap: 0.666484, audio_gap: 0.548166, cross_gap: 0.686964, gap: 0.811031
+2021-07-07 01:42:13,298:INFO: Epoch: 4/15, Step: 150/250, Lr: 0.000025, Text_Loss: 2.415253, Visual_Loss: 2.137766, Audio_Loss: 2.633541, Cross_Loss: 2.008877, Totual_Loss: 2.124870,  Time/step: 0.564042, text_gap: 0.578085, viusal_gap: 0.671755, audio_gap: 0.533589, cross_gap: 0.690579, gap: 0.807607
+2021-07-07 01:42:18,978:INFO: Epoch: 4/15, Step: 160/250, Lr: 0.000025, Text_Loss: 2.172398, Visual_Loss: 1.916274, Audio_Loss: 2.493855, Cross_Loss: 1.894772, Totual_Loss: 1.984593,  Time/step: 0.567949, text_gap: 0.569830, viusal_gap: 0.691237, audio_gap: 0.492564, cross_gap: 0.687672, gap: 0.813143
+2021-07-07 01:42:24,598:INFO: Epoch: 4/15, Step: 170/250, Lr: 0.000025, Text_Loss: 2.592100, Visual_Loss: 2.162674, Audio_Loss: 2.646188, Cross_Loss: 2.144052, Totual_Loss: 2.240932,  Time/step: 0.561963, text_gap: 0.566025, viusal_gap: 0.657379, audio_gap: 0.509541, cross_gap: 0.634424, gap: 0.783347
+2021-07-07 01:42:30,235:INFO: Epoch: 4/15, Step: 180/250, Lr: 0.000025, Text_Loss: 2.325452, Visual_Loss: 2.222362, Audio_Loss: 2.371399, Cross_Loss: 2.140672, Totual_Loss: 2.190392,  Time/step: 0.563756, text_gap: 0.593512, viusal_gap: 0.639482, audio_gap: 0.563350, cross_gap: 0.654053, gap: 0.805956
+2021-07-07 01:42:35,847:INFO: Epoch: 4/15, Step: 190/250, Lr: 0.000025, Text_Loss: 2.309345, Visual_Loss: 2.166078, Audio_Loss: 2.493797, Cross_Loss: 1.890921, Totual_Loss: 2.020567,  Time/step: 0.561100, text_gap: 0.630928, viusal_gap: 0.665669, audio_gap: 0.553452, cross_gap: 0.717947, gap: 0.800786
+2021-07-07 01:42:41,466:INFO: Epoch: 4/15, Step: 200/250, Lr: 0.000025, Text_Loss: 2.498682, Visual_Loss: 2.168356, Audio_Loss: 2.456001, Cross_Loss: 2.158513, Totual_Loss: 2.223263,  Time/step: 0.561952, text_gap: 0.560362, viusal_gap: 0.672036, audio_gap: 0.514103, cross_gap: 0.693888, gap: 0.818046
+2021-07-07 01:42:47,091:INFO: Epoch: 4/15, Step: 210/250, Lr: 0.000025, Text_Loss: 2.243455, Visual_Loss: 1.936254, Audio_Loss: 2.326784, Cross_Loss: 1.895399, Totual_Loss: 1.977429,  Time/step: 0.562390, text_gap: 0.598614, viusal_gap: 0.676709, audio_gap: 0.516966, cross_gap: 0.690790, gap: 0.814634
+2021-07-07 01:42:52,714:INFO: Epoch: 4/15, Step: 220/250, Lr: 0.000025, Text_Loss: 2.269156, Visual_Loss: 1.918659, Audio_Loss: 2.205898, Cross_Loss: 1.867578, Totual_Loss: 1.946676,  Time/step: 0.562355, text_gap: 0.606766, viusal_gap: 0.706599, audio_gap: 0.607504, cross_gap: 0.731538, gap: 0.857148
+2021-07-07 01:42:58,345:INFO: Epoch: 4/15, Step: 230/250, Lr: 0.000025, Text_Loss: 2.455565, Visual_Loss: 2.287803, Audio_Loss: 2.594667, Cross_Loss: 2.239768, Totual_Loss: 2.301641,  Time/step: 0.562995, text_gap: 0.577499, viusal_gap: 0.606249, audio_gap: 0.520530, cross_gap: 0.646757, gap: 0.769011
+2021-07-07 01:43:03,993:INFO: Epoch: 4/15, Step: 240/250, Lr: 0.000025, Text_Loss: 2.433682, Visual_Loss: 2.161105, Audio_Loss: 2.475079, Cross_Loss: 2.061985, Totual_Loss: 2.150376,  Time/step: 0.564844, text_gap: 0.535234, viusal_gap: 0.614001, audio_gap: 0.491489, cross_gap: 0.617634, gap: 0.753381
+2021-07-07 01:43:09,625:INFO: Epoch: 4/15, Step: 250/250, Lr: 0.000024, Text_Loss: 2.430394, Visual_Loss: 2.273876, Audio_Loss: 2.521175, Cross_Loss: 2.282616, Totual_Loss: 2.320376,  Time/step: 0.563193, text_gap: 0.563325, viusal_gap: 0.608123, audio_gap: 0.547128, cross_gap: 0.619740, gap: 0.771516
+2021-07-07 01:43:09,808:INFO: Fold 1 Epoch 4/15 Finished, Train Loss: 2.137590, Train_gap: 0.799314
+2021-07-07 01:43:09,808:INFO: ***** Running valing *****
+2021-07-07 01:43:09,809:INFO:   Num examples = 1000
+2021-07-07 01:43:09,809:INFO:   Batch_size = 16
+2021-07-07 01:43:20,671:INFO: ----- val_dataset text_gap: 0.734188, visual_gap: 0.779736, audio_gap: 0.690583, cross_gap: 0.797610, gap: 0.799763
+2021-07-07 01:43:26,429:INFO: Model saved to ckpts/ckpt/pytorch_model_0flod.bin.
+2021-07-07 01:43:26,658:INFO: The best model is: ckpts/ckpt/pytorch_model_0flod.bin., the gap is: 0.7998
+2021-07-07 01:43:33,852:INFO: Epoch: 5/15, Step: 10/250, Lr: 0.000024, Text_Loss: 2.455545, Visual_Loss: 2.235539, Audio_Loss: 2.492732, Cross_Loss: 2.060395, Totual_Loss: 2.160658,  Time/step: 0.692546, text_gap: 0.551515, viusal_gap: 0.613154, audio_gap: 0.520220, cross_gap: 0.655528, gap: 0.773880
+2021-07-07 01:43:39,460:INFO: Epoch: 5/15, Step: 20/250, Lr: 0.000024, Text_Loss: 2.157665, Visual_Loss: 1.957907, Audio_Loss: 2.591656, Cross_Loss: 1.879190, Totual_Loss: 1.986156,  Time/step: 0.560788, text_gap: 0.622582, viusal_gap: 0.695821, audio_gap: 0.506359, cross_gap: 0.731363, gap: 0.847693
+2021-07-07 01:43:45,096:INFO: Epoch: 5/15, Step: 30/250, Lr: 0.000024, Text_Loss: 2.367719, Visual_Loss: 2.131669, Audio_Loss: 2.367648, Cross_Loss: 2.173111, Totual_Loss: 2.207881,  Time/step: 0.563630, text_gap: 0.579217, viusal_gap: 0.663690, audio_gap: 0.584420, cross_gap: 0.653458, gap: 0.827139
+2021-07-07 01:43:50,720:INFO: Epoch: 5/15, Step: 40/250, Lr: 0.000024, Text_Loss: 2.427244, Visual_Loss: 2.219792, Audio_Loss: 2.735996, Cross_Loss: 2.005157, Totual_Loss: 2.141913,  Time/step: 0.562327, text_gap: 0.583075, viusal_gap: 0.674333, audio_gap: 0.519771, cross_gap: 0.711394, gap: 0.814600
+2021-07-07 01:43:56,340:INFO: Epoch: 5/15, Step: 50/250, Lr: 0.000024, Text_Loss: 2.251038, Visual_Loss: 2.029410, Audio_Loss: 2.379330, Cross_Loss: 1.921374, Totual_Loss: 2.010940,  Time/step: 0.561909, text_gap: 0.599992, viusal_gap: 0.723043, audio_gap: 0.572623, cross_gap: 0.733936, gap: 0.822598
+2021-07-07 01:44:01,962:INFO: Epoch: 5/15, Step: 60/250, Lr: 0.000024, Text_Loss: 2.090591, Visual_Loss: 1.963590, Audio_Loss: 2.375124, Cross_Loss: 1.840892, Totual_Loss: 1.931555,  Time/step: 0.562213, text_gap: 0.649165, viusal_gap: 0.696987, audio_gap: 0.548580, cross_gap: 0.716931, gap: 0.866972
+2021-07-07 01:44:07,594:INFO: Epoch: 5/15, Step: 70/250, Lr: 0.000024, Text_Loss: 2.070843, Visual_Loss: 1.865886, Audio_Loss: 2.456760, Cross_Loss: 1.845945, Totual_Loss: 1.931511,  Time/step: 0.563147, text_gap: 0.669858, viusal_gap: 0.685837, audio_gap: 0.517369, cross_gap: 0.745503, gap: 0.854905
+2021-07-07 01:44:13,215:INFO: Epoch: 5/15, Step: 80/250, Lr: 0.000024, Text_Loss: 2.273893, Visual_Loss: 1.992808, Audio_Loss: 2.495331, Cross_Loss: 2.065988, Totual_Loss: 2.122395,  Time/step: 0.562053, text_gap: 0.589403, viusal_gap: 0.668911, audio_gap: 0.492739, cross_gap: 0.685350, gap: 0.807402
+2021-07-07 01:44:18,838:INFO: Epoch: 5/15, Step: 90/250, Lr: 0.000024, Text_Loss: 2.344374, Visual_Loss: 2.144580, Audio_Loss: 2.464540, Cross_Loss: 2.237259, Totual_Loss: 2.261431,  Time/step: 0.562285, text_gap: 0.615021, viusal_gap: 0.683909, audio_gap: 0.546147, cross_gap: 0.687848, gap: 0.830402
+2021-07-07 01:44:24,470:INFO: Epoch: 5/15, Step: 100/250, Lr: 0.000024, Text_Loss: 2.088746, Visual_Loss: 1.960974, Audio_Loss: 2.207442, Cross_Loss: 1.768357, Totual_Loss: 1.863566,  Time/step: 0.563238, text_gap: 0.673987, viusal_gap: 0.708768, audio_gap: 0.608879, cross_gap: 0.764160, gap: 0.874107
+2021-07-07 01:44:30,103:INFO: Epoch: 5/15, Step: 110/250, Lr: 0.000023, Text_Loss: 2.239939, Visual_Loss: 2.067953, Audio_Loss: 2.455697, Cross_Loss: 1.839311, Totual_Loss: 1.963877,  Time/step: 0.563205, text_gap: 0.582593, viusal_gap: 0.674872, audio_gap: 0.521891, cross_gap: 0.726745, gap: 0.847304
+2021-07-07 01:44:35,729:INFO: Epoch: 5/15, Step: 120/250, Lr: 0.000023, Text_Loss: 2.268358, Visual_Loss: 2.419702, Audio_Loss: 2.612579, Cross_Loss: 2.118629, Totual_Loss: 2.213104,  Time/step: 0.562628, text_gap: 0.644180, viusal_gap: 0.603997, audio_gap: 0.544309, cross_gap: 0.669239, gap: 0.788946
+2021-07-07 01:44:41,386:INFO: Epoch: 5/15, Step: 130/250, Lr: 0.000023, Text_Loss: 2.349785, Visual_Loss: 2.196967, Audio_Loss: 2.482539, Cross_Loss: 1.942411, Totual_Loss: 2.062616,  Time/step: 0.565637, text_gap: 0.574985, viusal_gap: 0.636355, audio_gap: 0.546102, cross_gap: 0.704316, gap: 0.826280
+2021-07-07 01:44:47,013:INFO: Epoch: 5/15, Step: 140/250, Lr: 0.000023, Text_Loss: 2.197152, Visual_Loss: 1.957670, Audio_Loss: 2.377412, Cross_Loss: 1.820915, Totual_Loss: 1.927864,  Time/step: 0.562698, text_gap: 0.623153, viusal_gap: 0.675307, audio_gap: 0.558624, cross_gap: 0.752994, gap: 0.869689
+2021-07-07 01:44:52,685:INFO: Epoch: 5/15, Step: 150/250, Lr: 0.000023, Text_Loss: 2.211075, Visual_Loss: 2.089602, Audio_Loss: 2.194698, Cross_Loss: 1.757385, Totual_Loss: 1.879707,  Time/step: 0.567166, text_gap: 0.647814, viusal_gap: 0.652791, audio_gap: 0.630386, cross_gap: 0.750364, gap: 0.838181
+2021-07-07 01:44:58,319:INFO: Epoch: 5/15, Step: 160/250, Lr: 0.000023, Text_Loss: 2.328142, Visual_Loss: 2.214016, Audio_Loss: 2.530452, Cross_Loss: 1.950486, Totual_Loss: 2.072601,  Time/step: 0.563341, text_gap: 0.602652, viusal_gap: 0.659484, audio_gap: 0.536909, cross_gap: 0.723786, gap: 0.828470
+2021-07-07 01:45:03,946:INFO: Epoch: 5/15, Step: 170/250, Lr: 0.000023, Text_Loss: 2.116081, Visual_Loss: 1.950361, Audio_Loss: 2.228265, Cross_Loss: 1.739643, Totual_Loss: 1.847221,  Time/step: 0.562685, text_gap: 0.610580, viusal_gap: 0.673857, audio_gap: 0.562138, cross_gap: 0.746136, gap: 0.828485
+2021-07-07 01:45:09,572:INFO: Epoch: 5/15, Step: 180/250, Lr: 0.000023, Text_Loss: 2.010522, Visual_Loss: 1.896614, Audio_Loss: 2.313431, Cross_Loss: 1.845737, Totual_Loss: 1.914072,  Time/step: 0.562582, text_gap: 0.661786, viusal_gap: 0.715155, audio_gap: 0.582580, cross_gap: 0.721778, gap: 0.845580
+2021-07-07 01:45:15,193:INFO: Epoch: 5/15, Step: 190/250, Lr: 0.000023, Text_Loss: 2.427318, Visual_Loss: 2.336072, Audio_Loss: 2.478464, Cross_Loss: 2.160163, Totual_Loss: 2.236300,  Time/step: 0.562151, text_gap: 0.553102, viusal_gap: 0.575785, audio_gap: 0.522109, cross_gap: 0.647186, gap: 0.782526
+2021-07-07 01:45:20,814:INFO: Epoch: 5/15, Step: 200/250, Lr: 0.000023, Text_Loss: 2.212215, Visual_Loss: 2.235988, Audio_Loss: 2.527400, Cross_Loss: 2.060192, Totual_Loss: 2.139695,  Time/step: 0.562052, text_gap: 0.618438, viusal_gap: 0.664510, audio_gap: 0.535604, cross_gap: 0.730033, gap: 0.817977
+2021-07-07 01:45:26,436:INFO: Epoch: 5/15, Step: 210/250, Lr: 0.000023, Text_Loss: 2.252755, Visual_Loss: 1.829573, Audio_Loss: 2.259076, Cross_Loss: 1.671803, Totual_Loss: 1.804403,  Time/step: 0.562196, text_gap: 0.596108, viusal_gap: 0.676450, audio_gap: 0.572303, cross_gap: 0.736134, gap: 0.857096
+2021-07-07 01:45:32,066:INFO: Epoch: 5/15, Step: 220/250, Lr: 0.000022, Text_Loss: 2.219709, Visual_Loss: 1.937949, Audio_Loss: 2.486526, Cross_Loss: 1.880357, Totual_Loss: 1.980668,  Time/step: 0.562929, text_gap: 0.627652, viusal_gap: 0.697489, audio_gap: 0.524211, cross_gap: 0.728807, gap: 0.835782
+2021-07-07 01:45:37,695:INFO: Epoch: 5/15, Step: 230/250, Lr: 0.000022, Text_Loss: 2.394630, Visual_Loss: 1.976930, Audio_Loss: 2.532640, Cross_Loss: 1.920807, Totual_Loss: 2.034985,  Time/step: 0.562925, text_gap: 0.571370, viusal_gap: 0.677474, audio_gap: 0.526796, cross_gap: 0.756638, gap: 0.857785
+2021-07-07 01:45:43,346:INFO: Epoch: 5/15, Step: 240/250, Lr: 0.000022, Text_Loss: 2.507663, Visual_Loss: 2.136980, Audio_Loss: 2.694287, Cross_Loss: 1.969766, Totual_Loss: 2.112729,  Time/step: 0.565078, text_gap: 0.523577, viusal_gap: 0.707163, audio_gap: 0.487287, cross_gap: 0.712747, gap: 0.821819
+2021-07-07 01:45:48,979:INFO: Epoch: 5/15, Step: 250/250, Lr: 0.000022, Text_Loss: 2.294160, Visual_Loss: 2.068094, Audio_Loss: 2.424030, Cross_Loss: 2.134381, Totual_Loss: 2.172695,  Time/step: 0.563248, text_gap: 0.583410, viusal_gap: 0.684181, audio_gap: 0.539850, cross_gap: 0.675112, gap: 0.784294
+2021-07-07 01:45:49,161:INFO: Fold 1 Epoch 5/15 Finished, Train Loss: 2.034782, Train_gap: 0.829906
+2021-07-07 01:45:49,162:INFO: ***** Running valing *****
+2021-07-07 01:45:49,162:INFO:   Num examples = 1000
+2021-07-07 01:45:49,162:INFO:   Batch_size = 16
+2021-07-07 01:45:59,717:INFO: ----- val_dataset text_gap: 0.732391, visual_gap: 0.782895, audio_gap: 0.694206, cross_gap: 0.797497, gap: 0.802129
+2021-07-07 01:46:04,462:INFO: Model saved to ckpts/ckpt/pytorch_model_0flod.bin.
+2021-07-07 01:46:04,462:INFO: The best model is: ckpts/ckpt/pytorch_model_0flod.bin., the gap is: 0.8021
+2021-07-07 01:46:11,670:INFO: Epoch: 6/15, Step: 10/250, Lr: 0.000022, Text_Loss: 2.096885, Visual_Loss: 1.903390, Audio_Loss: 2.190575, Cross_Loss: 1.737045, Totual_Loss: 1.835017,  Time/step: 0.693970, text_gap: 0.613888, viusal_gap: 0.688380, audio_gap: 0.578009, cross_gap: 0.730561, gap: 0.838378
+2021-07-07 01:46:17,273:INFO: Epoch: 6/15, Step: 20/250, Lr: 0.000022, Text_Loss: 2.212636, Visual_Loss: 2.056994, Audio_Loss: 2.335897, Cross_Loss: 1.739861, Totual_Loss: 1.878456,  Time/step: 0.560255, text_gap: 0.616457, viusal_gap: 0.685971, audio_gap: 0.578435, cross_gap: 0.737241, gap: 0.870748
+2021-07-07 01:46:22,892:INFO: Epoch: 6/15, Step: 30/250, Lr: 0.000022, Text_Loss: 2.367539, Visual_Loss: 2.160032, Audio_Loss: 2.639284, Cross_Loss: 1.958735, Totual_Loss: 2.087800,  Time/step: 0.561946, text_gap: 0.622620, viusal_gap: 0.665013, audio_gap: 0.536185, cross_gap: 0.708089, gap: 0.814432
+2021-07-07 01:46:28,527:INFO: Epoch: 6/15, Step: 40/250, Lr: 0.000022, Text_Loss: 2.238075, Visual_Loss: 1.925728, Audio_Loss: 2.340171, Cross_Loss: 1.703575, Totual_Loss: 1.842900,  Time/step: 0.563435, text_gap: 0.635688, viusal_gap: 0.714926, audio_gap: 0.588650, cross_gap: 0.788487, gap: 0.883129
+2021-07-07 01:46:34,167:INFO: Epoch: 6/15, Step: 50/250, Lr: 0.000022, Text_Loss: 2.405849, Visual_Loss: 2.101555, Audio_Loss: 2.356855, Cross_Loss: 1.786232, Totual_Loss: 1.936788,  Time/step: 0.564017, text_gap: 0.619390, viusal_gap: 0.642545, audio_gap: 0.572142, cross_gap: 0.725027, gap: 0.862131
+2021-07-07 01:46:39,809:INFO: Epoch: 6/15, Step: 60/250, Lr: 0.000022, Text_Loss: 2.398849, Visual_Loss: 1.889379, Audio_Loss: 2.478303, Cross_Loss: 1.803607, Totual_Loss: 1.939178,  Time/step: 0.564149, text_gap: 0.596667, viusal_gap: 0.716753, audio_gap: 0.549937, cross_gap: 0.747876, gap: 0.856218
+2021-07-07 01:46:45,427:INFO: Epoch: 6/15, Step: 70/250, Lr: 0.000022, Text_Loss: 2.055960, Visual_Loss: 1.964053, Audio_Loss: 2.451674, Cross_Loss: 2.005191, Totual_Loss: 2.050803,  Time/step: 0.561822, text_gap: 0.652373, viusal_gap: 0.717651, audio_gap: 0.554799, cross_gap: 0.710418, gap: 0.850620
+2021-07-07 01:46:51,075:INFO: Epoch: 6/15, Step: 80/250, Lr: 0.000022, Text_Loss: 2.461056, Visual_Loss: 2.066448, Audio_Loss: 2.622107, Cross_Loss: 1.925487, Totual_Loss: 2.062802,  Time/step: 0.564695, text_gap: 0.588181, viusal_gap: 0.676785, audio_gap: 0.526057, cross_gap: 0.743643, gap: 0.826356
+2021-07-07 01:46:56,734:INFO: Epoch: 6/15, Step: 90/250, Lr: 0.000021, Text_Loss: 2.536003, Visual_Loss: 2.397604, Audio_Loss: 2.701228, Cross_Loss: 1.895122, Totual_Loss: 2.090069,  Time/step: 0.565922, text_gap: 0.564294, viusal_gap: 0.624343, audio_gap: 0.513435, cross_gap: 0.720221, gap: 0.807250
+2021-07-07 01:47:02,390:INFO: Epoch: 6/15, Step: 100/250, Lr: 0.000021, Text_Loss: 2.209200, Visual_Loss: 1.964073, Audio_Loss: 2.248660, Cross_Loss: 1.785904, Totual_Loss: 1.892326,  Time/step: 0.565609, text_gap: 0.642256, viusal_gap: 0.666005, audio_gap: 0.581886, cross_gap: 0.750378, gap: 0.858208
+2021-07-07 01:47:08,021:INFO: Epoch: 6/15, Step: 110/250, Lr: 0.000021, Text_Loss: 2.291533, Visual_Loss: 2.025973, Audio_Loss: 2.696832, Cross_Loss: 1.779021, Totual_Loss: 1.946748,  Time/step: 0.563060, text_gap: 0.599234, viusal_gap: 0.681187, audio_gap: 0.477815, cross_gap: 0.751754, gap: 0.824791
+2021-07-07 01:47:13,643:INFO: Epoch: 6/15, Step: 120/250, Lr: 0.000021, Text_Loss: 1.988867, Visual_Loss: 2.071626, Audio_Loss: 2.333813, Cross_Loss: 1.794690, Totual_Loss: 1.895714,  Time/step: 0.562133, text_gap: 0.670937, viusal_gap: 0.681616, audio_gap: 0.577974, cross_gap: 0.756321, gap: 0.885445
+2021-07-07 01:47:19,307:INFO: Epoch: 6/15, Step: 130/250, Lr: 0.000021, Text_Loss: 2.550420, Visual_Loss: 2.170215, Audio_Loss: 2.427784, Cross_Loss: 1.932989, Totual_Loss: 2.067934,  Time/step: 0.566407, text_gap: 0.582024, viusal_gap: 0.660570, audio_gap: 0.609073, cross_gap: 0.735184, gap: 0.849368
+2021-07-07 01:47:24,937:INFO: Epoch: 6/15, Step: 140/250, Lr: 0.000021, Text_Loss: 2.141592, Visual_Loss: 2.061950, Audio_Loss: 2.408345, Cross_Loss: 1.854015, Totual_Loss: 1.958999,  Time/step: 0.562945, text_gap: 0.638501, viusal_gap: 0.665326, audio_gap: 0.540660, cross_gap: 0.734596, gap: 0.846284
+2021-07-07 01:47:30,553:INFO: Epoch: 6/15, Step: 150/250, Lr: 0.000021, Text_Loss: 2.458439, Visual_Loss: 2.251787, Audio_Loss: 2.620706, Cross_Loss: 2.001372, Totual_Loss: 2.134054,  Time/step: 0.561635, text_gap: 0.557155, viusal_gap: 0.614203, audio_gap: 0.500528, cross_gap: 0.699064, gap: 0.795230
+2021-07-07 01:47:36,180:INFO: Epoch: 6/15, Step: 160/250, Lr: 0.000021, Text_Loss: 2.135212, Visual_Loss: 2.068766, Audio_Loss: 2.397644, Cross_Loss: 1.715976, Totual_Loss: 1.861345,  Time/step: 0.562621, text_gap: 0.626435, viusal_gap: 0.650805, audio_gap: 0.560340, cross_gap: 0.723137, gap: 0.882088
+2021-07-07 01:47:41,804:INFO: Epoch: 6/15, Step: 170/250, Lr: 0.000021, Text_Loss: 2.293208, Visual_Loss: 1.958832, Audio_Loss: 2.456420, Cross_Loss: 1.723594, Totual_Loss: 1.877362,  Time/step: 0.562378, text_gap: 0.553906, viusal_gap: 0.659671, audio_gap: 0.512749, cross_gap: 0.756330, gap: 0.846634
+2021-07-07 01:47:47,429:INFO: Epoch: 6/15, Step: 180/250, Lr: 0.000021, Text_Loss: 2.220371, Visual_Loss: 1.956461, Audio_Loss: 2.596224, Cross_Loss: 1.751977, Totual_Loss: 1.903689,  Time/step: 0.562458, text_gap: 0.649654, viusal_gap: 0.687139, audio_gap: 0.514182, cross_gap: 0.780749, gap: 0.905837
+2021-07-07 01:47:53,068:INFO: Epoch: 6/15, Step: 190/250, Lr: 0.000021, Text_Loss: 2.303877, Visual_Loss: 2.129734, Audio_Loss: 2.580664, Cross_Loss: 1.980869, Totual_Loss: 2.088036,  Time/step: 0.563917, text_gap: 0.571994, viusal_gap: 0.639355, audio_gap: 0.534562, cross_gap: 0.690826, gap: 0.810811
+2021-07-07 01:47:58,691:INFO: Epoch: 6/15, Step: 200/250, Lr: 0.000020, Text_Loss: 2.006968, Visual_Loss: 1.803622, Audio_Loss: 2.180624, Cross_Loss: 1.634667, Totual_Loss: 1.743388,  Time/step: 0.562258, text_gap: 0.691335, viusal_gap: 0.733392, audio_gap: 0.617955, cross_gap: 0.806572, gap: 0.901074
+2021-07-07 01:48:04,311:INFO: Epoch: 6/15, Step: 210/250, Lr: 0.000020, Text_Loss: 2.346402, Visual_Loss: 2.066462, Audio_Loss: 2.491546, Cross_Loss: 1.842471, Totual_Loss: 1.980171,  Time/step: 0.562016, text_gap: 0.594457, viusal_gap: 0.635988, audio_gap: 0.546893, cross_gap: 0.731683, gap: 0.862432
+2021-07-07 01:48:09,944:INFO: Epoch: 6/15, Step: 220/250, Lr: 0.000020, Text_Loss: 2.286354, Visual_Loss: 1.972490, Audio_Loss: 2.256429, Cross_Loss: 1.976056, Totual_Loss: 2.034766,  Time/step: 0.563244, text_gap: 0.628925, viusal_gap: 0.686746, audio_gap: 0.575988, cross_gap: 0.725926, gap: 0.834438
+2021-07-07 01:48:15,562:INFO: Epoch: 6/15, Step: 230/250, Lr: 0.000020, Text_Loss: 2.083003, Visual_Loss: 1.749749, Audio_Loss: 2.039786, Cross_Loss: 1.534516, Totual_Loss: 1.661415,  Time/step: 0.561741, text_gap: 0.666757, viusal_gap: 0.742395, audio_gap: 0.613528, cross_gap: 0.797279, gap: 0.899291
+2021-07-07 01:48:21,193:INFO: Epoch: 6/15, Step: 240/250, Lr: 0.000020, Text_Loss: 2.247346, Visual_Loss: 1.969076, Audio_Loss: 2.383719, Cross_Loss: 1.731842, Totual_Loss: 1.872304,  Time/step: 0.563146, text_gap: 0.612466, viusal_gap: 0.685863, audio_gap: 0.558421, cross_gap: 0.766954, gap: 0.854595
+2021-07-07 01:48:26,819:INFO: Epoch: 6/15, Step: 250/250, Lr: 0.000020, Text_Loss: 2.327639, Visual_Loss: 2.108606, Audio_Loss: 2.583418, Cross_Loss: 1.951716, Totual_Loss: 2.068167,  Time/step: 0.562534, text_gap: 0.635330, viusal_gap: 0.675591, audio_gap: 0.543636, cross_gap: 0.713149, gap: 0.824535
+2021-07-07 01:48:26,998:INFO: Fold 1 Epoch 6/15 Finished, Train Loss: 1.939245, Train_gap: 0.856342
+2021-07-07 01:48:26,999:INFO: ***** Running valing *****
+2021-07-07 01:48:26,999:INFO:   Num examples = 1000
+2021-07-07 01:48:26,999:INFO:   Batch_size = 16
+2021-07-07 01:48:37,517:INFO: ----- val_dataset text_gap: 0.734150, visual_gap: 0.782540, audio_gap: 0.691718, cross_gap: 0.796566, gap: 0.804069
+2021-07-07 01:48:43,033:INFO: Model saved to ckpts/ckpt/pytorch_model_0flod.bin.
+2021-07-07 01:48:43,033:INFO: The best model is: ckpts/ckpt/pytorch_model_0flod.bin., the gap is: 0.8041
+2021-07-07 01:48:50,387:INFO: Epoch: 7/15, Step: 10/250, Lr: 0.000020, Text_Loss: 2.322815, Visual_Loss: 2.005526, Audio_Loss: 2.406092, Cross_Loss: 1.656195, Totual_Loss: 1.832780,  Time/step: 0.709607, text_gap: 0.588922, viusal_gap: 0.714319, audio_gap: 0.566235, cross_gap: 0.794865, gap: 0.858195
+2021-07-07 01:48:56,007:INFO: Epoch: 7/15, Step: 20/250, Lr: 0.000020, Text_Loss: 2.118313, Visual_Loss: 1.913956, Audio_Loss: 2.265207, Cross_Loss: 1.727469, Totual_Loss: 1.838976,  Time/step: 0.561910, text_gap: 0.671433, viusal_gap: 0.730909, audio_gap: 0.610185, cross_gap: 0.785605, gap: 0.891719
+2021-07-07 01:49:01,641:INFO: Epoch: 7/15, Step: 30/250, Lr: 0.000020, Text_Loss: 2.331462, Visual_Loss: 2.225839, Audio_Loss: 2.456172, Cross_Loss: 2.000632, Totual_Loss: 2.101790,  Time/step: 0.563434, text_gap: 0.630619, viusal_gap: 0.651037, audio_gap: 0.584348, cross_gap: 0.727898, gap: 0.851074
+2021-07-07 01:49:07,298:INFO: Epoch: 7/15, Step: 40/250, Lr: 0.000020, Text_Loss: 2.262521, Visual_Loss: 2.122571, Audio_Loss: 2.391488, Cross_Loss: 1.684212, Totual_Loss: 1.856606,  Time/step: 0.565668, text_gap: 0.611914, viusal_gap: 0.675392, audio_gap: 0.573455, cross_gap: 0.761260, gap: 0.855535
+2021-07-07 01:49:12,923:INFO: Epoch: 7/15, Step: 50/250, Lr: 0.000020, Text_Loss: 2.262754, Visual_Loss: 1.992500, Audio_Loss: 2.259481, Cross_Loss: 1.549988, Totual_Loss: 1.736465,  Time/step: 0.562411, text_gap: 0.643348, viusal_gap: 0.693662, audio_gap: 0.591275, cross_gap: 0.799852, gap: 0.898296
+2021-07-07 01:49:18,543:INFO: Epoch: 7/15, Step: 60/250, Lr: 0.000019, Text_Loss: 2.119352, Visual_Loss: 1.816981, Audio_Loss: 2.483468, Cross_Loss: 1.605731, Totual_Loss: 1.765992,  Time/step: 0.562060, text_gap: 0.624281, viusal_gap: 0.765013, audio_gap: 0.555495, cross_gap: 0.812841, gap: 0.911521
+2021-07-07 01:49:24,178:INFO: Epoch: 7/15, Step: 70/250, Lr: 0.000019, Text_Loss: 2.299205, Visual_Loss: 1.846838, Audio_Loss: 2.287245, Cross_Loss: 1.526444, Totual_Loss: 1.711840,  Time/step: 0.563443, text_gap: 0.555165, viusal_gap: 0.718840, audio_gap: 0.542264, cross_gap: 0.820343, gap: 0.885369
+2021-07-07 01:49:29,803:INFO: Epoch: 7/15, Step: 80/250, Lr: 0.000019, Text_Loss: 2.407577, Visual_Loss: 1.906638, Audio_Loss: 2.389231, Cross_Loss: 1.809655, Totual_Loss: 1.937103,  Time/step: 0.562464, text_gap: 0.598580, viusal_gap: 0.691229, audio_gap: 0.554927, cross_gap: 0.786145, gap: 0.876304
+2021-07-07 01:49:35,435:INFO: Epoch: 7/15, Step: 90/250, Lr: 0.000019, Text_Loss: 2.268512, Visual_Loss: 2.025517, Audio_Loss: 2.505830, Cross_Loss: 2.010089, Totual_Loss: 2.087048,  Time/step: 0.563127, text_gap: 0.659118, viusal_gap: 0.695799, audio_gap: 0.535401, cross_gap: 0.746489, gap: 0.859478
+2021-07-07 01:49:41,068:INFO: Epoch: 7/15, Step: 100/250, Lr: 0.000019, Text_Loss: 2.204346, Visual_Loss: 1.780668, Audio_Loss: 2.309463, Cross_Loss: 1.712434, Totual_Loss: 1.828151,  Time/step: 0.563303, text_gap: 0.626621, viusal_gap: 0.728743, audio_gap: 0.599732, cross_gap: 0.762641, gap: 0.869988
+2021-07-07 01:49:46,720:INFO: Epoch: 7/15, Step: 110/250, Lr: 0.000019, Text_Loss: 1.811645, Visual_Loss: 1.598310, Audio_Loss: 2.151309, Cross_Loss: 1.318386, Totual_Loss: 1.478997,  Time/step: 0.565164, text_gap: 0.662396, viusal_gap: 0.763003, audio_gap: 0.572908, cross_gap: 0.836379, gap: 0.924617
+2021-07-07 01:49:52,340:INFO: Epoch: 7/15, Step: 120/250, Lr: 0.000019, Text_Loss: 2.380665, Visual_Loss: 2.179974, Audio_Loss: 2.609909, Cross_Loss: 1.907225, Totual_Loss: 2.052113,  Time/step: 0.561971, text_gap: 0.606734, viusal_gap: 0.629704, audio_gap: 0.507030, cross_gap: 0.721901, gap: 0.822124
+2021-07-07 01:49:57,972:INFO: Epoch: 7/15, Step: 130/250, Lr: 0.000019, Text_Loss: 2.217103, Visual_Loss: 1.739164, Audio_Loss: 2.312547, Cross_Loss: 1.732843, Totual_Loss: 1.839871,  Time/step: 0.563200, text_gap: 0.614201, viusal_gap: 0.773625, audio_gap: 0.568409, cross_gap: 0.786736, gap: 0.890684
+2021-07-07 01:50:03,589:INFO: Epoch: 7/15, Step: 140/250, Lr: 0.000019, Text_Loss: 2.113435, Visual_Loss: 1.901946, Audio_Loss: 2.353818, Cross_Loss: 1.552862, Totual_Loss: 1.723923,  Time/step: 0.561698, text_gap: 0.655055, viusal_gap: 0.743623, audio_gap: 0.572008, cross_gap: 0.808842, gap: 0.890049
+2021-07-07 01:50:09,222:INFO: Epoch: 7/15, Step: 150/250, Lr: 0.000019, Text_Loss: 2.100600, Visual_Loss: 1.872135, Audio_Loss: 2.534447, Cross_Loss: 1.938245, Totual_Loss: 2.007490,  Time/step: 0.563283, text_gap: 0.645570, viusal_gap: 0.700768, audio_gap: 0.528343, cross_gap: 0.719858, gap: 0.868583
+2021-07-07 01:50:14,853:INFO: Epoch: 7/15, Step: 160/250, Lr: 0.000019, Text_Loss: 2.356629, Visual_Loss: 2.158433, Audio_Loss: 2.356419, Cross_Loss: 1.833212, Totual_Loss: 1.970397,  Time/step: 0.563070, text_gap: 0.575711, viusal_gap: 0.674468, audio_gap: 0.576483, cross_gap: 0.736372, gap: 0.864119
+2021-07-07 01:50:20,476:INFO: Epoch: 7/15, Step: 170/250, Lr: 0.000018, Text_Loss: 2.185599, Visual_Loss: 1.718606, Audio_Loss: 2.312092, Cross_Loss: 1.766956, Totual_Loss: 1.858499,  Time/step: 0.562250, text_gap: 0.641594, viusal_gap: 0.791658, audio_gap: 0.592342, cross_gap: 0.786959, gap: 0.900531
+2021-07-07 01:50:26,148:INFO: Epoch: 7/15, Step: 180/250, Lr: 0.000018, Text_Loss: 2.120517, Visual_Loss: 1.887445, Audio_Loss: 2.289469, Cross_Loss: 1.580814, Totual_Loss: 1.736313,  Time/step: 0.567131, text_gap: 0.640598, viusal_gap: 0.678763, audio_gap: 0.568564, cross_gap: 0.811797, gap: 0.898409
+2021-07-07 01:50:31,807:INFO: Epoch: 7/15, Step: 190/250, Lr: 0.000018, Text_Loss: 2.117215, Visual_Loss: 1.996064, Audio_Loss: 2.205069, Cross_Loss: 1.645626, Totual_Loss: 1.783773,  Time/step: 0.565926, text_gap: 0.650294, viusal_gap: 0.686374, audio_gap: 0.562869, cross_gap: 0.776302, gap: 0.897009
+2021-07-07 01:50:37,431:INFO: Epoch: 7/15, Step: 200/250, Lr: 0.000018, Text_Loss: 2.154335, Visual_Loss: 1.967871, Audio_Loss: 2.251902, Cross_Loss: 1.891174, Totual_Loss: 1.961233,  Time/step: 0.562374, text_gap: 0.634837, viusal_gap: 0.705438, audio_gap: 0.578387, cross_gap: 0.739227, gap: 0.874945
+2021-07-07 01:50:43,086:INFO: Epoch: 7/15, Step: 210/250, Lr: 0.000018, Text_Loss: 2.198233, Visual_Loss: 1.922638, Audio_Loss: 2.468364, Cross_Loss: 1.658410, Totual_Loss: 1.819811,  Time/step: 0.565509, text_gap: 0.622234, viusal_gap: 0.711866, audio_gap: 0.520770, cross_gap: 0.802178, gap: 0.864040
+2021-07-07 01:50:48,761:INFO: Epoch: 7/15, Step: 220/250, Lr: 0.000018, Text_Loss: 2.312142, Visual_Loss: 1.978929, Audio_Loss: 2.389420, Cross_Loss: 1.743676, Totual_Loss: 1.888622,  Time/step: 0.567430, text_gap: 0.570289, viusal_gap: 0.673093, audio_gap: 0.564139, cross_gap: 0.716653, gap: 0.844406
+2021-07-07 01:50:54,391:INFO: Epoch: 7/15, Step: 230/250, Lr: 0.000018, Text_Loss: 2.140870, Visual_Loss: 2.144849, Audio_Loss: 2.581955, Cross_Loss: 1.687450, Totual_Loss: 1.867982,  Time/step: 0.562978, text_gap: 0.648282, viusal_gap: 0.669005, audio_gap: 0.534540, cross_gap: 0.784253, gap: 0.858167
+2021-07-07 01:51:00,023:INFO: Epoch: 7/15, Step: 240/250, Lr: 0.000018, Text_Loss: 2.317339, Visual_Loss: 2.082613, Audio_Loss: 2.493405, Cross_Loss: 1.847653, Totual_Loss: 1.982693,  Time/step: 0.563216, text_gap: 0.610372, viusal_gap: 0.657685, audio_gap: 0.554319, cross_gap: 0.752192, gap: 0.824937
+2021-07-07 01:51:05,672:INFO: Epoch: 7/15, Step: 250/250, Lr: 0.000018, Text_Loss: 2.162941, Visual_Loss: 1.764929, Audio_Loss: 2.267516, Cross_Loss: 1.603358, Totual_Loss: 1.741889,  Time/step: 0.564793, text_gap: 0.601307, viusal_gap: 0.710902, audio_gap: 0.569380, cross_gap: 0.816012, gap: 0.919466
+2021-07-07 01:51:05,847:INFO: Fold 1 Epoch 7/15 Finished, Train Loss: 1.852010, Train_gap: 0.878647
+2021-07-07 01:51:05,848:INFO: ***** Running valing *****
+2021-07-07 01:51:05,848:INFO:   Num examples = 1000
+2021-07-07 01:51:05,848:INFO:   Batch_size = 16
+2021-07-07 01:51:16,369:INFO: ----- val_dataset text_gap: 0.732834, visual_gap: 0.780252, audio_gap: 0.689488, cross_gap: 0.794314, gap: 0.803437
+2021-07-07 01:51:16,369:INFO: The best model is: ckpts/ckpt/pytorch_model_0flod.bin., the gap is: 0.8041
+2021-07-07 01:51:23,495:INFO: Epoch: 8/15, Step: 10/250, Lr: 0.000018, Text_Loss: 2.134346, Visual_Loss: 1.877072, Audio_Loss: 2.363437, Cross_Loss: 1.621685, Totual_Loss: 1.772665,  Time/step: 0.687658, text_gap: 0.672743, viusal_gap: 0.711291, audio_gap: 0.568028, cross_gap: 0.787943, gap: 0.898027
+2021-07-07 01:51:29,119:INFO: Epoch: 8/15, Step: 20/250, Lr: 0.000018, Text_Loss: 2.238612, Visual_Loss: 1.973454, Audio_Loss: 2.409147, Cross_Loss: 1.825562, Totual_Loss: 1.940015,  Time/step: 0.562331, text_gap: 0.642947, viusal_gap: 0.683923, audio_gap: 0.584309, cross_gap: 0.742628, gap: 0.895160

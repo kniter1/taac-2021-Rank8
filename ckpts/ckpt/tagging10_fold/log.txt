@@ -1,0 +1,987 @@
+2021-07-06 22:38:06,205:INFO: Effective parameters:
+2021-07-06 22:38:06,205:INFO:   <<< audio_dim: 128
+2021-07-06 22:38:06,205:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-06 22:38:06,206:INFO:   <<< audio_model: audio-base
+2021-07-06 22:38:06,206:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-06 22:38:06,206:INFO:   <<< batch_size: 16
+2021-07-06 22:38:06,206:INFO:   <<< bert_model: bert-base-chinese
+2021-07-06 22:38:06,206:INFO:   <<< bert_model_path: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/bert/pytorch_model.bin
+2021-07-06 22:38:06,206:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-06 22:38:06,206:INFO:   <<< coef_lr: 0.1
+2021-07-06 22:38:06,206:INFO:   <<< cross_model: cross-base
+2021-07-06 22:38:06,206:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-06 22:38:06,206:INFO:   <<< datatype: tagging
+2021-07-06 22:38:06,206:INFO:   <<< decoder_model: decoder-base
+2021-07-06 22:38:06,206:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-06 22:38:06,206:INFO:   <<< do_lower_case: True
+2021-07-06 22:38:06,206:INFO:   <<< do_pretrain: False
+2021-07-06 22:38:06,206:INFO:   <<< do_test: False
+2021-07-06 22:38:06,206:INFO:   <<< do_train: True
+2021-07-06 22:38:06,206:INFO:   <<< epochs: 15
+2021-07-06 22:38:06,206:INFO:   <<< feature_framerate: 1
+2021-07-06 22:38:06,206:INFO:   <<< fp16: False
+2021-07-06 22:38:06,206:INFO:   <<< fp16_opt_level: O1
+2021-07-06 22:38:06,206:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-06 22:38:06,206:INFO:   <<< hard_negative_rate: 0.5
+2021-07-06 22:38:06,206:INFO:   <<< init_model: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/ckpts/ckpt/pretrain_2nd/pytorch_model.bin.pretrain.47
+2021-07-06 22:38:06,206:INFO:   <<< k_fold: 5
+2021-07-06 22:38:06,206:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-06 22:38:06,206:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-06 22:38:06,206:INFO:   <<< local_rank: 0
+2021-07-06 22:38:06,206:INFO:   <<< lr: 3e-05
+2021-07-06 22:38:06,207:INFO:   <<< lr_decay: 0.9
+2021-07-06 22:38:06,207:INFO:   <<< margin: 0.1
+2021-07-06 22:38:06,207:INFO:   <<< max_frames: 100
+2021-07-06 22:38:06,207:INFO:   <<< max_sequence: 100
+2021-07-06 22:38:06,207:INFO:   <<< max_words: 200
+2021-07-06 22:38:06,207:INFO:   <<< n_display: 10
+2021-07-06 22:38:06,207:INFO:   <<< n_gpu: 1
+2021-07-06 22:38:06,207:INFO:   <<< n_pair: 1
+2021-07-06 22:38:06,207:INFO:   <<< negative_weighting: 1
+2021-07-06 22:38:06,207:INFO:   <<< num_labels: 82
+2021-07-06 22:38:06,207:INFO:   <<< num_thread_reader: 12
+2021-07-06 22:38:06,207:INFO:   <<< output_dir: ckpts/ckpt/tagging10_fold
+2021-07-06 22:38:06,207:INFO:   <<< output_json_file: None
+2021-07-06 22:38:06,207:INFO:   <<< sampled_use_mil: False
+2021-07-06 22:38:06,207:INFO:   <<< seed: 666
+2021-07-06 22:38:06,207:INFO:   <<< text_num_hidden_layers: 12
+2021-07-06 22:38:06,207:INFO:   <<< use_mil: False
+2021-07-06 22:38:06,207:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-06 22:38:06,207:INFO:   <<< video_dim: 1024
+2021-07-06 22:38:06,207:INFO:   <<< video_features_path: /home/tione/notebook/VIT_L_train_5k_features
+2021-07-06 22:38:06,207:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-06 22:38:06,207:INFO:   <<< visual_model: visual-base
+2021-07-06 22:38:06,207:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-06 22:38:06,207:INFO:   <<< warmup_proportion: 0.1
+2021-07-06 22:38:06,207:INFO:   <<< world_size: 0
+2021-07-06 22:38:06,208:INFO: device: cuda:0 n_gpu: 1
+2021-07-06 22:38:07,180:INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at /home/tione/.pytorch_pretrained_bert/8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+2021-07-06 22:38:07,241:INFO: ***** k_fold traing:5 *****
+2021-07-06 22:38:07,252:INFO: ***** 1 fold strat *****
+2021-07-06 23:13:29,388:INFO: Effective parameters:
+2021-07-06 23:13:29,389:INFO:   <<< audio_dim: 128
+2021-07-06 23:13:29,389:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-06 23:13:29,389:INFO:   <<< audio_model: audio-base
+2021-07-06 23:13:29,389:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-06 23:13:29,389:INFO:   <<< batch_size: 16
+2021-07-06 23:13:29,389:INFO:   <<< bert_model: bert-base-chinese
+2021-07-06 23:13:29,389:INFO:   <<< bert_model_path: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/bert/pytorch_model.bin
+2021-07-06 23:13:29,389:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-06 23:13:29,389:INFO:   <<< coef_lr: 0.1
+2021-07-06 23:13:29,389:INFO:   <<< cross_model: cross-base
+2021-07-06 23:13:29,389:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-06 23:13:29,389:INFO:   <<< datatype: tagging
+2021-07-06 23:13:29,389:INFO:   <<< decoder_model: decoder-base
+2021-07-06 23:13:29,389:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-06 23:13:29,389:INFO:   <<< do_lower_case: True
+2021-07-06 23:13:29,389:INFO:   <<< do_pretrain: False
+2021-07-06 23:13:29,389:INFO:   <<< do_test: False
+2021-07-06 23:13:29,389:INFO:   <<< do_train: True
+2021-07-06 23:13:29,389:INFO:   <<< epochs: 15
+2021-07-06 23:13:29,389:INFO:   <<< feature_framerate: 1
+2021-07-06 23:13:29,389:INFO:   <<< fp16: False
+2021-07-06 23:13:29,389:INFO:   <<< fp16_opt_level: O1
+2021-07-06 23:13:29,390:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-06 23:13:29,390:INFO:   <<< hard_negative_rate: 0.5
+2021-07-06 23:13:29,390:INFO:   <<< init_model: /home/tione/notebook/taac-2021-神奈川冲浪里/pretrained_models/UniVL_Pretrained_models/pytorch_model.bin.pretrain
+2021-07-06 23:13:29,390:INFO:   <<< k_fold: 5
+2021-07-06 23:13:29,390:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-06 23:13:29,390:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-06 23:13:29,390:INFO:   <<< local_rank: 0
+2021-07-06 23:13:29,390:INFO:   <<< lr: 3e-05
+2021-07-06 23:13:29,390:INFO:   <<< lr_decay: 0.9
+2021-07-06 23:13:29,390:INFO:   <<< margin: 0.1
+2021-07-06 23:13:29,390:INFO:   <<< max_frames: 100
+2021-07-06 23:13:29,390:INFO:   <<< max_sequence: 100
+2021-07-06 23:13:29,390:INFO:   <<< max_words: 200
+2021-07-06 23:13:29,390:INFO:   <<< n_display: 10
+2021-07-06 23:13:29,390:INFO:   <<< n_gpu: 1
+2021-07-06 23:13:29,390:INFO:   <<< n_pair: 1
+2021-07-06 23:13:29,390:INFO:   <<< negative_weighting: 1
+2021-07-06 23:13:29,390:INFO:   <<< num_labels: 82
+2021-07-06 23:13:29,390:INFO:   <<< num_thread_reader: 12
+2021-07-06 23:13:29,390:INFO:   <<< output_dir: ckpts/ckpt/tagging10_fold
+2021-07-06 23:13:29,390:INFO:   <<< output_json_file: None
+2021-07-06 23:13:29,390:INFO:   <<< sampled_use_mil: False
+2021-07-06 23:13:29,390:INFO:   <<< seed: 666
+2021-07-06 23:13:29,390:INFO:   <<< text_num_hidden_layers: 12
+2021-07-06 23:13:29,390:INFO:   <<< use_mil: False
+2021-07-06 23:13:29,390:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-06 23:13:29,390:INFO:   <<< video_dim: 1024
+2021-07-06 23:13:29,390:INFO:   <<< video_features_path: /home/tione/notebook/VIT_L_train_5k_features
+2021-07-06 23:13:29,391:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-06 23:13:29,391:INFO:   <<< visual_model: visual-base
+2021-07-06 23:13:29,391:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-06 23:13:29,391:INFO:   <<< warmup_proportion: 0.1
+2021-07-06 23:13:29,391:INFO:   <<< world_size: 0
+2021-07-06 23:13:29,391:INFO: device: cuda:0 n_gpu: 1
+2021-07-06 23:13:41,334:INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at /home/tione/.pytorch_pretrained_bert/8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+2021-07-06 23:13:41,383:INFO: ***** k_fold traing:5 *****
+2021-07-06 23:13:41,395:INFO: ***** 1 fold strat *****
+2021-07-06 23:21:18,137:INFO: Effective parameters:
+2021-07-06 23:21:18,137:INFO:   <<< audio_dim: 128
+2021-07-06 23:21:18,137:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-06 23:21:18,137:INFO:   <<< audio_model: audio-base
+2021-07-06 23:21:18,137:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-06 23:21:18,138:INFO:   <<< batch_size: 16
+2021-07-06 23:21:18,138:INFO:   <<< bert_model: bert-base-chinese
+2021-07-06 23:21:18,138:INFO:   <<< bert_model_path: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/bert/pytorch_model.bin
+2021-07-06 23:21:18,138:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-06 23:21:18,138:INFO:   <<< coef_lr: 0.1
+2021-07-06 23:21:18,138:INFO:   <<< cross_model: cross-base
+2021-07-06 23:21:18,138:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-06 23:21:18,138:INFO:   <<< datatype: tagging
+2021-07-06 23:21:18,138:INFO:   <<< decoder_model: decoder-base
+2021-07-06 23:21:18,138:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-06 23:21:18,138:INFO:   <<< do_lower_case: True
+2021-07-06 23:21:18,138:INFO:   <<< do_pretrain: False
+2021-07-06 23:21:18,138:INFO:   <<< do_test: False
+2021-07-06 23:21:18,138:INFO:   <<< do_train: True
+2021-07-06 23:21:18,138:INFO:   <<< epochs: 15
+2021-07-06 23:21:18,138:INFO:   <<< feature_framerate: 1
+2021-07-06 23:21:18,138:INFO:   <<< fp16: False
+2021-07-06 23:21:18,138:INFO:   <<< fp16_opt_level: O1
+2021-07-06 23:21:18,138:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-06 23:21:18,138:INFO:   <<< hard_negative_rate: 0.5
+2021-07-06 23:21:18,138:INFO:   <<< init_model: /home/tione/notebook/taac-2021-神奈川冲浪里/pretrained_models/UniVL_Pretrained_models/pytorch_model.bin.pretrain
+2021-07-06 23:21:18,138:INFO:   <<< k_fold: 5
+2021-07-06 23:21:18,138:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-06 23:21:18,138:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-06 23:21:18,138:INFO:   <<< local_rank: 0
+2021-07-06 23:21:18,138:INFO:   <<< lr: 3e-05
+2021-07-06 23:21:18,138:INFO:   <<< lr_decay: 0.9
+2021-07-06 23:21:18,139:INFO:   <<< margin: 0.1
+2021-07-06 23:21:18,139:INFO:   <<< max_frames: 100
+2021-07-06 23:21:18,139:INFO:   <<< max_sequence: 100
+2021-07-06 23:21:18,139:INFO:   <<< max_words: 200
+2021-07-06 23:21:18,139:INFO:   <<< n_display: 10
+2021-07-06 23:21:18,139:INFO:   <<< n_gpu: 1
+2021-07-06 23:21:18,139:INFO:   <<< n_pair: 1
+2021-07-06 23:21:18,139:INFO:   <<< negative_weighting: 1
+2021-07-06 23:21:18,139:INFO:   <<< num_labels: 82
+2021-07-06 23:21:18,139:INFO:   <<< num_thread_reader: 12
+2021-07-06 23:21:18,139:INFO:   <<< output_dir: ckpts/ckpt/tagging10_fold
+2021-07-06 23:21:18,139:INFO:   <<< output_json_file: None
+2021-07-06 23:21:18,139:INFO:   <<< sampled_use_mil: False
+2021-07-06 23:21:18,139:INFO:   <<< seed: 666
+2021-07-06 23:21:18,139:INFO:   <<< text_num_hidden_layers: 12
+2021-07-06 23:21:18,139:INFO:   <<< use_mil: False
+2021-07-06 23:21:18,139:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-06 23:21:18,139:INFO:   <<< video_dim: 1024
+2021-07-06 23:21:18,139:INFO:   <<< video_features_path: /home/tione/notebook/VIT_L_train_5k_features
+2021-07-06 23:21:18,139:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-06 23:21:18,139:INFO:   <<< visual_model: visual-base
+2021-07-06 23:21:18,139:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-06 23:21:18,139:INFO:   <<< warmup_proportion: 0.1
+2021-07-06 23:21:18,139:INFO:   <<< world_size: 0
+2021-07-06 23:21:18,140:INFO: device: cuda:0 n_gpu: 1
+2021-07-06 23:21:19,161:INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at /home/tione/.pytorch_pretrained_bert/8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+2021-07-06 23:21:19,210:INFO: ***** k_fold traing:5 *****
+2021-07-06 23:21:19,221:INFO: ***** 1 fold strat *****
+2021-07-06 23:21:26,057:INFO: loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese.tar.gz from cache at /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache/42d4a64dda3243ffeca7ec268d5544122e67d9d06b971608796b483925716512.02ac7d664cff08d793eb00d6aac1d04368a1322435e5fe0a27c70b0b3a85327f
+2021-07-06 23:21:26,059:INFO: extracting archive file /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache/42d4a64dda3243ffeca7ec268d5544122e67d9d06b971608796b483925716512.02ac7d664cff08d793eb00d6aac1d04368a1322435e5fe0a27c70b0b3a85327f to temp dir /tmp/tmp14hzfs80
+2021-07-06 23:21:29,841:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+
+2021-07-06 23:21:29,917:INFO: loading archive file /home/tione/notebook/taac-2021-神奈川冲浪里/src/modules/visual-base
+2021-07-06 23:21:29,917:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 1,
+  "type_vocab_size": 2,
+  "vocab_size": 1024
+}
+
+2021-07-06 23:21:29,917:INFO: Weight doesn't exsits. /home/tione/notebook/taac-2021-神奈川冲浪里/src/modules/visual-base/visual_pytorch_model.bin
+2021-07-06 23:21:29,917:INFO: loading archive file /home/tione/notebook/taac-2021-神奈川冲浪里/src/modules/audio-base
+2021-07-06 23:21:29,917:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 1,
+  "type_vocab_size": 2,
+  "vocab_size": 128
+}
+
+2021-07-06 23:21:29,918:INFO: Weight doesn't exsits. /home/tione/notebook/taac-2021-神奈川冲浪里/src/modules/audio-base/audio_model.bin
+2021-07-06 23:21:29,918:INFO: loading archive file /home/tione/notebook/taac-2021-神奈川冲浪里/src/modules/cross-base
+2021-07-06 23:21:29,918:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 1024,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 2,
+  "type_vocab_size": 2,
+  "vocab_size": 768
+}
+
+2021-07-06 23:21:29,918:INFO: Weight doesn't exsits. /home/tione/notebook/taac-2021-神奈川冲浪里/src/modules/cross-base/cross_pytorch_model.bin
+2021-07-06 23:21:29,918:WARNING: Set bert_config.num_hidden_layers: 12.
+2021-07-06 23:21:31,526:WARNING: Set visual_config.num_hidden_layers: 6.
+2021-07-06 23:21:32,133:WARNING: Set audio_config.num_hidden_layers: 3.
+2021-07-06 23:21:32,497:WARNING: Set cross_config.num_hidden_layers: 2.
+2021-07-06 23:21:35,368:INFO: --------------------
+2021-07-06 23:21:35,368:INFO: Weights from pretrained model not used in Tagging_UniVL: 
+   cls.predictions.bias
+   cls.predictions.transform.dense.weight
+   cls.predictions.transform.dense.bias
+   cls.predictions.transform.LayerNorm.weight
+   cls.predictions.transform.LayerNorm.bias
+   cls.predictions.decoder.weight
+   cls_visual.predictions.weight
+   cls_visual.predictions.bias
+   cls_visual.predictions.transform.dense.weight
+   cls_visual.predictions.transform.dense.bias
+   cls_visual.predictions.transform.LayerNorm.weight
+   cls_visual.predictions.transform.LayerNorm.bias
+   cls_audio.predictions.weight
+   cls_audio.predictions.bias
+   cls_audio.predictions.transform.dense.weight
+   cls_audio.predictions.transform.dense.bias
+   cls_audio.predictions.transform.LayerNorm.weight
+   cls_audio.predictions.transform.LayerNorm.bias
+2021-07-06 23:23:43,480:INFO: ***** Running training *****
+2021-07-06 23:23:43,481:INFO:   Num examples = 4000
+2021-07-06 23:23:43,481:INFO:   Batch size = 16
+2021-07-06 23:23:43,481:INFO:   Num steps = 3750
+2021-07-06 23:23:50,552:INFO: Epoch: 1/15, Step: 10/250, Lr: 0.000001, Text_Loss: 10.836533, Visual_Loss: 10.322155, Audio_Loss: 10.368849, Cross_Loss: 9.715611, Totual_Loss: 9.953681,  Time/step: 0.706926, text_gap: 0.053052, viusal_gap: 0.037331, audio_gap: 0.030511, cross_gap: 0.049140, gap: 0.064389
+2021-07-06 23:23:56,324:INFO: Epoch: 1/15, Step: 20/250, Lr: 0.000002, Text_Loss: 10.145945, Visual_Loss: 9.839502, Audio_Loss: 9.435015, Cross_Loss: 8.179739, Totual_Loss: 8.667864,  Time/step: 0.577212, text_gap: 0.077450, viusal_gap: 0.041657, audio_gap: 0.070398, cross_gap: 0.105548, gap: 0.148504
+2021-07-06 23:24:02,013:INFO: Epoch: 1/15, Step: 30/250, Lr: 0.000002, Text_Loss: 9.233702, Visual_Loss: 9.066969, Audio_Loss: 8.154343, Cross_Loss: 6.283161, Totual_Loss: 7.043714,  Time/step: 0.568866, text_gap: 0.120440, viusal_gap: 0.088825, audio_gap: 0.110862, cross_gap: 0.191419, gap: 0.274166
+2021-07-06 23:24:07,757:INFO: Epoch: 1/15, Step: 40/250, Lr: 0.000003, Text_Loss: 7.700859, Visual_Loss: 7.866234, Audio_Loss: 6.458732, Cross_Loss: 4.595869, Totual_Loss: 5.419690,  Time/step: 0.574316, text_gap: 0.197501, viusal_gap: 0.166997, audio_gap: 0.216909, cross_gap: 0.371080, gap: 0.421524
+2021-07-06 23:24:13,430:INFO: Epoch: 1/15, Step: 50/250, Lr: 0.000004, Text_Loss: 6.280438, Visual_Loss: 5.515985, Audio_Loss: 4.854694, Cross_Loss: 3.669925, Totual_Loss: 4.234059,  Time/step: 0.567339, text_gap: 0.247156, viusal_gap: 0.376521, audio_gap: 0.304970, cross_gap: 0.416227, gap: 0.468231
+2021-07-06 23:24:19,141:INFO: Epoch: 1/15, Step: 60/250, Lr: 0.000005, Text_Loss: 4.778447, Visual_Loss: 3.841323, Audio_Loss: 3.632274, Cross_Loss: 3.280996, Totual_Loss: 3.521902,  Time/step: 0.571103, text_gap: 0.360923, viusal_gap: 0.359887, audio_gap: 0.366461, cross_gap: 0.419283, gap: 0.466858
+2021-07-06 23:24:24,918:INFO: Epoch: 1/15, Step: 70/250, Lr: 0.000006, Text_Loss: 3.810294, Visual_Loss: 3.316073, Audio_Loss: 3.159533, Cross_Loss: 2.928815, Totual_Loss: 3.078761,  Time/step: 0.577583, text_gap: 0.363917, viusal_gap: 0.391613, audio_gap: 0.433752, cross_gap: 0.451086, gap: 0.505432
+2021-07-06 23:24:30,668:INFO: Epoch: 1/15, Step: 80/250, Lr: 0.000006, Text_Loss: 3.108785, Visual_Loss: 2.861879, Audio_Loss: 2.932573, Cross_Loss: 2.798781, Totual_Loss: 2.849471,  Time/step: 0.575040, text_gap: 0.407391, viusal_gap: 0.408153, audio_gap: 0.401481, cross_gap: 0.403247, gap: 0.481120
+2021-07-06 23:24:36,386:INFO: Epoch: 1/15, Step: 90/250, Lr: 0.000007, Text_Loss: 3.101373, Visual_Loss: 2.958055, Audio_Loss: 3.041285, Cross_Loss: 2.919409, Totual_Loss: 2.953658,  Time/step: 0.571775, text_gap: 0.391780, viusal_gap: 0.398126, audio_gap: 0.364420, cross_gap: 0.410761, gap: 0.503830
+2021-07-06 23:24:42,380:INFO: Epoch: 1/15, Step: 100/250, Lr: 0.000008, Text_Loss: 3.362273, Visual_Loss: 3.086785, Audio_Loss: 3.241838, Cross_Loss: 3.160424, Totual_Loss: 3.181386,  Time/step: 0.599386, text_gap: 0.395717, viusal_gap: 0.437436, audio_gap: 0.395446, cross_gap: 0.415082, gap: 0.536874
+2021-07-06 23:24:48,137:INFO: Epoch: 1/15, Step: 110/250, Lr: 0.000009, Text_Loss: 2.943622, Visual_Loss: 2.728754, Audio_Loss: 2.735745, Cross_Loss: 2.599679, Totual_Loss: 2.660588,  Time/step: 0.575611, text_gap: 0.421249, viusal_gap: 0.467891, audio_gap: 0.453596, cross_gap: 0.497802, gap: 0.615875
+2021-07-06 23:24:53,869:INFO: Epoch: 1/15, Step: 120/250, Lr: 0.000010, Text_Loss: 2.928159, Visual_Loss: 2.997453, Audio_Loss: 3.044927, Cross_Loss: 2.864804, Totual_Loss: 2.902416,  Time/step: 0.573241, text_gap: 0.411922, viusal_gap: 0.403892, audio_gap: 0.399846, cross_gap: 0.461155, gap: 0.565060
+2021-07-06 23:24:59,576:INFO: Epoch: 1/15, Step: 130/250, Lr: 0.000010, Text_Loss: 2.985625, Visual_Loss: 2.983752, Audio_Loss: 3.070492, Cross_Loss: 2.666814, Totual_Loss: 2.770757,  Time/step: 0.570626, text_gap: 0.406174, viusal_gap: 0.432083, audio_gap: 0.377641, cross_gap: 0.515553, gap: 0.591225
+2021-07-06 23:25:05,298:INFO: Epoch: 1/15, Step: 140/250, Lr: 0.000011, Text_Loss: 2.848202, Visual_Loss: 2.782145, Audio_Loss: 3.023910, Cross_Loss: 2.828500, Totual_Loss: 2.845376,  Time/step: 0.572172, text_gap: 0.452299, viusal_gap: 0.500613, audio_gap: 0.390906, cross_gap: 0.478400, gap: 0.569845
+2021-07-06 23:25:10,998:INFO: Epoch: 1/15, Step: 150/250, Lr: 0.000012, Text_Loss: 2.881267, Visual_Loss: 2.923572, Audio_Loss: 3.057964, Cross_Loss: 2.892220, Totual_Loss: 2.910835,  Time/step: 0.569983, text_gap: 0.459110, viusal_gap: 0.436508, audio_gap: 0.404694, cross_gap: 0.462736, gap: 0.590175
+2021-07-06 23:25:16,689:INFO: Epoch: 1/15, Step: 160/250, Lr: 0.000013, Text_Loss: 2.704036, Visual_Loss: 2.617007, Audio_Loss: 2.722153, Cross_Loss: 2.501069, Totual_Loss: 2.555068,  Time/step: 0.569034, text_gap: 0.469937, viusal_gap: 0.487539, audio_gap: 0.461299, cross_gap: 0.519606, gap: 0.630619
+2021-07-06 23:25:22,423:INFO: Epoch: 1/15, Step: 170/250, Lr: 0.000014, Text_Loss: 2.618649, Visual_Loss: 2.587168, Audio_Loss: 2.725082, Cross_Loss: 2.382330, Totual_Loss: 2.460721,  Time/step: 0.573374, text_gap: 0.486948, viusal_gap: 0.458890, audio_gap: 0.413822, cross_gap: 0.546184, gap: 0.680112
+2021-07-06 23:25:28,155:INFO: Epoch: 1/15, Step: 180/250, Lr: 0.000014, Text_Loss: 2.784866, Visual_Loss: 2.694513, Audio_Loss: 2.821247, Cross_Loss: 2.501886, Totual_Loss: 2.581383,  Time/step: 0.573223, text_gap: 0.454752, viusal_gap: 0.491596, audio_gap: 0.431747, cross_gap: 0.530557, gap: 0.626049
+2021-07-06 23:25:33,899:INFO: Epoch: 1/15, Step: 190/250, Lr: 0.000015, Text_Loss: 2.819305, Visual_Loss: 2.761692, Audio_Loss: 2.924620, Cross_Loss: 2.525253, Totual_Loss: 2.618239,  Time/step: 0.574419, text_gap: 0.436879, viusal_gap: 0.465487, audio_gap: 0.409194, cross_gap: 0.508465, gap: 0.604133
+2021-07-06 23:25:39,636:INFO: Epoch: 1/15, Step: 200/250, Lr: 0.000016, Text_Loss: 2.607251, Visual_Loss: 2.855825, Audio_Loss: 2.818634, Cross_Loss: 2.578393, Totual_Loss: 2.633046,  Time/step: 0.573620, text_gap: 0.507905, viusal_gap: 0.464378, audio_gap: 0.426455, cross_gap: 0.518684, gap: 0.617666
+2021-07-06 23:25:45,391:INFO: Epoch: 1/15, Step: 210/250, Lr: 0.000017, Text_Loss: 3.035762, Visual_Loss: 2.848275, Audio_Loss: 2.913044, Cross_Loss: 2.690787, Totual_Loss: 2.763259,  Time/step: 0.575522, text_gap: 0.439181, viusal_gap: 0.484932, audio_gap: 0.462635, cross_gap: 0.516331, gap: 0.609674
+2021-07-06 23:25:51,124:INFO: Epoch: 1/15, Step: 220/250, Lr: 0.000018, Text_Loss: 2.603111, Visual_Loss: 2.637631, Audio_Loss: 2.800899, Cross_Loss: 2.516933, Totual_Loss: 2.566017,  Time/step: 0.573273, text_gap: 0.462222, viusal_gap: 0.491324, audio_gap: 0.397860, cross_gap: 0.523347, gap: 0.638856
+2021-07-06 23:25:56,883:INFO: Epoch: 1/15, Step: 230/250, Lr: 0.000018, Text_Loss: 2.710715, Visual_Loss: 2.814582, Audio_Loss: 2.801458, Cross_Loss: 2.593756, Totual_Loss: 2.648305,  Time/step: 0.575847, text_gap: 0.453101, viusal_gap: 0.471367, audio_gap: 0.441875, cross_gap: 0.503981, gap: 0.632776
+2021-07-06 23:26:02,647:INFO: Epoch: 1/15, Step: 240/250, Lr: 0.000019, Text_Loss: 2.637454, Visual_Loss: 2.440896, Audio_Loss: 2.742579, Cross_Loss: 2.411281, Totual_Loss: 2.469990,  Time/step: 0.576387, text_gap: 0.489904, viusal_gap: 0.509564, audio_gap: 0.455351, cross_gap: 0.544453, gap: 0.658911
+2021-07-06 23:26:08,321:INFO: Epoch: 1/15, Step: 250/250, Lr: 0.000020, Text_Loss: 2.397376, Visual_Loss: 2.482811, Audio_Loss: 2.503355, Cross_Loss: 2.096348, Totual_Loss: 2.205797,  Time/step: 0.567355, text_gap: 0.538689, viusal_gap: 0.572165, audio_gap: 0.527118, cross_gap: 0.674907, gap: 0.760958
+2021-07-06 23:26:08,519:INFO: Fold 1 Epoch 1/15 Finished, Train Loss: 3.766500, Train_gap: 0.524655
+2021-07-06 23:26:08,520:INFO: ***** Running valing *****
+2021-07-06 23:26:08,520:INFO:   Num examples = 1000
+2021-07-06 23:26:08,520:INFO:   Batch_size = 16
+2021-07-06 23:26:19,222:INFO: ----- val_dataset text_gap: 0.668866, visual_gap: 0.712912, audio_gap: 0.644083, cross_gap: 0.740323, gap: 0.732109
+2021-07-06 23:26:21,048:INFO: Model saved to ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin.
+2021-07-06 23:26:21,048:INFO: The best model is: ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin., the gap is: 0.7321
+2021-07-06 23:26:28,424:INFO: Epoch: 2/15, Step: 10/250, Lr: 0.000021, Text_Loss: 2.813983, Visual_Loss: 2.780678, Audio_Loss: 3.017010, Cross_Loss: 2.642923, Totual_Loss: 2.711213,  Time/step: 0.715757, text_gap: 0.473815, viusal_gap: 0.498023, audio_gap: 0.428119, cross_gap: 0.535039, gap: 0.652811
+2021-07-06 23:26:34,136:INFO: Epoch: 2/15, Step: 20/250, Lr: 0.000022, Text_Loss: 2.691622, Visual_Loss: 2.519449, Audio_Loss: 2.730567, Cross_Loss: 2.490799, Totual_Loss: 2.537724,  Time/step: 0.571106, text_gap: 0.480792, viusal_gap: 0.541452, audio_gap: 0.462793, cross_gap: 0.555315, gap: 0.673771
+2021-07-06 23:26:39,792:INFO: Epoch: 2/15, Step: 30/250, Lr: 0.000022, Text_Loss: 2.715482, Visual_Loss: 2.585679, Audio_Loss: 2.807805, Cross_Loss: 2.534505, Totual_Loss: 2.585050,  Time/step: 0.565611, text_gap: 0.496117, viusal_gap: 0.529771, audio_gap: 0.479238, cross_gap: 0.581354, gap: 0.663256
+2021-07-06 23:26:45,433:INFO: Epoch: 2/15, Step: 40/250, Lr: 0.000023, Text_Loss: 2.378787, Visual_Loss: 2.375289, Audio_Loss: 2.615064, Cross_Loss: 2.167679, Totual_Loss: 2.254289,  Time/step: 0.564072, text_gap: 0.538020, viusal_gap: 0.570078, audio_gap: 0.481707, cross_gap: 0.617303, gap: 0.738025
+2021-07-06 23:26:51,134:INFO: Epoch: 2/15, Step: 50/250, Lr: 0.000024, Text_Loss: 2.748654, Visual_Loss: 2.536032, Audio_Loss: 2.929061, Cross_Loss: 2.502278, Totual_Loss: 2.572969,  Time/step: 0.570091, text_gap: 0.474395, viusal_gap: 0.506492, audio_gap: 0.444172, cross_gap: 0.554441, gap: 0.695072
+2021-07-06 23:26:56,800:INFO: Epoch: 2/15, Step: 60/250, Lr: 0.000025, Text_Loss: 2.578533, Visual_Loss: 2.307200, Audio_Loss: 2.684064, Cross_Loss: 2.325166, Totual_Loss: 2.384596,  Time/step: 0.566557, text_gap: 0.502257, viusal_gap: 0.608629, audio_gap: 0.504566, cross_gap: 0.571454, gap: 0.703268
+2021-07-06 23:27:03,261:INFO: Epoch: 2/15, Step: 70/250, Lr: 0.000026, Text_Loss: 2.582749, Visual_Loss: 2.387161, Audio_Loss: 2.794975, Cross_Loss: 2.423190, Totual_Loss: 2.472722,  Time/step: 0.564807, text_gap: 0.527004, viusal_gap: 0.583014, audio_gap: 0.472670, cross_gap: 0.591691, gap: 0.725905
+2021-07-06 23:27:08,900:INFO: Epoch: 2/15, Step: 80/250, Lr: 0.000026, Text_Loss: 2.779325, Visual_Loss: 2.697981, Audio_Loss: 2.735027, Cross_Loss: 2.405763, Totual_Loss: 2.505267,  Time/step: 0.563897, text_gap: 0.469997, viusal_gap: 0.514895, audio_gap: 0.501030, cross_gap: 0.597745, gap: 0.713348
+2021-07-06 23:27:14,595:INFO: Epoch: 2/15, Step: 90/250, Lr: 0.000027, Text_Loss: 2.795020, Visual_Loss: 2.782312, Audio_Loss: 2.909844, Cross_Loss: 2.601753, Totual_Loss: 2.669945,  Time/step: 0.569469, text_gap: 0.484402, viusal_gap: 0.503355, audio_gap: 0.462249, cross_gap: 0.558987, gap: 0.666629
+2021-07-06 23:27:20,318:INFO: Epoch: 2/15, Step: 100/250, Lr: 0.000028, Text_Loss: 2.411164, Visual_Loss: 2.240703, Audio_Loss: 2.545928, Cross_Loss: 2.143083, Totual_Loss: 2.219938,  Time/step: 0.572248, text_gap: 0.560862, viusal_gap: 0.615621, audio_gap: 0.489253, cross_gap: 0.617948, gap: 0.758496
+2021-07-06 23:27:26,081:INFO: Epoch: 2/15, Step: 110/250, Lr: 0.000029, Text_Loss: 2.479665, Visual_Loss: 2.436175, Audio_Loss: 2.675123, Cross_Loss: 2.341046, Totual_Loss: 2.397829,  Time/step: 0.576274, text_gap: 0.492431, viusal_gap: 0.540160, audio_gap: 0.419183, cross_gap: 0.551616, gap: 0.679675
+2021-07-06 23:27:31,876:INFO: Epoch: 2/15, Step: 120/250, Lr: 0.000030, Text_Loss: 2.653611, Visual_Loss: 2.284453, Audio_Loss: 2.511396, Cross_Loss: 2.299006, Totual_Loss: 2.354250,  Time/step: 0.579278, text_gap: 0.482035, viusal_gap: 0.579264, audio_gap: 0.498369, cross_gap: 0.591298, gap: 0.711900
+2021-07-06 23:27:37,610:INFO: Epoch: 2/15, Step: 130/250, Lr: 0.000030, Text_Loss: 2.656688, Visual_Loss: 2.477278, Audio_Loss: 2.790728, Cross_Loss: 2.490860, Totual_Loss: 2.536072,  Time/step: 0.573335, text_gap: 0.475004, viusal_gap: 0.535576, audio_gap: 0.469981, cross_gap: 0.568344, gap: 0.686756
+2021-07-06 23:27:43,365:INFO: Epoch: 2/15, Step: 140/250, Lr: 0.000030, Text_Loss: 2.520604, Visual_Loss: 2.587442, Audio_Loss: 2.737590, Cross_Loss: 2.480946, Totual_Loss: 2.521226,  Time/step: 0.575527, text_gap: 0.536923, viusal_gap: 0.561047, audio_gap: 0.512320, cross_gap: 0.579113, gap: 0.688434
+2021-07-06 23:27:49,079:INFO: Epoch: 2/15, Step: 150/250, Lr: 0.000030, Text_Loss: 2.450618, Visual_Loss: 2.245063, Audio_Loss: 2.552825, Cross_Loss: 2.513436, Totual_Loss: 2.484256,  Time/step: 0.571347, text_gap: 0.536970, viusal_gap: 0.623288, audio_gap: 0.506019, cross_gap: 0.581195, gap: 0.692893
+2021-07-06 23:27:54,913:INFO: Epoch: 2/15, Step: 160/250, Lr: 0.000030, Text_Loss: 2.583642, Visual_Loss: 2.557503, Audio_Loss: 2.745002, Cross_Loss: 2.488175, Totual_Loss: 2.530337,  Time/step: 0.583386, text_gap: 0.503645, viusal_gap: 0.534614, audio_gap: 0.495158, cross_gap: 0.545025, gap: 0.705178
+2021-07-06 23:28:00,658:INFO: Epoch: 2/15, Step: 170/250, Lr: 0.000030, Text_Loss: 2.793295, Visual_Loss: 2.304131, Audio_Loss: 2.579009, Cross_Loss: 2.424924, Totual_Loss: 2.465091,  Time/step: 0.574521, text_gap: 0.471196, viusal_gap: 0.611984, audio_gap: 0.509923, cross_gap: 0.585276, gap: 0.679293
+2021-07-06 23:28:06,342:INFO: Epoch: 2/15, Step: 180/250, Lr: 0.000030, Text_Loss: 2.562526, Visual_Loss: 2.383167, Audio_Loss: 2.484211, Cross_Loss: 2.238045, Totual_Loss: 2.309622,  Time/step: 0.568341, text_gap: 0.510366, viusal_gap: 0.561424, audio_gap: 0.542327, cross_gap: 0.585194, gap: 0.731504
+2021-07-06 23:28:12,071:INFO: Epoch: 2/15, Step: 190/250, Lr: 0.000029, Text_Loss: 2.721315, Visual_Loss: 2.535830, Audio_Loss: 3.059456, Cross_Loss: 2.552276, Totual_Loss: 2.618253,  Time/step: 0.572819, text_gap: 0.517283, viusal_gap: 0.545928, audio_gap: 0.426224, cross_gap: 0.571265, gap: 0.668002
+2021-07-06 23:28:17,822:INFO: Epoch: 2/15, Step: 200/250, Lr: 0.000029, Text_Loss: 2.659968, Visual_Loss: 2.339505, Audio_Loss: 2.693513, Cross_Loss: 2.288210, Totual_Loss: 2.371046,  Time/step: 0.575091, text_gap: 0.475881, viusal_gap: 0.593572, audio_gap: 0.474937, cross_gap: 0.575945, gap: 0.725290
+2021-07-06 23:28:23,578:INFO: Epoch: 2/15, Step: 210/250, Lr: 0.000029, Text_Loss: 2.747493, Visual_Loss: 2.562204, Audio_Loss: 2.945982, Cross_Loss: 2.461405, Totual_Loss: 2.548552,  Time/step: 0.575624, text_gap: 0.520419, viusal_gap: 0.574780, audio_gap: 0.447371, cross_gap: 0.595614, gap: 0.717470
+2021-07-06 23:28:29,359:INFO: Epoch: 2/15, Step: 220/250, Lr: 0.000029, Text_Loss: 2.363562, Visual_Loss: 2.064737, Audio_Loss: 2.430899, Cross_Loss: 2.117535, Totual_Loss: 2.168195,  Time/step: 0.578101, text_gap: 0.569527, viusal_gap: 0.643783, audio_gap: 0.567844, cross_gap: 0.640838, gap: 0.786826
+2021-07-06 23:28:35,050:INFO: Epoch: 2/15, Step: 230/250, Lr: 0.000029, Text_Loss: 2.370358, Visual_Loss: 2.205563, Audio_Loss: 2.530570, Cross_Loss: 2.224731, Totual_Loss: 2.267961,  Time/step: 0.569037, text_gap: 0.567131, viusal_gap: 0.621350, audio_gap: 0.530950, cross_gap: 0.650976, gap: 0.758481
+2021-07-06 23:28:40,821:INFO: Epoch: 2/15, Step: 240/250, Lr: 0.000029, Text_Loss: 2.323337, Visual_Loss: 2.355860, Audio_Loss: 2.473464, Cross_Loss: 2.236251, Totual_Loss: 2.280642,  Time/step: 0.577022, text_gap: 0.569041, viusal_gap: 0.567132, audio_gap: 0.505902, cross_gap: 0.594684, gap: 0.757466
+2021-07-06 23:28:46,557:INFO: Epoch: 2/15, Step: 250/250, Lr: 0.000029, Text_Loss: 2.630030, Visual_Loss: 2.344744, Audio_Loss: 2.709028, Cross_Loss: 2.351304, Totual_Loss: 2.414293,  Time/step: 0.573631, text_gap: 0.505112, viusal_gap: 0.587817, audio_gap: 0.488534, cross_gap: 0.592990, gap: 0.730301
+2021-07-06 23:28:46,767:INFO: Fold 1 Epoch 2/15 Finished, Train Loss: 2.446933, Train_gap: 0.706806
+2021-07-06 23:28:46,768:INFO: ***** Running valing *****
+2021-07-06 23:28:46,768:INFO:   Num examples = 1000
+2021-07-06 23:28:46,768:INFO:   Batch_size = 16
+2021-07-06 23:28:57,719:INFO: ----- val_dataset text_gap: 0.715328, visual_gap: 0.760475, audio_gap: 0.674178, cross_gap: 0.774873, gap: 0.772527
+2021-07-06 23:29:03,322:INFO: Model saved to ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin.
+2021-07-06 23:29:03,323:INFO: The best model is: ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin., the gap is: 0.7725
+2021-07-06 23:29:10,811:INFO: Epoch: 3/15, Step: 10/250, Lr: 0.000029, Text_Loss: 2.633295, Visual_Loss: 2.510458, Audio_Loss: 2.788264, Cross_Loss: 2.454355, Totual_Loss: 2.511250,  Time/step: 0.720862, text_gap: 0.495741, viusal_gap: 0.539384, audio_gap: 0.471988, cross_gap: 0.529610, gap: 0.710405
+2021-07-06 23:29:16,727:INFO: Epoch: 3/15, Step: 20/250, Lr: 0.000029, Text_Loss: 2.405320, Visual_Loss: 2.168005, Audio_Loss: 2.528975, Cross_Loss: 2.205572, Totual_Loss: 2.254131,  Time/step: 0.591543, text_gap: 0.543248, viusal_gap: 0.607801, audio_gap: 0.498151, cross_gap: 0.621544, gap: 0.743960
+2021-07-06 23:29:22,492:INFO: Epoch: 3/15, Step: 30/250, Lr: 0.000029, Text_Loss: 2.663743, Visual_Loss: 2.564069, Audio_Loss: 2.892900, Cross_Loss: 2.467170, Totual_Loss: 2.539090,  Time/step: 0.576435, text_gap: 0.527744, viusal_gap: 0.578329, audio_gap: 0.474721, cross_gap: 0.593662, gap: 0.694138
+2021-07-06 23:29:28,209:INFO: Epoch: 3/15, Step: 40/250, Lr: 0.000029, Text_Loss: 2.606650, Visual_Loss: 2.278275, Audio_Loss: 2.723288, Cross_Loss: 2.608910, Totual_Loss: 2.587058,  Time/step: 0.571680, text_gap: 0.529934, viusal_gap: 0.609577, audio_gap: 0.462138, cross_gap: 0.533025, gap: 0.701034
+2021-07-06 23:29:33,934:INFO: Epoch: 3/15, Step: 50/250, Lr: 0.000028, Text_Loss: 2.533791, Visual_Loss: 2.055354, Audio_Loss: 2.646226, Cross_Loss: 2.183487, Totual_Loss: 2.251978,  Time/step: 0.572531, text_gap: 0.538624, viusal_gap: 0.643604, audio_gap: 0.494446, cross_gap: 0.649612, gap: 0.763105
+2021-07-06 23:29:39,767:INFO: Epoch: 3/15, Step: 60/250, Lr: 0.000028, Text_Loss: 2.362442, Visual_Loss: 2.193561, Audio_Loss: 2.427155, Cross_Loss: 2.167477, Totual_Loss: 2.215550,  Time/step: 0.583244, text_gap: 0.589029, viusal_gap: 0.613284, audio_gap: 0.553259, cross_gap: 0.629008, gap: 0.767975
+2021-07-06 23:29:45,527:INFO: Epoch: 3/15, Step: 70/250, Lr: 0.000028, Text_Loss: 2.361731, Visual_Loss: 2.156776, Audio_Loss: 2.493772, Cross_Loss: 2.113215, Totual_Loss: 2.180479,  Time/step: 0.575948, text_gap: 0.586940, viusal_gap: 0.631406, audio_gap: 0.515286, cross_gap: 0.645929, gap: 0.758584
+2021-07-06 23:29:51,273:INFO: Epoch: 3/15, Step: 80/250, Lr: 0.000028, Text_Loss: 2.528993, Visual_Loss: 2.413342, Audio_Loss: 2.650124, Cross_Loss: 2.245121, Totual_Loss: 2.330830,  Time/step: 0.574622, text_gap: 0.513298, viusal_gap: 0.571916, audio_gap: 0.478324, cross_gap: 0.625168, gap: 0.756582
+2021-07-06 23:29:56,989:INFO: Epoch: 3/15, Step: 90/250, Lr: 0.000028, Text_Loss: 2.467569, Visual_Loss: 2.291112, Audio_Loss: 2.680910, Cross_Loss: 2.133250, Totual_Loss: 2.237234,  Time/step: 0.571579, text_gap: 0.528847, viusal_gap: 0.615950, audio_gap: 0.502473, cross_gap: 0.649888, gap: 0.747345
+2021-07-06 23:30:02,748:INFO: Epoch: 3/15, Step: 100/250, Lr: 0.000028, Text_Loss: 2.515024, Visual_Loss: 2.257767, Audio_Loss: 2.718697, Cross_Loss: 2.316884, Totual_Loss: 2.370967,  Time/step: 0.575834, text_gap: 0.553559, viusal_gap: 0.625644, audio_gap: 0.494299, cross_gap: 0.642766, gap: 0.781858
+2021-07-06 23:30:08,448:INFO: Epoch: 3/15, Step: 110/250, Lr: 0.000028, Text_Loss: 2.601120, Visual_Loss: 2.531487, Audio_Loss: 2.627219, Cross_Loss: 2.401668, Totual_Loss: 2.457150,  Time/step: 0.570008, text_gap: 0.514668, viusal_gap: 0.585219, audio_gap: 0.522383, cross_gap: 0.610329, gap: 0.757928
+2021-07-06 23:30:14,164:INFO: Epoch: 3/15, Step: 120/250, Lr: 0.000028, Text_Loss: 2.302234, Visual_Loss: 2.127144, Audio_Loss: 2.517443, Cross_Loss: 1.981752, Totual_Loss: 2.081908,  Time/step: 0.571591, text_gap: 0.546818, viusal_gap: 0.618938, audio_gap: 0.492434, cross_gap: 0.653249, gap: 0.773807
+2021-07-06 23:30:20,010:INFO: Epoch: 3/15, Step: 130/250, Lr: 0.000028, Text_Loss: 2.591799, Visual_Loss: 2.587230, Audio_Loss: 2.714848, Cross_Loss: 2.327003, Totual_Loss: 2.418289,  Time/step: 0.584521, text_gap: 0.513234, viusal_gap: 0.547353, audio_gap: 0.465719, cross_gap: 0.608392, gap: 0.716620
+2021-07-06 23:30:25,732:INFO: Epoch: 3/15, Step: 140/250, Lr: 0.000028, Text_Loss: 2.372342, Visual_Loss: 2.313768, Audio_Loss: 2.672568, Cross_Loss: 2.175044, Totual_Loss: 2.258399,  Time/step: 0.572203, text_gap: 0.557193, viusal_gap: 0.565288, audio_gap: 0.489044, cross_gap: 0.634265, gap: 0.746332
+2021-07-06 23:30:31,450:INFO: Epoch: 3/15, Step: 150/250, Lr: 0.000028, Text_Loss: 2.619191, Visual_Loss: 2.241961, Audio_Loss: 2.725406, Cross_Loss: 2.355077, Totual_Loss: 2.407210,  Time/step: 0.571732, text_gap: 0.518421, viusal_gap: 0.599832, audio_gap: 0.491301, cross_gap: 0.567334, gap: 0.729439
+2021-07-06 23:30:37,173:INFO: Epoch: 3/15, Step: 160/250, Lr: 0.000027, Text_Loss: 2.249175, Visual_Loss: 2.201423, Audio_Loss: 2.495899, Cross_Loss: 1.917396, Totual_Loss: 2.036827,  Time/step: 0.572305, text_gap: 0.567455, viusal_gap: 0.628292, audio_gap: 0.508336, cross_gap: 0.706484, gap: 0.812557
+2021-07-06 23:30:42,906:INFO: Epoch: 3/15, Step: 170/250, Lr: 0.000027, Text_Loss: 2.279348, Visual_Loss: 2.066148, Audio_Loss: 2.557227, Cross_Loss: 2.133222, Totual_Loss: 2.183527,  Time/step: 0.573289, text_gap: 0.605819, viusal_gap: 0.651120, audio_gap: 0.498823, cross_gap: 0.646983, gap: 0.775239
+2021-07-06 23:30:48,608:INFO: Epoch: 3/15, Step: 180/250, Lr: 0.000027, Text_Loss: 2.435012, Visual_Loss: 2.367761, Audio_Loss: 2.705111, Cross_Loss: 2.164960, Totual_Loss: 2.266261,  Time/step: 0.570165, text_gap: 0.551000, viusal_gap: 0.582687, audio_gap: 0.469689, cross_gap: 0.607950, gap: 0.751035
+2021-07-06 23:30:54,386:INFO: Epoch: 3/15, Step: 190/250, Lr: 0.000027, Text_Loss: 2.673732, Visual_Loss: 2.786991, Audio_Loss: 2.809891, Cross_Loss: 2.312357, Totual_Loss: 2.445711,  Time/step: 0.577786, text_gap: 0.488714, viusal_gap: 0.521550, audio_gap: 0.459578, cross_gap: 0.608115, gap: 0.703439
+2021-07-06 23:31:00,121:INFO: Epoch: 3/15, Step: 200/250, Lr: 0.000027, Text_Loss: 2.230207, Visual_Loss: 2.034684, Audio_Loss: 2.223156, Cross_Loss: 1.943564, Totual_Loss: 2.009300,  Time/step: 0.573451, text_gap: 0.616210, viusal_gap: 0.702519, audio_gap: 0.607751, cross_gap: 0.734813, gap: 0.834528
+2021-07-06 23:31:05,866:INFO: Epoch: 3/15, Step: 210/250, Lr: 0.000027, Text_Loss: 2.287531, Visual_Loss: 2.155395, Audio_Loss: 2.860010, Cross_Loss: 2.080752, Totual_Loss: 2.186820,  Time/step: 0.574455, text_gap: 0.569536, viusal_gap: 0.628900, audio_gap: 0.456043, cross_gap: 0.643980, gap: 0.747788
+2021-07-06 23:31:11,591:INFO: Epoch: 3/15, Step: 220/250, Lr: 0.000027, Text_Loss: 2.374316, Visual_Loss: 2.155772, Audio_Loss: 2.517782, Cross_Loss: 2.124211, Totual_Loss: 2.191735,  Time/step: 0.572549, text_gap: 0.589429, viusal_gap: 0.656760, audio_gap: 0.506078, cross_gap: 0.638624, gap: 0.800472
+2021-07-06 23:31:17,279:INFO: Epoch: 3/15, Step: 230/250, Lr: 0.000027, Text_Loss: 2.580389, Visual_Loss: 2.209723, Audio_Loss: 2.501708, Cross_Loss: 2.220422, Totual_Loss: 2.283477,  Time/step: 0.568720, text_gap: 0.537403, viusal_gap: 0.634957, audio_gap: 0.550875, cross_gap: 0.664908, gap: 0.765557
+2021-07-06 23:31:23,034:INFO: Epoch: 3/15, Step: 240/250, Lr: 0.000027, Text_Loss: 2.343558, Visual_Loss: 2.131628, Audio_Loss: 2.653913, Cross_Loss: 2.174563, Totual_Loss: 2.235104,  Time/step: 0.575541, text_gap: 0.544848, viusal_gap: 0.630867, audio_gap: 0.477273, cross_gap: 0.632559, gap: 0.742894
+2021-07-06 23:31:28,780:INFO: Epoch: 3/15, Step: 250/250, Lr: 0.000027, Text_Loss: 2.385469, Visual_Loss: 2.079260, Audio_Loss: 2.477343, Cross_Loss: 1.965327, Totual_Loss: 2.069936,  Time/step: 0.574531, text_gap: 0.549756, viusal_gap: 0.650706, audio_gap: 0.530698, cross_gap: 0.664674, gap: 0.798014
+2021-07-06 23:31:28,962:INFO: Fold 1 Epoch 3/15 Finished, Train Loss: 2.276109, Train_gap: 0.761577
+2021-07-06 23:31:28,963:INFO: ***** Running valing *****
+2021-07-06 23:31:28,963:INFO:   Num examples = 1000
+2021-07-06 23:31:28,963:INFO:   Batch_size = 16
+2021-07-06 23:31:39,945:INFO: ----- val_dataset text_gap: 0.729234, visual_gap: 0.774688, audio_gap: 0.681972, cross_gap: 0.789986, gap: 0.789498
+2021-07-06 23:31:45,632:INFO: Model saved to ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin.
+2021-07-06 23:31:45,633:INFO: The best model is: ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin., the gap is: 0.7895
+2021-07-06 23:31:52,984:INFO: Epoch: 4/15, Step: 10/250, Lr: 0.000027, Text_Loss: 2.234816, Visual_Loss: 2.203861, Audio_Loss: 2.521502, Cross_Loss: 1.931252, Totual_Loss: 2.047894,  Time/step: 0.707526, text_gap: 0.605502, viusal_gap: 0.670448, audio_gap: 0.549785, cross_gap: 0.716971, gap: 0.840366
+2021-07-06 23:31:58,643:INFO: Epoch: 4/15, Step: 20/250, Lr: 0.000026, Text_Loss: 2.125232, Visual_Loss: 1.915394, Audio_Loss: 2.268233, Cross_Loss: 1.818522, Totual_Loss: 1.903851,  Time/step: 0.565882, text_gap: 0.595622, viusal_gap: 0.706991, audio_gap: 0.531143, cross_gap: 0.730187, gap: 0.861190
+2021-07-06 23:32:04,339:INFO: Epoch: 4/15, Step: 30/250, Lr: 0.000026, Text_Loss: 2.332239, Visual_Loss: 2.246663, Audio_Loss: 2.579869, Cross_Loss: 1.891358, Totual_Loss: 2.039828,  Time/step: 0.569565, text_gap: 0.573916, viusal_gap: 0.607752, audio_gap: 0.507531, cross_gap: 0.696937, gap: 0.822414
+2021-07-06 23:32:10,080:INFO: Epoch: 4/15, Step: 40/250, Lr: 0.000026, Text_Loss: 2.169538, Visual_Loss: 1.959976, Audio_Loss: 2.369510, Cross_Loss: 2.060425, Totual_Loss: 2.092200,  Time/step: 0.574109, text_gap: 0.597767, viusal_gap: 0.697708, audio_gap: 0.556413, cross_gap: 0.697685, gap: 0.833651
+2021-07-06 23:32:15,922:INFO: Epoch: 4/15, Step: 50/250, Lr: 0.000026, Text_Loss: 2.278801, Visual_Loss: 2.116197, Audio_Loss: 2.406556, Cross_Loss: 2.019844, Totual_Loss: 2.094046,  Time/step: 0.584154, text_gap: 0.604303, viusal_gap: 0.660854, audio_gap: 0.569191, cross_gap: 0.673815, gap: 0.798548
+2021-07-06 23:32:21,683:INFO: Epoch: 4/15, Step: 60/250, Lr: 0.000026, Text_Loss: 2.331259, Visual_Loss: 2.215282, Audio_Loss: 2.520982, Cross_Loss: 2.124301, Totual_Loss: 2.193763,  Time/step: 0.576066, text_gap: 0.600735, viusal_gap: 0.618111, audio_gap: 0.575570, cross_gap: 0.678095, gap: 0.781885
+2021-07-06 23:32:27,445:INFO: Epoch: 4/15, Step: 70/250, Lr: 0.000026, Text_Loss: 2.373561, Visual_Loss: 2.254654, Audio_Loss: 2.449199, Cross_Loss: 1.814897, Totual_Loss: 1.978169,  Time/step: 0.576179, text_gap: 0.598682, viusal_gap: 0.632815, audio_gap: 0.525947, cross_gap: 0.748661, gap: 0.865400
+2021-07-06 23:32:33,177:INFO: Epoch: 4/15, Step: 80/250, Lr: 0.000026, Text_Loss: 2.419426, Visual_Loss: 2.128983, Audio_Loss: 2.494082, Cross_Loss: 1.999327, Totual_Loss: 2.103778,  Time/step: 0.573190, text_gap: 0.551911, viusal_gap: 0.672972, audio_gap: 0.540705, cross_gap: 0.681916, gap: 0.821168
+2021-07-06 23:32:38,926:INFO: Epoch: 4/15, Step: 90/250, Lr: 0.000026, Text_Loss: 2.571836, Visual_Loss: 2.374706, Audio_Loss: 2.659586, Cross_Loss: 2.156234, Totual_Loss: 2.269977,  Time/step: 0.574818, text_gap: 0.521407, viusal_gap: 0.581624, audio_gap: 0.485502, cross_gap: 0.677593, gap: 0.773238
+2021-07-06 23:32:44,714:INFO: Epoch: 4/15, Step: 100/250, Lr: 0.000026, Text_Loss: 2.437248, Visual_Loss: 2.330260, Audio_Loss: 2.575036, Cross_Loss: 2.242242, Totual_Loss: 2.303824,  Time/step: 0.578801, text_gap: 0.569738, viusal_gap: 0.598931, audio_gap: 0.545456, cross_gap: 0.600038, gap: 0.767628
+2021-07-06 23:32:50,423:INFO: Epoch: 4/15, Step: 110/250, Lr: 0.000026, Text_Loss: 2.291778, Visual_Loss: 1.866655, Audio_Loss: 2.371077, Cross_Loss: 1.792663, Totual_Loss: 1.907815,  Time/step: 0.570838, text_gap: 0.559948, viusal_gap: 0.688808, audio_gap: 0.527091, cross_gap: 0.733904, gap: 0.862892
+2021-07-06 23:32:56,137:INFO: Epoch: 4/15, Step: 120/250, Lr: 0.000026, Text_Loss: 2.424503, Visual_Loss: 2.019840, Audio_Loss: 2.609782, Cross_Loss: 1.844512, Totual_Loss: 1.996571,  Time/step: 0.571412, text_gap: 0.601443, viusal_gap: 0.694237, audio_gap: 0.513332, cross_gap: 0.733153, gap: 0.825461
+2021-07-06 23:33:01,856:INFO: Epoch: 4/15, Step: 130/250, Lr: 0.000026, Text_Loss: 2.387562, Visual_Loss: 1.962314, Audio_Loss: 2.465157, Cross_Loss: 1.915784, Totual_Loss: 2.022552,  Time/step: 0.571879, text_gap: 0.562063, viusal_gap: 0.670936, audio_gap: 0.528498, cross_gap: 0.679984, gap: 0.808619
+2021-07-06 23:33:07,561:INFO: Epoch: 4/15, Step: 140/250, Lr: 0.000025, Text_Loss: 2.198397, Visual_Loss: 2.184254, Audio_Loss: 2.393143, Cross_Loss: 1.995376, Totual_Loss: 2.074342,  Time/step: 0.570509, text_gap: 0.623485, viusal_gap: 0.666484, audio_gap: 0.548166, cross_gap: 0.686964, gap: 0.811031
+2021-07-06 23:33:13,295:INFO: Epoch: 4/15, Step: 150/250, Lr: 0.000025, Text_Loss: 2.415253, Visual_Loss: 2.137766, Audio_Loss: 2.633541, Cross_Loss: 2.008877, Totual_Loss: 2.124870,  Time/step: 0.573373, text_gap: 0.578085, viusal_gap: 0.671755, audio_gap: 0.533589, cross_gap: 0.690579, gap: 0.807607
+2021-07-06 23:33:19,119:INFO: Epoch: 4/15, Step: 160/250, Lr: 0.000025, Text_Loss: 2.172398, Visual_Loss: 1.916274, Audio_Loss: 2.493855, Cross_Loss: 1.894772, Totual_Loss: 1.984593,  Time/step: 0.582306, text_gap: 0.569830, viusal_gap: 0.691237, audio_gap: 0.492564, cross_gap: 0.687672, gap: 0.813143
+2021-07-06 23:33:24,902:INFO: Epoch: 4/15, Step: 170/250, Lr: 0.000025, Text_Loss: 2.592100, Visual_Loss: 2.162674, Audio_Loss: 2.646188, Cross_Loss: 2.144052, Totual_Loss: 2.240932,  Time/step: 0.578370, text_gap: 0.566025, viusal_gap: 0.657379, audio_gap: 0.509541, cross_gap: 0.634424, gap: 0.783347
+2021-07-06 23:33:30,628:INFO: Epoch: 4/15, Step: 180/250, Lr: 0.000025, Text_Loss: 2.325452, Visual_Loss: 2.222362, Audio_Loss: 2.371399, Cross_Loss: 2.140672, Totual_Loss: 2.190392,  Time/step: 0.572541, text_gap: 0.593512, viusal_gap: 0.639482, audio_gap: 0.563350, cross_gap: 0.654053, gap: 0.805956
+2021-07-06 23:33:36,386:INFO: Epoch: 4/15, Step: 190/250, Lr: 0.000025, Text_Loss: 2.309345, Visual_Loss: 2.166078, Audio_Loss: 2.493797, Cross_Loss: 1.890921, Totual_Loss: 2.020567,  Time/step: 0.575789, text_gap: 0.630928, viusal_gap: 0.665669, audio_gap: 0.553452, cross_gap: 0.717947, gap: 0.800786
+2021-07-06 23:33:42,137:INFO: Epoch: 4/15, Step: 200/250, Lr: 0.000025, Text_Loss: 2.498682, Visual_Loss: 2.168356, Audio_Loss: 2.456001, Cross_Loss: 2.158513, Totual_Loss: 2.223263,  Time/step: 0.575019, text_gap: 0.560362, viusal_gap: 0.672036, audio_gap: 0.514103, cross_gap: 0.693888, gap: 0.818046
+2021-07-06 23:33:47,849:INFO: Epoch: 4/15, Step: 210/250, Lr: 0.000025, Text_Loss: 2.243455, Visual_Loss: 1.936254, Audio_Loss: 2.326784, Cross_Loss: 1.895399, Totual_Loss: 1.977429,  Time/step: 0.571251, text_gap: 0.598614, viusal_gap: 0.676709, audio_gap: 0.516966, cross_gap: 0.690790, gap: 0.814634
+2021-07-06 23:33:53,633:INFO: Epoch: 4/15, Step: 220/250, Lr: 0.000025, Text_Loss: 2.269156, Visual_Loss: 1.918659, Audio_Loss: 2.205898, Cross_Loss: 1.867578, Totual_Loss: 1.946676,  Time/step: 0.578286, text_gap: 0.606766, viusal_gap: 0.706599, audio_gap: 0.607504, cross_gap: 0.731538, gap: 0.857148
+2021-07-06 23:33:59,461:INFO: Epoch: 4/15, Step: 230/250, Lr: 0.000025, Text_Loss: 2.455565, Visual_Loss: 2.287803, Audio_Loss: 2.594667, Cross_Loss: 2.239768, Totual_Loss: 2.301641,  Time/step: 0.582792, text_gap: 0.577499, viusal_gap: 0.606249, audio_gap: 0.520530, cross_gap: 0.646757, gap: 0.769011
+2021-07-06 23:34:05,180:INFO: Epoch: 4/15, Step: 240/250, Lr: 0.000025, Text_Loss: 2.433682, Visual_Loss: 2.161105, Audio_Loss: 2.475079, Cross_Loss: 2.061985, Totual_Loss: 2.150376,  Time/step: 0.571862, text_gap: 0.535234, viusal_gap: 0.614001, audio_gap: 0.491489, cross_gap: 0.617634, gap: 0.753381
+2021-07-06 23:34:10,871:INFO: Epoch: 4/15, Step: 250/250, Lr: 0.000024, Text_Loss: 2.430394, Visual_Loss: 2.273876, Audio_Loss: 2.521175, Cross_Loss: 2.282616, Totual_Loss: 2.320376,  Time/step: 0.569101, text_gap: 0.563325, viusal_gap: 0.608123, audio_gap: 0.547128, cross_gap: 0.619740, gap: 0.771516
+2021-07-06 23:34:11,079:INFO: Fold 1 Epoch 4/15 Finished, Train Loss: 2.137590, Train_gap: 0.799314
+2021-07-06 23:34:11,079:INFO: ***** Running valing *****
+2021-07-06 23:34:11,079:INFO:   Num examples = 1000
+2021-07-06 23:34:11,079:INFO:   Batch_size = 16
+2021-07-06 23:34:22,093:INFO: ----- val_dataset text_gap: 0.734188, visual_gap: 0.779736, audio_gap: 0.690583, cross_gap: 0.797610, gap: 0.799763
+2021-07-06 23:34:27,873:INFO: Model saved to ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin.
+2021-07-06 23:34:27,874:INFO: The best model is: ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin., the gap is: 0.7998
+2021-07-06 23:34:35,252:INFO: Epoch: 5/15, Step: 10/250, Lr: 0.000024, Text_Loss: 2.455545, Visual_Loss: 2.235539, Audio_Loss: 2.492732, Cross_Loss: 2.060395, Totual_Loss: 2.160658,  Time/step: 0.710776, text_gap: 0.551515, viusal_gap: 0.613154, audio_gap: 0.520220, cross_gap: 0.655528, gap: 0.773880
+2021-07-06 23:34:41,179:INFO: Epoch: 5/15, Step: 20/250, Lr: 0.000024, Text_Loss: 2.157665, Visual_Loss: 1.957907, Audio_Loss: 2.591656, Cross_Loss: 1.879190, Totual_Loss: 1.986156,  Time/step: 0.592644, text_gap: 0.622582, viusal_gap: 0.695821, audio_gap: 0.506359, cross_gap: 0.731363, gap: 0.847693
+2021-07-06 23:34:46,923:INFO: Epoch: 5/15, Step: 30/250, Lr: 0.000024, Text_Loss: 2.367719, Visual_Loss: 2.131669, Audio_Loss: 2.367648, Cross_Loss: 2.173111, Totual_Loss: 2.207881,  Time/step: 0.574456, text_gap: 0.579217, viusal_gap: 0.663690, audio_gap: 0.584420, cross_gap: 0.653458, gap: 0.827139
+2021-07-06 23:34:52,674:INFO: Epoch: 5/15, Step: 40/250, Lr: 0.000024, Text_Loss: 2.427244, Visual_Loss: 2.219792, Audio_Loss: 2.735996, Cross_Loss: 2.005157, Totual_Loss: 2.141913,  Time/step: 0.575079, text_gap: 0.583075, viusal_gap: 0.674333, audio_gap: 0.519771, cross_gap: 0.711394, gap: 0.814600
+2021-07-06 23:34:58,491:INFO: Epoch: 5/15, Step: 50/250, Lr: 0.000024, Text_Loss: 2.251038, Visual_Loss: 2.029410, Audio_Loss: 2.379330, Cross_Loss: 1.921374, Totual_Loss: 2.010940,  Time/step: 0.581588, text_gap: 0.599992, viusal_gap: 0.723043, audio_gap: 0.572623, cross_gap: 0.733936, gap: 0.822598
+2021-07-06 23:35:04,251:INFO: Epoch: 5/15, Step: 60/250, Lr: 0.000024, Text_Loss: 2.090591, Visual_Loss: 1.963590, Audio_Loss: 2.375124, Cross_Loss: 1.840892, Totual_Loss: 1.931555,  Time/step: 0.575993, text_gap: 0.649165, viusal_gap: 0.696987, audio_gap: 0.548580, cross_gap: 0.716931, gap: 0.866972
+2021-07-06 23:35:09,999:INFO: Epoch: 5/15, Step: 70/250, Lr: 0.000024, Text_Loss: 2.070843, Visual_Loss: 1.865886, Audio_Loss: 2.456760, Cross_Loss: 1.845945, Totual_Loss: 1.931511,  Time/step: 0.574776, text_gap: 0.669858, viusal_gap: 0.685837, audio_gap: 0.517369, cross_gap: 0.745503, gap: 0.854905
+2021-07-06 23:35:15,710:INFO: Epoch: 5/15, Step: 80/250, Lr: 0.000024, Text_Loss: 2.273893, Visual_Loss: 1.992808, Audio_Loss: 2.495331, Cross_Loss: 2.065988, Totual_Loss: 2.122395,  Time/step: 0.571108, text_gap: 0.589403, viusal_gap: 0.668911, audio_gap: 0.492739, cross_gap: 0.685350, gap: 0.807402
+2021-07-06 23:35:21,460:INFO: Epoch: 5/15, Step: 90/250, Lr: 0.000024, Text_Loss: 2.344374, Visual_Loss: 2.144580, Audio_Loss: 2.464540, Cross_Loss: 2.237259, Totual_Loss: 2.261431,  Time/step: 0.574971, text_gap: 0.615021, viusal_gap: 0.683909, audio_gap: 0.546147, cross_gap: 0.687848, gap: 0.830402
+2021-07-06 23:35:27,180:INFO: Epoch: 5/15, Step: 100/250, Lr: 0.000024, Text_Loss: 2.088746, Visual_Loss: 1.960974, Audio_Loss: 2.207442, Cross_Loss: 1.768357, Totual_Loss: 1.863566,  Time/step: 0.572010, text_gap: 0.673987, viusal_gap: 0.708768, audio_gap: 0.608879, cross_gap: 0.764160, gap: 0.874107
+2021-07-06 23:35:32,878:INFO: Epoch: 5/15, Step: 110/250, Lr: 0.000023, Text_Loss: 2.239939, Visual_Loss: 2.067953, Audio_Loss: 2.455697, Cross_Loss: 1.839311, Totual_Loss: 1.963877,  Time/step: 0.569697, text_gap: 0.582593, viusal_gap: 0.674872, audio_gap: 0.521891, cross_gap: 0.726745, gap: 0.847304
+2021-07-06 23:35:38,572:INFO: Epoch: 5/15, Step: 120/250, Lr: 0.000023, Text_Loss: 2.268358, Visual_Loss: 2.419702, Audio_Loss: 2.612579, Cross_Loss: 2.118629, Totual_Loss: 2.213104,  Time/step: 0.569448, text_gap: 0.644180, viusal_gap: 0.603997, audio_gap: 0.544309, cross_gap: 0.669239, gap: 0.788946
+2021-07-06 23:35:44,299:INFO: Epoch: 5/15, Step: 130/250, Lr: 0.000023, Text_Loss: 2.349785, Visual_Loss: 2.196967, Audio_Loss: 2.482539, Cross_Loss: 1.942411, Totual_Loss: 2.062616,  Time/step: 0.572633, text_gap: 0.574985, viusal_gap: 0.636355, audio_gap: 0.546102, cross_gap: 0.704316, gap: 0.826280
+2021-07-06 23:35:49,996:INFO: Epoch: 5/15, Step: 140/250, Lr: 0.000023, Text_Loss: 2.197152, Visual_Loss: 1.957670, Audio_Loss: 2.377412, Cross_Loss: 1.820915, Totual_Loss: 1.927864,  Time/step: 0.569650, text_gap: 0.623153, viusal_gap: 0.675307, audio_gap: 0.558624, cross_gap: 0.752994, gap: 0.869689
+2021-07-06 23:35:55,738:INFO: Epoch: 5/15, Step: 150/250, Lr: 0.000023, Text_Loss: 2.211075, Visual_Loss: 2.089602, Audio_Loss: 2.194698, Cross_Loss: 1.757385, Totual_Loss: 1.879707,  Time/step: 0.574258, text_gap: 0.647814, viusal_gap: 0.652791, audio_gap: 0.630386, cross_gap: 0.750364, gap: 0.838181
+2021-07-06 23:36:01,559:INFO: Epoch: 5/15, Step: 160/250, Lr: 0.000023, Text_Loss: 2.328142, Visual_Loss: 2.214016, Audio_Loss: 2.530452, Cross_Loss: 1.950486, Totual_Loss: 2.072601,  Time/step: 0.582012, text_gap: 0.602652, viusal_gap: 0.659484, audio_gap: 0.536909, cross_gap: 0.723786, gap: 0.828470
+2021-07-06 23:36:07,340:INFO: Epoch: 5/15, Step: 170/250, Lr: 0.000023, Text_Loss: 2.116081, Visual_Loss: 1.950361, Audio_Loss: 2.228265, Cross_Loss: 1.739643, Totual_Loss: 1.847221,  Time/step: 0.578097, text_gap: 0.610580, viusal_gap: 0.673857, audio_gap: 0.562138, cross_gap: 0.746136, gap: 0.828485
+2021-07-06 23:36:13,051:INFO: Epoch: 5/15, Step: 180/250, Lr: 0.000023, Text_Loss: 2.010522, Visual_Loss: 1.896614, Audio_Loss: 2.313431, Cross_Loss: 1.845737, Totual_Loss: 1.914072,  Time/step: 0.571067, text_gap: 0.661786, viusal_gap: 0.715155, audio_gap: 0.582580, cross_gap: 0.721778, gap: 0.845580
+2021-07-06 23:36:18,789:INFO: Epoch: 5/15, Step: 190/250, Lr: 0.000023, Text_Loss: 2.427318, Visual_Loss: 2.336072, Audio_Loss: 2.478464, Cross_Loss: 2.160163, Totual_Loss: 2.236300,  Time/step: 0.573753, text_gap: 0.553102, viusal_gap: 0.575785, audio_gap: 0.522109, cross_gap: 0.647186, gap: 0.782526
+2021-07-06 23:36:24,509:INFO: Epoch: 5/15, Step: 200/250, Lr: 0.000023, Text_Loss: 2.212215, Visual_Loss: 2.235988, Audio_Loss: 2.527400, Cross_Loss: 2.060192, Totual_Loss: 2.139695,  Time/step: 0.572026, text_gap: 0.618438, viusal_gap: 0.664510, audio_gap: 0.535604, cross_gap: 0.730033, gap: 0.817977
+2021-07-06 23:36:30,204:INFO: Epoch: 5/15, Step: 210/250, Lr: 0.000023, Text_Loss: 2.252755, Visual_Loss: 1.829573, Audio_Loss: 2.259076, Cross_Loss: 1.671803, Totual_Loss: 1.804403,  Time/step: 0.569451, text_gap: 0.596108, viusal_gap: 0.676450, audio_gap: 0.572303, cross_gap: 0.736134, gap: 0.857096
+2021-07-06 23:36:35,887:INFO: Epoch: 5/15, Step: 220/250, Lr: 0.000022, Text_Loss: 2.219709, Visual_Loss: 1.937949, Audio_Loss: 2.486526, Cross_Loss: 1.880357, Totual_Loss: 1.980668,  Time/step: 0.568264, text_gap: 0.627652, viusal_gap: 0.697489, audio_gap: 0.524211, cross_gap: 0.728807, gap: 0.835782
+2021-07-06 23:36:41,623:INFO: Epoch: 5/15, Step: 230/250, Lr: 0.000022, Text_Loss: 2.394630, Visual_Loss: 1.976930, Audio_Loss: 2.532640, Cross_Loss: 1.920807, Totual_Loss: 2.034985,  Time/step: 0.573547, text_gap: 0.571370, viusal_gap: 0.677474, audio_gap: 0.526796, cross_gap: 0.756638, gap: 0.857785
+2021-07-06 23:36:47,357:INFO: Epoch: 5/15, Step: 240/250, Lr: 0.000022, Text_Loss: 2.507663, Visual_Loss: 2.136980, Audio_Loss: 2.694287, Cross_Loss: 1.969766, Totual_Loss: 2.112729,  Time/step: 0.573468, text_gap: 0.523577, viusal_gap: 0.707163, audio_gap: 0.487287, cross_gap: 0.712747, gap: 0.821819
+2021-07-06 23:36:53,071:INFO: Epoch: 5/15, Step: 250/250, Lr: 0.000022, Text_Loss: 2.294160, Visual_Loss: 2.068094, Audio_Loss: 2.424030, Cross_Loss: 2.134381, Totual_Loss: 2.172695,  Time/step: 0.571371, text_gap: 0.583410, viusal_gap: 0.684181, audio_gap: 0.539850, cross_gap: 0.675112, gap: 0.784294
+2021-07-06 23:36:53,278:INFO: Fold 1 Epoch 5/15 Finished, Train Loss: 2.034782, Train_gap: 0.829906
+2021-07-06 23:36:53,279:INFO: ***** Running valing *****
+2021-07-06 23:36:53,279:INFO:   Num examples = 1000
+2021-07-06 23:36:53,279:INFO:   Batch_size = 16
+2021-07-06 23:37:04,056:INFO: ----- val_dataset text_gap: 0.732391, visual_gap: 0.782895, audio_gap: 0.694206, cross_gap: 0.797497, gap: 0.802129
+2021-07-06 23:37:10,116:INFO: Model saved to ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin.
+2021-07-06 23:37:10,116:INFO: The best model is: ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin., the gap is: 0.8021
+2021-07-06 23:37:17,411:INFO: Epoch: 6/15, Step: 10/250, Lr: 0.000022, Text_Loss: 2.096885, Visual_Loss: 1.903390, Audio_Loss: 2.190575, Cross_Loss: 1.737045, Totual_Loss: 1.835017,  Time/step: 0.702177, text_gap: 0.613888, viusal_gap: 0.688380, audio_gap: 0.578009, cross_gap: 0.730561, gap: 0.838378
+2021-07-06 23:37:23,164:INFO: Epoch: 6/15, Step: 20/250, Lr: 0.000022, Text_Loss: 2.212636, Visual_Loss: 2.056994, Audio_Loss: 2.335897, Cross_Loss: 1.739861, Totual_Loss: 1.878456,  Time/step: 0.575308, text_gap: 0.616457, viusal_gap: 0.685971, audio_gap: 0.578435, cross_gap: 0.737241, gap: 0.870748
+2021-07-06 23:37:28,901:INFO: Epoch: 6/15, Step: 30/250, Lr: 0.000022, Text_Loss: 2.367539, Visual_Loss: 2.160032, Audio_Loss: 2.639284, Cross_Loss: 1.958735, Totual_Loss: 2.087800,  Time/step: 0.573657, text_gap: 0.622620, viusal_gap: 0.665013, audio_gap: 0.536185, cross_gap: 0.708089, gap: 0.814432
+2021-07-06 23:37:34,607:INFO: Epoch: 6/15, Step: 40/250, Lr: 0.000022, Text_Loss: 2.238075, Visual_Loss: 1.925728, Audio_Loss: 2.340171, Cross_Loss: 1.703575, Totual_Loss: 1.842900,  Time/step: 0.570573, text_gap: 0.635688, viusal_gap: 0.714926, audio_gap: 0.588650, cross_gap: 0.788487, gap: 0.883129
+2021-07-06 23:37:40,337:INFO: Epoch: 6/15, Step: 50/250, Lr: 0.000022, Text_Loss: 2.405849, Visual_Loss: 2.101555, Audio_Loss: 2.356855, Cross_Loss: 1.786232, Totual_Loss: 1.936788,  Time/step: 0.572956, text_gap: 0.619390, viusal_gap: 0.642545, audio_gap: 0.572142, cross_gap: 0.725027, gap: 0.862131
+2021-07-06 23:37:46,102:INFO: Epoch: 6/15, Step: 60/250, Lr: 0.000022, Text_Loss: 2.398849, Visual_Loss: 1.889379, Audio_Loss: 2.478303, Cross_Loss: 1.803607, Totual_Loss: 1.939178,  Time/step: 0.576491, text_gap: 0.596667, viusal_gap: 0.716753, audio_gap: 0.549937, cross_gap: 0.747876, gap: 0.856218
+2021-07-06 23:37:51,806:INFO: Epoch: 6/15, Step: 70/250, Lr: 0.000022, Text_Loss: 2.055960, Visual_Loss: 1.964053, Audio_Loss: 2.451674, Cross_Loss: 2.005191, Totual_Loss: 2.050803,  Time/step: 0.570400, text_gap: 0.652373, viusal_gap: 0.717651, audio_gap: 0.554799, cross_gap: 0.710418, gap: 0.850620
+2021-07-06 23:37:57,623:INFO: Epoch: 6/15, Step: 80/250, Lr: 0.000022, Text_Loss: 2.461056, Visual_Loss: 2.066448, Audio_Loss: 2.622107, Cross_Loss: 1.925487, Totual_Loss: 2.062802,  Time/step: 0.581586, text_gap: 0.588181, viusal_gap: 0.676785, audio_gap: 0.526057, cross_gap: 0.743643, gap: 0.826356
+2021-07-06 23:38:03,392:INFO: Epoch: 6/15, Step: 90/250, Lr: 0.000021, Text_Loss: 2.536003, Visual_Loss: 2.397604, Audio_Loss: 2.701228, Cross_Loss: 1.895122, Totual_Loss: 2.090069,  Time/step: 0.576939, text_gap: 0.564294, viusal_gap: 0.624343, audio_gap: 0.513435, cross_gap: 0.720221, gap: 0.807250
+2021-07-06 23:38:09,119:INFO: Epoch: 6/15, Step: 100/250, Lr: 0.000021, Text_Loss: 2.209200, Visual_Loss: 1.964073, Audio_Loss: 2.248660, Cross_Loss: 1.785904, Totual_Loss: 1.892326,  Time/step: 0.572671, text_gap: 0.642256, viusal_gap: 0.666005, audio_gap: 0.581886, cross_gap: 0.750378, gap: 0.858208
+2021-07-06 23:38:14,888:INFO: Epoch: 6/15, Step: 110/250, Lr: 0.000021, Text_Loss: 2.291533, Visual_Loss: 2.025973, Audio_Loss: 2.696832, Cross_Loss: 1.779021, Totual_Loss: 1.946748,  Time/step: 0.576872, text_gap: 0.599234, viusal_gap: 0.681187, audio_gap: 0.477815, cross_gap: 0.751754, gap: 0.824791
+2021-07-06 23:38:20,619:INFO: Epoch: 6/15, Step: 120/250, Lr: 0.000021, Text_Loss: 1.988867, Visual_Loss: 2.071626, Audio_Loss: 2.333813, Cross_Loss: 1.794690, Totual_Loss: 1.895714,  Time/step: 0.573059, text_gap: 0.670937, viusal_gap: 0.681616, audio_gap: 0.577974, cross_gap: 0.756321, gap: 0.885445
+2021-07-06 23:38:26,465:INFO: Epoch: 6/15, Step: 130/250, Lr: 0.000021, Text_Loss: 2.550420, Visual_Loss: 2.170215, Audio_Loss: 2.427784, Cross_Loss: 1.932989, Totual_Loss: 2.067934,  Time/step: 0.584537, text_gap: 0.582024, viusal_gap: 0.660570, audio_gap: 0.609073, cross_gap: 0.735184, gap: 0.849368
+2021-07-06 23:38:32,298:INFO: Epoch: 6/15, Step: 140/250, Lr: 0.000021, Text_Loss: 2.141592, Visual_Loss: 2.061950, Audio_Loss: 2.408345, Cross_Loss: 1.854015, Totual_Loss: 1.958999,  Time/step: 0.583354, text_gap: 0.638501, viusal_gap: 0.665326, audio_gap: 0.540660, cross_gap: 0.734596, gap: 0.846284
+2021-07-06 23:38:38,076:INFO: Epoch: 6/15, Step: 150/250, Lr: 0.000021, Text_Loss: 2.458439, Visual_Loss: 2.251787, Audio_Loss: 2.620706, Cross_Loss: 2.001372, Totual_Loss: 2.134054,  Time/step: 0.577734, text_gap: 0.557155, viusal_gap: 0.614203, audio_gap: 0.500528, cross_gap: 0.699064, gap: 0.795230
+2021-07-06 23:38:43,968:INFO: Epoch: 6/15, Step: 160/250, Lr: 0.000021, Text_Loss: 2.135212, Visual_Loss: 2.068766, Audio_Loss: 2.397644, Cross_Loss: 1.715976, Totual_Loss: 1.861345,  Time/step: 0.589151, text_gap: 0.626435, viusal_gap: 0.650805, audio_gap: 0.560340, cross_gap: 0.723137, gap: 0.882088
+2021-07-06 23:38:49,736:INFO: Epoch: 6/15, Step: 170/250, Lr: 0.000021, Text_Loss: 2.293208, Visual_Loss: 1.958832, Audio_Loss: 2.456420, Cross_Loss: 1.723594, Totual_Loss: 1.877362,  Time/step: 0.576856, text_gap: 0.553906, viusal_gap: 0.659671, audio_gap: 0.512749, cross_gap: 0.756330, gap: 0.846634
+2021-07-06 23:38:55,461:INFO: Epoch: 6/15, Step: 180/250, Lr: 0.000021, Text_Loss: 2.220371, Visual_Loss: 1.956461, Audio_Loss: 2.596224, Cross_Loss: 1.751977, Totual_Loss: 1.903689,  Time/step: 0.572461, text_gap: 0.649654, viusal_gap: 0.687139, audio_gap: 0.514182, cross_gap: 0.780749, gap: 0.905837
+2021-07-06 23:39:01,127:INFO: Epoch: 6/15, Step: 190/250, Lr: 0.000021, Text_Loss: 2.303877, Visual_Loss: 2.129734, Audio_Loss: 2.580664, Cross_Loss: 1.980869, Totual_Loss: 2.088036,  Time/step: 0.566566, text_gap: 0.571994, viusal_gap: 0.639355, audio_gap: 0.534562, cross_gap: 0.690826, gap: 0.810811
+2021-07-06 23:39:06,804:INFO: Epoch: 6/15, Step: 200/250, Lr: 0.000020, Text_Loss: 2.006968, Visual_Loss: 1.803622, Audio_Loss: 2.180624, Cross_Loss: 1.634667, Totual_Loss: 1.743388,  Time/step: 0.567639, text_gap: 0.691335, viusal_gap: 0.733392, audio_gap: 0.617955, cross_gap: 0.806572, gap: 0.901074
+2021-07-06 23:39:12,480:INFO: Epoch: 6/15, Step: 210/250, Lr: 0.000020, Text_Loss: 2.346402, Visual_Loss: 2.066462, Audio_Loss: 2.491546, Cross_Loss: 1.842471, Totual_Loss: 1.980171,  Time/step: 0.567629, text_gap: 0.594457, viusal_gap: 0.635988, audio_gap: 0.546893, cross_gap: 0.731683, gap: 0.862432
+2021-07-06 23:39:18,159:INFO: Epoch: 6/15, Step: 220/250, Lr: 0.000020, Text_Loss: 2.286354, Visual_Loss: 1.972490, Audio_Loss: 2.256429, Cross_Loss: 1.976056, Totual_Loss: 2.034766,  Time/step: 0.567870, text_gap: 0.628925, viusal_gap: 0.686746, audio_gap: 0.575988, cross_gap: 0.725926, gap: 0.834438
+2021-07-06 23:39:23,818:INFO: Epoch: 6/15, Step: 230/250, Lr: 0.000020, Text_Loss: 2.083003, Visual_Loss: 1.749749, Audio_Loss: 2.039786, Cross_Loss: 1.534516, Totual_Loss: 1.661415,  Time/step: 0.565813, text_gap: 0.666757, viusal_gap: 0.742395, audio_gap: 0.613528, cross_gap: 0.797279, gap: 0.899291
+2021-07-06 23:39:29,472:INFO: Epoch: 6/15, Step: 240/250, Lr: 0.000020, Text_Loss: 2.247346, Visual_Loss: 1.969076, Audio_Loss: 2.383719, Cross_Loss: 1.731842, Totual_Loss: 1.872304,  Time/step: 0.565393, text_gap: 0.612466, viusal_gap: 0.685863, audio_gap: 0.558421, cross_gap: 0.766954, gap: 0.854595
+2021-07-06 23:39:35,187:INFO: Epoch: 6/15, Step: 250/250, Lr: 0.000020, Text_Loss: 2.327639, Visual_Loss: 2.108606, Audio_Loss: 2.583418, Cross_Loss: 1.951716, Totual_Loss: 2.068167,  Time/step: 0.571488, text_gap: 0.635330, viusal_gap: 0.675591, audio_gap: 0.543636, cross_gap: 0.713149, gap: 0.824535
+2021-07-06 23:39:35,355:INFO: Fold 1 Epoch 6/15 Finished, Train Loss: 1.939245, Train_gap: 0.856342
+2021-07-06 23:39:35,356:INFO: ***** Running valing *****
+2021-07-06 23:39:35,356:INFO:   Num examples = 1000
+2021-07-06 23:39:35,356:INFO:   Batch_size = 16
+2021-07-06 23:39:45,975:INFO: ----- val_dataset text_gap: 0.734150, visual_gap: 0.782540, audio_gap: 0.691718, cross_gap: 0.796566, gap: 0.804069
+2021-07-06 23:39:51,660:INFO: Model saved to ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin.
+2021-07-06 23:39:52,110:INFO: The best model is: ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin., the gap is: 0.8041
+2021-07-06 23:39:59,409:INFO: Epoch: 7/15, Step: 10/250, Lr: 0.000020, Text_Loss: 2.322815, Visual_Loss: 2.005526, Audio_Loss: 2.406092, Cross_Loss: 1.656195, Totual_Loss: 1.832780,  Time/step: 0.702727, text_gap: 0.588922, viusal_gap: 0.714319, audio_gap: 0.566235, cross_gap: 0.794865, gap: 0.858195
+2021-07-06 23:40:05,055:INFO: Epoch: 7/15, Step: 20/250, Lr: 0.000020, Text_Loss: 2.118313, Visual_Loss: 1.913956, Audio_Loss: 2.265207, Cross_Loss: 1.727469, Totual_Loss: 1.838976,  Time/step: 0.564554, text_gap: 0.671433, viusal_gap: 0.730909, audio_gap: 0.610185, cross_gap: 0.785605, gap: 0.891719
+2021-07-06 23:40:10,713:INFO: Epoch: 7/15, Step: 30/250, Lr: 0.000020, Text_Loss: 2.331462, Visual_Loss: 2.225839, Audio_Loss: 2.456172, Cross_Loss: 2.000632, Totual_Loss: 2.101790,  Time/step: 0.565753, text_gap: 0.630619, viusal_gap: 0.651037, audio_gap: 0.584348, cross_gap: 0.727898, gap: 0.851074
+2021-07-06 23:40:16,537:INFO: Epoch: 7/15, Step: 40/250, Lr: 0.000020, Text_Loss: 2.262521, Visual_Loss: 2.122571, Audio_Loss: 2.391488, Cross_Loss: 1.684212, Totual_Loss: 1.856606,  Time/step: 0.582427, text_gap: 0.611914, viusal_gap: 0.675392, audio_gap: 0.573455, cross_gap: 0.761260, gap: 0.855535
+2021-07-06 23:40:22,267:INFO: Epoch: 7/15, Step: 50/250, Lr: 0.000020, Text_Loss: 2.262754, Visual_Loss: 1.992500, Audio_Loss: 2.259481, Cross_Loss: 1.549988, Totual_Loss: 1.736465,  Time/step: 0.572915, text_gap: 0.643348, viusal_gap: 0.693662, audio_gap: 0.591275, cross_gap: 0.799852, gap: 0.898296
+2021-07-06 23:40:28,030:INFO: Epoch: 7/15, Step: 60/250, Lr: 0.000019, Text_Loss: 2.119352, Visual_Loss: 1.816981, Audio_Loss: 2.483468, Cross_Loss: 1.605731, Totual_Loss: 1.765992,  Time/step: 0.576250, text_gap: 0.624281, viusal_gap: 0.765013, audio_gap: 0.555495, cross_gap: 0.812841, gap: 0.911521
+2021-07-06 23:40:33,756:INFO: Epoch: 7/15, Step: 70/250, Lr: 0.000019, Text_Loss: 2.299205, Visual_Loss: 1.846838, Audio_Loss: 2.287245, Cross_Loss: 1.526444, Totual_Loss: 1.711840,  Time/step: 0.572610, text_gap: 0.555165, viusal_gap: 0.718840, audio_gap: 0.542264, cross_gap: 0.820343, gap: 0.885369
+2021-07-06 23:40:39,485:INFO: Epoch: 7/15, Step: 80/250, Lr: 0.000019, Text_Loss: 2.407577, Visual_Loss: 1.906638, Audio_Loss: 2.389231, Cross_Loss: 1.809655, Totual_Loss: 1.937103,  Time/step: 0.572873, text_gap: 0.598580, viusal_gap: 0.691229, audio_gap: 0.554927, cross_gap: 0.786145, gap: 0.876304
+2021-07-06 23:40:45,274:INFO: Epoch: 7/15, Step: 90/250, Lr: 0.000019, Text_Loss: 2.268512, Visual_Loss: 2.025517, Audio_Loss: 2.505830, Cross_Loss: 2.010089, Totual_Loss: 2.087048,  Time/step: 0.578930, text_gap: 0.659118, viusal_gap: 0.695799, audio_gap: 0.535401, cross_gap: 0.746489, gap: 0.859478
+2021-07-06 23:40:51,055:INFO: Epoch: 7/15, Step: 100/250, Lr: 0.000019, Text_Loss: 2.204346, Visual_Loss: 1.780668, Audio_Loss: 2.309463, Cross_Loss: 1.712434, Totual_Loss: 1.828151,  Time/step: 0.578085, text_gap: 0.626621, viusal_gap: 0.728743, audio_gap: 0.599732, cross_gap: 0.762641, gap: 0.869988
+2021-07-06 23:40:56,797:INFO: Epoch: 7/15, Step: 110/250, Lr: 0.000019, Text_Loss: 1.811645, Visual_Loss: 1.598310, Audio_Loss: 2.151309, Cross_Loss: 1.318386, Totual_Loss: 1.478997,  Time/step: 0.574107, text_gap: 0.662396, viusal_gap: 0.763003, audio_gap: 0.572908, cross_gap: 0.836379, gap: 0.924617
+2021-07-06 23:41:02,556:INFO: Epoch: 7/15, Step: 120/250, Lr: 0.000019, Text_Loss: 2.380665, Visual_Loss: 2.179974, Audio_Loss: 2.609909, Cross_Loss: 1.907225, Totual_Loss: 2.052113,  Time/step: 0.575918, text_gap: 0.606734, viusal_gap: 0.629704, audio_gap: 0.507030, cross_gap: 0.721901, gap: 0.822124
+2021-07-06 23:41:08,262:INFO: Epoch: 7/15, Step: 130/250, Lr: 0.000019, Text_Loss: 2.217103, Visual_Loss: 1.739164, Audio_Loss: 2.312547, Cross_Loss: 1.732843, Totual_Loss: 1.839871,  Time/step: 0.570542, text_gap: 0.614201, viusal_gap: 0.773625, audio_gap: 0.568409, cross_gap: 0.786736, gap: 0.890684
+2021-07-06 23:41:13,981:INFO: Epoch: 7/15, Step: 140/250, Lr: 0.000019, Text_Loss: 2.113435, Visual_Loss: 1.901946, Audio_Loss: 2.353818, Cross_Loss: 1.552862, Totual_Loss: 1.723923,  Time/step: 0.571859, text_gap: 0.655055, viusal_gap: 0.743623, audio_gap: 0.572008, cross_gap: 0.808842, gap: 0.890049
+2021-07-06 23:41:19,748:INFO: Epoch: 7/15, Step: 150/250, Lr: 0.000019, Text_Loss: 2.100600, Visual_Loss: 1.872135, Audio_Loss: 2.534447, Cross_Loss: 1.938245, Totual_Loss: 2.007490,  Time/step: 0.576721, text_gap: 0.645570, viusal_gap: 0.700768, audio_gap: 0.528343, cross_gap: 0.719858, gap: 0.868583
+2021-07-06 23:41:25,480:INFO: Epoch: 7/15, Step: 160/250, Lr: 0.000019, Text_Loss: 2.356629, Visual_Loss: 2.158433, Audio_Loss: 2.356419, Cross_Loss: 1.833212, Totual_Loss: 1.970397,  Time/step: 0.573133, text_gap: 0.575711, viusal_gap: 0.674468, audio_gap: 0.576483, cross_gap: 0.736372, gap: 0.864119
+2021-07-06 23:41:31,208:INFO: Epoch: 7/15, Step: 170/250, Lr: 0.000018, Text_Loss: 2.185599, Visual_Loss: 1.718606, Audio_Loss: 2.312092, Cross_Loss: 1.766956, Totual_Loss: 1.858499,  Time/step: 0.572812, text_gap: 0.641594, viusal_gap: 0.791658, audio_gap: 0.592342, cross_gap: 0.786959, gap: 0.900531
+2021-07-06 23:41:36,965:INFO: Epoch: 7/15, Step: 180/250, Lr: 0.000018, Text_Loss: 2.120517, Visual_Loss: 1.887445, Audio_Loss: 2.289469, Cross_Loss: 1.580814, Totual_Loss: 1.736313,  Time/step: 0.575697, text_gap: 0.640598, viusal_gap: 0.678763, audio_gap: 0.568564, cross_gap: 0.811797, gap: 0.898409
+2021-07-06 23:41:42,750:INFO: Epoch: 7/15, Step: 190/250, Lr: 0.000018, Text_Loss: 2.117215, Visual_Loss: 1.996064, Audio_Loss: 2.205069, Cross_Loss: 1.645626, Totual_Loss: 1.783773,  Time/step: 0.578468, text_gap: 0.650294, viusal_gap: 0.686374, audio_gap: 0.562869, cross_gap: 0.776302, gap: 0.897009
+2021-07-06 23:41:48,468:INFO: Epoch: 7/15, Step: 200/250, Lr: 0.000018, Text_Loss: 2.154335, Visual_Loss: 1.967871, Audio_Loss: 2.251902, Cross_Loss: 1.891174, Totual_Loss: 1.961233,  Time/step: 0.571778, text_gap: 0.634837, viusal_gap: 0.705438, audio_gap: 0.578387, cross_gap: 0.739227, gap: 0.874945
+2021-07-06 23:41:54,213:INFO: Epoch: 7/15, Step: 210/250, Lr: 0.000018, Text_Loss: 2.198233, Visual_Loss: 1.922638, Audio_Loss: 2.468364, Cross_Loss: 1.658410, Totual_Loss: 1.819811,  Time/step: 0.574471, text_gap: 0.622234, viusal_gap: 0.711866, audio_gap: 0.520770, cross_gap: 0.802178, gap: 0.864040
+2021-07-06 23:41:59,977:INFO: Epoch: 7/15, Step: 220/250, Lr: 0.000018, Text_Loss: 2.312142, Visual_Loss: 1.978929, Audio_Loss: 2.389420, Cross_Loss: 1.743676, Totual_Loss: 1.888622,  Time/step: 0.576349, text_gap: 0.570289, viusal_gap: 0.673093, audio_gap: 0.564139, cross_gap: 0.716653, gap: 0.844406
+2021-07-06 23:42:05,716:INFO: Epoch: 7/15, Step: 230/250, Lr: 0.000018, Text_Loss: 2.140870, Visual_Loss: 2.144849, Audio_Loss: 2.581955, Cross_Loss: 1.687450, Totual_Loss: 1.867982,  Time/step: 0.573824, text_gap: 0.648282, viusal_gap: 0.669005, audio_gap: 0.534540, cross_gap: 0.784253, gap: 0.858167
+2021-07-06 23:42:11,453:INFO: Epoch: 7/15, Step: 240/250, Lr: 0.000018, Text_Loss: 2.317339, Visual_Loss: 2.082613, Audio_Loss: 2.493405, Cross_Loss: 1.847653, Totual_Loss: 1.982693,  Time/step: 0.573733, text_gap: 0.610372, viusal_gap: 0.657685, audio_gap: 0.554319, cross_gap: 0.752192, gap: 0.824937
+2021-07-06 23:42:17,200:INFO: Epoch: 7/15, Step: 250/250, Lr: 0.000018, Text_Loss: 2.162941, Visual_Loss: 1.764929, Audio_Loss: 2.267516, Cross_Loss: 1.603358, Totual_Loss: 1.741889,  Time/step: 0.574640, text_gap: 0.601307, viusal_gap: 0.710902, audio_gap: 0.569380, cross_gap: 0.816012, gap: 0.919466
+2021-07-06 23:42:17,400:INFO: Fold 1 Epoch 7/15 Finished, Train Loss: 1.852010, Train_gap: 0.878647
+2021-07-06 23:42:17,400:INFO: ***** Running valing *****
+2021-07-06 23:42:17,400:INFO:   Num examples = 1000
+2021-07-06 23:42:17,400:INFO:   Batch_size = 16
+2021-07-06 23:42:28,468:INFO: ----- val_dataset text_gap: 0.732834, visual_gap: 0.780252, audio_gap: 0.689488, cross_gap: 0.794314, gap: 0.803437
+2021-07-06 23:42:28,468:INFO: The best model is: ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin., the gap is: 0.8041
+2021-07-06 23:42:36,030:INFO: Epoch: 8/15, Step: 10/250, Lr: 0.000018, Text_Loss: 2.134346, Visual_Loss: 1.877072, Audio_Loss: 2.363437, Cross_Loss: 1.621685, Totual_Loss: 1.772665,  Time/step: 0.730978, text_gap: 0.672743, viusal_gap: 0.711291, audio_gap: 0.568028, cross_gap: 0.787943, gap: 0.898027
+2021-07-06 23:42:41,795:INFO: Epoch: 8/15, Step: 20/250, Lr: 0.000018, Text_Loss: 2.238612, Visual_Loss: 1.973454, Audio_Loss: 2.409147, Cross_Loss: 1.825562, Totual_Loss: 1.940015,  Time/step: 0.576429, text_gap: 0.642947, viusal_gap: 0.683923, audio_gap: 0.584309, cross_gap: 0.742628, gap: 0.895160
+2021-07-06 23:42:47,488:INFO: Epoch: 8/15, Step: 30/250, Lr: 0.000018, Text_Loss: 2.024302, Visual_Loss: 1.717041, Audio_Loss: 2.112651, Cross_Loss: 1.553371, Totual_Loss: 1.672759,  Time/step: 0.569224, text_gap: 0.689775, viusal_gap: 0.775272, audio_gap: 0.646763, cross_gap: 0.817979, gap: 0.933723
+2021-07-06 23:42:53,207:INFO: Epoch: 8/15, Step: 40/250, Lr: 0.000017, Text_Loss: 2.223094, Visual_Loss: 2.036980, Audio_Loss: 2.522165, Cross_Loss: 1.617243, Totual_Loss: 1.810294,  Time/step: 0.571873, text_gap: 0.638886, viusal_gap: 0.691778, audio_gap: 0.560599, cross_gap: 0.784278, gap: 0.906229
+2021-07-06 23:42:58,941:INFO: Epoch: 8/15, Step: 50/250, Lr: 0.000017, Text_Loss: 2.275635, Visual_Loss: 2.070543, Audio_Loss: 2.462523, Cross_Loss: 1.793624, Totual_Loss: 1.936406,  Time/step: 0.573389, text_gap: 0.602075, viusal_gap: 0.660928, audio_gap: 0.542352, cross_gap: 0.780465, gap: 0.852430
+2021-07-06 23:43:04,668:INFO: Epoch: 8/15, Step: 60/250, Lr: 0.000017, Text_Loss: 2.136096, Visual_Loss: 1.956757, Audio_Loss: 2.453098, Cross_Loss: 1.611518, Totual_Loss: 1.782658,  Time/step: 0.572689, text_gap: 0.609545, viusal_gap: 0.669450, audio_gap: 0.532142, cross_gap: 0.773435, gap: 0.874467
+2021-07-06 23:43:10,487:INFO: Epoch: 8/15, Step: 70/250, Lr: 0.000017, Text_Loss: 2.092717, Visual_Loss: 1.749773, Audio_Loss: 2.189627, Cross_Loss: 1.565901, Totual_Loss: 1.699342,  Time/step: 0.581868, text_gap: 0.651683, viusal_gap: 0.753953, audio_gap: 0.599308, cross_gap: 0.831604, gap: 0.881442
+2021-07-06 23:43:16,194:INFO: Epoch: 8/15, Step: 80/250, Lr: 0.000017, Text_Loss: 2.230817, Visual_Loss: 2.050347, Audio_Loss: 2.523528, Cross_Loss: 1.617126, Totual_Loss: 1.812457,  Time/step: 0.570720, text_gap: 0.600315, viusal_gap: 0.677124, audio_gap: 0.518179, cross_gap: 0.798796, gap: 0.888855
+2021-07-06 23:43:21,905:INFO: Epoch: 8/15, Step: 90/250, Lr: 0.000017, Text_Loss: 2.513173, Visual_Loss: 1.966305, Audio_Loss: 2.535524, Cross_Loss: 1.727058, Totual_Loss: 1.910441,  Time/step: 0.571069, text_gap: 0.582992, viusal_gap: 0.707135, audio_gap: 0.576999, cross_gap: 0.778593, gap: 0.880481
+2021-07-06 23:43:27,595:INFO: Epoch: 8/15, Step: 100/250, Lr: 0.000017, Text_Loss: 2.345925, Visual_Loss: 1.955655, Audio_Loss: 2.495671, Cross_Loss: 1.730648, Totual_Loss: 1.891179,  Time/step: 0.569004, text_gap: 0.626208, viusal_gap: 0.696410, audio_gap: 0.581733, cross_gap: 0.762893, gap: 0.870518
+2021-07-06 23:43:33,302:INFO: Epoch: 8/15, Step: 110/250, Lr: 0.000017, Text_Loss: 2.089574, Visual_Loss: 2.145260, Audio_Loss: 2.239615, Cross_Loss: 1.799206, Totual_Loss: 1.906889,  Time/step: 0.570676, text_gap: 0.659272, viusal_gap: 0.689580, audio_gap: 0.619140, cross_gap: 0.767144, gap: 0.870908
+2021-07-06 23:43:39,021:INFO: Epoch: 8/15, Step: 120/250, Lr: 0.000017, Text_Loss: 2.237665, Visual_Loss: 1.821812, Audio_Loss: 2.444793, Cross_Loss: 1.669863, Totual_Loss: 1.819331,  Time/step: 0.571847, text_gap: 0.602846, viusal_gap: 0.684506, audio_gap: 0.582041, cross_gap: 0.815263, gap: 0.906044
+2021-07-06 23:43:44,765:INFO: Epoch: 8/15, Step: 130/250, Lr: 0.000017, Text_Loss: 2.171160, Visual_Loss: 1.967781, Audio_Loss: 2.412897, Cross_Loss: 1.659048, Totual_Loss: 1.816517,  Time/step: 0.574368, text_gap: 0.654079, viusal_gap: 0.723759, audio_gap: 0.573277, cross_gap: 0.802555, gap: 0.906275
+2021-07-06 23:43:50,618:INFO: Epoch: 8/15, Step: 140/250, Lr: 0.000017, Text_Loss: 2.135498, Visual_Loss: 1.950681, Audio_Loss: 2.283678, Cross_Loss: 1.757332, Totual_Loss: 1.867118,  Time/step: 0.585226, text_gap: 0.592481, viusal_gap: 0.693794, audio_gap: 0.559245, cross_gap: 0.794218, gap: 0.881162
+2021-07-06 23:43:56,372:INFO: Epoch: 8/15, Step: 150/250, Lr: 0.000016, Text_Loss: 1.996019, Visual_Loss: 1.639690, Audio_Loss: 2.247617, Cross_Loss: 1.429058, Totual_Loss: 1.588674,  Time/step: 0.575428, text_gap: 0.610379, viusal_gap: 0.751129, audio_gap: 0.588973, cross_gap: 0.841972, gap: 0.904453
+2021-07-06 23:44:02,188:INFO: Epoch: 8/15, Step: 160/250, Lr: 0.000016, Text_Loss: 2.115180, Visual_Loss: 1.858352, Audio_Loss: 2.126548, Cross_Loss: 1.657395, Totual_Loss: 1.770184,  Time/step: 0.581588, text_gap: 0.672129, viusal_gap: 0.757339, audio_gap: 0.634060, cross_gap: 0.783538, gap: 0.901307
+2021-07-06 23:44:07,943:INFO: Epoch: 8/15, Step: 170/250, Lr: 0.000016, Text_Loss: 2.137085, Visual_Loss: 1.627829, Audio_Loss: 2.351960, Cross_Loss: 1.517269, Totual_Loss: 1.673775,  Time/step: 0.575450, text_gap: 0.642277, viusal_gap: 0.760932, audio_gap: 0.562771, cross_gap: 0.829664, gap: 0.917367
+2021-07-06 23:44:13,675:INFO: Epoch: 8/15, Step: 180/250, Lr: 0.000016, Text_Loss: 2.080481, Visual_Loss: 1.982198, Audio_Loss: 2.364572, Cross_Loss: 1.606599, Totual_Loss: 1.767344,  Time/step: 0.573181, text_gap: 0.653550, viusal_gap: 0.714724, audio_gap: 0.611599, cross_gap: 0.827713, gap: 0.899093
+2021-07-06 23:44:19,454:INFO: Epoch: 8/15, Step: 190/250, Lr: 0.000016, Text_Loss: 2.303810, Visual_Loss: 2.107140, Audio_Loss: 2.457546, Cross_Loss: 1.544379, Totual_Loss: 1.767915,  Time/step: 0.577844, text_gap: 0.614494, viusal_gap: 0.680205, audio_gap: 0.555168, cross_gap: 0.797503, gap: 0.881348
+2021-07-06 23:44:25,160:INFO: Epoch: 8/15, Step: 200/250, Lr: 0.000016, Text_Loss: 2.170204, Visual_Loss: 1.846982, Audio_Loss: 2.220479, Cross_Loss: 1.549868, Totual_Loss: 1.708674,  Time/step: 0.570572, text_gap: 0.641557, viusal_gap: 0.728036, audio_gap: 0.566713, cross_gap: 0.784993, gap: 0.893046
+2021-07-06 23:44:30,909:INFO: Epoch: 8/15, Step: 210/250, Lr: 0.000016, Text_Loss: 2.031469, Visual_Loss: 1.743790, Audio_Loss: 2.180933, Cross_Loss: 1.595788, Totual_Loss: 1.712671,  Time/step: 0.574945, text_gap: 0.669278, viusal_gap: 0.743265, audio_gap: 0.596773, cross_gap: 0.809164, gap: 0.893515
+2021-07-06 23:44:36,612:INFO: Epoch: 8/15, Step: 220/250, Lr: 0.000016, Text_Loss: 2.172452, Visual_Loss: 1.869370, Audio_Loss: 2.316461, Cross_Loss: 1.705399, Totual_Loss: 1.829607,  Time/step: 0.570215, text_gap: 0.640738, viusal_gap: 0.722132, audio_gap: 0.569236, cross_gap: 0.768302, gap: 0.879067
+2021-07-06 23:44:42,418:INFO: Epoch: 8/15, Step: 230/250, Lr: 0.000016, Text_Loss: 2.268265, Visual_Loss: 2.197075, Audio_Loss: 2.482798, Cross_Loss: 1.738070, Totual_Loss: 1.911463,  Time/step: 0.580604, text_gap: 0.614617, viusal_gap: 0.682084, audio_gap: 0.542959, cross_gap: 0.795764, gap: 0.874204
+2021-07-06 23:44:48,136:INFO: Epoch: 8/15, Step: 240/250, Lr: 0.000016, Text_Loss: 2.280878, Visual_Loss: 1.780394, Audio_Loss: 2.246080, Cross_Loss: 1.655681, Totual_Loss: 1.789712,  Time/step: 0.571739, text_gap: 0.668972, viusal_gap: 0.789291, audio_gap: 0.607921, cross_gap: 0.835499, gap: 0.918164
+2021-07-06 23:44:53,896:INFO: Epoch: 8/15, Step: 250/250, Lr: 0.000016, Text_Loss: 1.957854, Visual_Loss: 1.784142, Audio_Loss: 2.285164, Cross_Loss: 1.762893, Totual_Loss: 1.836741,  Time/step: 0.576022, text_gap: 0.673642, viusal_gap: 0.745288, audio_gap: 0.608856, cross_gap: 0.777438, gap: 0.916843
+2021-07-06 23:44:54,082:INFO: Fold 1 Epoch 8/15 Finished, Train Loss: 1.774537, Train_gap: 0.898302
+2021-07-06 23:44:54,083:INFO: ***** Running valing *****
+2021-07-06 23:44:54,083:INFO:   Num examples = 1000
+2021-07-06 23:44:54,083:INFO:   Batch_size = 16
+2021-07-06 23:45:04,732:INFO: ----- val_dataset text_gap: 0.733254, visual_gap: 0.780353, audio_gap: 0.688334, cross_gap: 0.792611, gap: 0.802994
+2021-07-06 23:45:04,733:INFO: The best model is: ckpts/ckpt/tagging10_fold/pytorch_model_0flod.bin., the gap is: 0.8041
+2021-07-06 23:45:12,129:INFO: Epoch: 9/15, Step: 10/250, Lr: 0.000015, Text_Loss: 2.058690, Visual_Loss: 1.937480, Audio_Loss: 2.253762, Cross_Loss: 1.640756, Totual_Loss: 1.773522,  Time/step: 0.714833, text_gap: 0.679790, viusal_gap: 0.747395, audio_gap: 0.620370, cross_gap: 0.827220, gap: 0.919852
+2021-07-06 23:45:17,894:INFO: Epoch: 9/15, Step: 20/250, Lr: 0.000015, Text_Loss: 2.086427, Visual_Loss: 1.826105, Audio_Loss: 2.257383, Cross_Loss: 1.560844, Totual_Loss: 1.709583,  Time/step: 0.576516, text_gap: 0.652179, viusal_gap: 0.733487, audio_gap: 0.597700, cross_gap: 0.817288, gap: 0.901449
+2021-07-06 23:45:23,612:INFO: Epoch: 9/15, Step: 30/250, Lr: 0.000015, Text_Loss: 1.860711, Visual_Loss: 1.607198, Audio_Loss: 2.145087, Cross_Loss: 1.370551, Totual_Loss: 1.520685,  Time/step: 0.571756, text_gap: 0.677593, viusal_gap: 0.774720, audio_gap: 0.604199, cross_gap: 0.842652, gap: 0.944596
+2021-07-06 23:45:29,331:INFO: Epoch: 9/15, Step: 40/250, Lr: 0.000015, Text_Loss: 1.883165, Visual_Loss: 1.638386, Audio_Loss: 1.952201, Cross_Loss: 1.509845, Totual_Loss: 1.604266,  Time/step: 0.571830, text_gap: 0.645719, viusal_gap: 0.768788, audio_gap: 0.652819, cross_gap: 0.841215, gap: 0.931145
+2021-07-07 00:38:10,151:INFO: Effective parameters:
+2021-07-07 00:38:10,151:INFO:   <<< audio_dim: 128
+2021-07-07 00:38:10,151:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-07 00:38:10,151:INFO:   <<< audio_model: audio-base
+2021-07-07 00:38:10,151:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-07 00:38:10,151:INFO:   <<< batch_size: 16
+2021-07-07 00:38:10,151:INFO:   <<< bert_model: bert-base-chinese
+2021-07-07 00:38:10,151:INFO:   <<< bert_model_path: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/bert/pytorch_model.bin
+2021-07-07 00:38:10,151:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-07 00:38:10,151:INFO:   <<< coef_lr: 0.1
+2021-07-07 00:38:10,151:INFO:   <<< cross_model: cross-base
+2021-07-07 00:38:10,151:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-07 00:38:10,151:INFO:   <<< datatype: tagging
+2021-07-07 00:38:10,151:INFO:   <<< decoder_model: decoder-base
+2021-07-07 00:38:10,151:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-07 00:38:10,152:INFO:   <<< do_lower_case: True
+2021-07-07 00:38:10,152:INFO:   <<< do_pretrain: False
+2021-07-07 00:38:10,152:INFO:   <<< do_test: False
+2021-07-07 00:38:10,152:INFO:   <<< do_train: True
+2021-07-07 00:38:10,152:INFO:   <<< epochs: 15
+2021-07-07 00:38:10,152:INFO:   <<< feature_framerate: 1
+2021-07-07 00:38:10,152:INFO:   <<< fp16: False
+2021-07-07 00:38:10,152:INFO:   <<< fp16_opt_level: O1
+2021-07-07 00:38:10,152:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-07 00:38:10,152:INFO:   <<< hard_negative_rate: 0.5
+2021-07-07 00:38:10,152:INFO:   <<< init_model: /home/tione/notebook/taac-2021-神奈川冲浪里/pretrained_models/UniVL_Pretrained_models/pytorch_model.bin.pretrain
+2021-07-07 00:38:10,152:INFO:   <<< k_fold: 5
+2021-07-07 00:38:10,152:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-07 00:38:10,152:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-07 00:38:10,152:INFO:   <<< local_rank: 0
+2021-07-07 00:38:10,152:INFO:   <<< lr: 3e-05
+2021-07-07 00:38:10,152:INFO:   <<< lr_decay: 0.9
+2021-07-07 00:38:10,152:INFO:   <<< margin: 0.1
+2021-07-07 00:38:10,152:INFO:   <<< max_frames: 100
+2021-07-07 00:38:10,152:INFO:   <<< max_sequence: 100
+2021-07-07 00:38:10,152:INFO:   <<< max_words: 200
+2021-07-07 00:38:10,153:INFO:   <<< n_display: 10
+2021-07-07 00:38:10,153:INFO:   <<< n_gpu: 1
+2021-07-07 00:38:10,153:INFO:   <<< n_pair: 1
+2021-07-07 00:38:10,153:INFO:   <<< negative_weighting: 1
+2021-07-07 00:38:10,153:INFO:   <<< num_labels: 82
+2021-07-07 00:38:10,153:INFO:   <<< num_thread_reader: 12
+2021-07-07 00:38:10,153:INFO:   <<< output_dir: ckpts/ckpt/tagging10_fold
+2021-07-07 00:38:10,153:INFO:   <<< output_json_file: None
+2021-07-07 00:38:10,153:INFO:   <<< sampled_use_mil: False
+2021-07-07 00:38:10,153:INFO:   <<< seed: 666
+2021-07-07 00:38:10,153:INFO:   <<< text_num_hidden_layers: 12
+2021-07-07 00:38:10,153:INFO:   <<< use_mil: False
+2021-07-07 00:38:10,153:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-07 00:38:10,153:INFO:   <<< video_dim: 1024
+2021-07-07 00:38:10,153:INFO:   <<< video_features_path: /home/tione/notebook/taac-2021-神奈川冲浪里/pre/VIT_L_train_5k_features
+2021-07-07 00:38:10,153:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-07 00:38:10,153:INFO:   <<< visual_model: visual-base
+2021-07-07 00:38:10,153:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-07 00:38:10,153:INFO:   <<< warmup_proportion: 0.1
+2021-07-07 00:38:10,153:INFO:   <<< world_size: 0
+2021-07-07 00:38:10,154:INFO: device: cuda:0 n_gpu: 1
+2021-07-07 00:38:11,159:INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at /home/tione/.pytorch_pretrained_bert/8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+2021-07-07 00:38:11,210:INFO: ***** k_fold traing:5 *****
+2021-07-07 00:38:11,220:INFO: ***** 1 fold strat *****
+2021-07-07 00:39:27,227:INFO: Effective parameters:
+2021-07-07 00:39:27,227:INFO:   <<< audio_dim: 128
+2021-07-07 00:39:27,227:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-07 00:39:27,227:INFO:   <<< audio_model: audio-base
+2021-07-07 00:39:27,227:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-07 00:39:27,228:INFO:   <<< batch_size: 16
+2021-07-07 00:39:27,228:INFO:   <<< bert_model: bert-base-chinese
+2021-07-07 00:39:27,228:INFO:   <<< bert_model_path: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/bert/pytorch_model.bin
+2021-07-07 00:39:27,228:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-07 00:39:27,228:INFO:   <<< coef_lr: 0.1
+2021-07-07 00:39:27,228:INFO:   <<< cross_model: cross-base
+2021-07-07 00:39:27,228:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-07 00:39:27,228:INFO:   <<< datatype: tagging
+2021-07-07 00:39:27,228:INFO:   <<< decoder_model: decoder-base
+2021-07-07 00:39:27,228:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-07 00:39:27,228:INFO:   <<< do_lower_case: True
+2021-07-07 00:39:27,228:INFO:   <<< do_pretrain: False
+2021-07-07 00:39:27,228:INFO:   <<< do_test: False
+2021-07-07 00:39:27,228:INFO:   <<< do_train: True
+2021-07-07 00:39:27,228:INFO:   <<< epochs: 15
+2021-07-07 00:39:27,228:INFO:   <<< feature_framerate: 1
+2021-07-07 00:39:27,228:INFO:   <<< fp16: False
+2021-07-07 00:39:27,228:INFO:   <<< fp16_opt_level: O1
+2021-07-07 00:39:27,229:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-07 00:39:27,229:INFO:   <<< hard_negative_rate: 0.5
+2021-07-07 00:39:27,229:INFO:   <<< init_model: /home/tione/notebook/taac-2021-神奈川冲浪里/pretrained_models/UniVL_Pretrained_models/pytorch_model.bin.pretrain
+2021-07-07 00:39:27,229:INFO:   <<< k_fold: 5
+2021-07-07 00:39:27,229:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-07 00:39:27,229:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-07 00:39:27,229:INFO:   <<< local_rank: 0
+2021-07-07 00:39:27,229:INFO:   <<< lr: 3e-05
+2021-07-07 00:39:27,229:INFO:   <<< lr_decay: 0.9
+2021-07-07 00:39:27,229:INFO:   <<< margin: 0.1
+2021-07-07 00:39:27,229:INFO:   <<< max_frames: 100
+2021-07-07 00:39:27,229:INFO:   <<< max_sequence: 100
+2021-07-07 00:39:27,229:INFO:   <<< max_words: 200
+2021-07-07 00:39:27,229:INFO:   <<< n_display: 10
+2021-07-07 00:39:27,229:INFO:   <<< n_gpu: 1
+2021-07-07 00:39:27,229:INFO:   <<< n_pair: 1
+2021-07-07 00:39:27,229:INFO:   <<< negative_weighting: 1
+2021-07-07 00:39:27,229:INFO:   <<< num_labels: 82
+2021-07-07 00:39:27,229:INFO:   <<< num_thread_reader: 12
+2021-07-07 00:39:27,229:INFO:   <<< output_dir: ckpts/ckpt/tagging10_fold
+2021-07-07 00:39:27,229:INFO:   <<< output_json_file: None
+2021-07-07 00:39:27,229:INFO:   <<< sampled_use_mil: False
+2021-07-07 00:39:27,229:INFO:   <<< seed: 666
+2021-07-07 00:39:27,229:INFO:   <<< text_num_hidden_layers: 12
+2021-07-07 00:39:27,229:INFO:   <<< use_mil: False
+2021-07-07 00:39:27,229:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-07 00:39:27,229:INFO:   <<< video_dim: 1024
+2021-07-07 00:39:27,229:INFO:   <<< video_features_path: /home/tione/notebook/taac-2021-神奈川冲浪里/pre/VIT_L_train_5k_features
+2021-07-07 00:39:27,230:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-07 00:39:27,230:INFO:   <<< visual_model: visual-base
+2021-07-07 00:39:27,230:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-07 00:39:27,230:INFO:   <<< warmup_proportion: 0.1
+2021-07-07 00:39:27,230:INFO:   <<< world_size: 0
+2021-07-07 00:39:27,230:INFO: device: cuda:0 n_gpu: 1
+2021-07-07 00:39:28,169:INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at /home/tione/.pytorch_pretrained_bert/8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+2021-07-07 00:39:28,222:INFO: ***** k_fold traing:5 *****
+2021-07-07 00:39:28,233:INFO: ***** 1 fold strat *****
+2021-07-07 00:39:29,986:INFO: loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese.tar.gz from cache at /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache/42d4a64dda3243ffeca7ec268d5544122e67d9d06b971608796b483925716512.02ac7d664cff08d793eb00d6aac1d04368a1322435e5fe0a27c70b0b3a85327f
+2021-07-07 00:39:29,987:INFO: extracting archive file /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache/42d4a64dda3243ffeca7ec268d5544122e67d9d06b971608796b483925716512.02ac7d664cff08d793eb00d6aac1d04368a1322435e5fe0a27c70b0b3a85327f to temp dir /tmp/tmp_o3qwmue
+2021-07-07 00:41:12,241:INFO: Effective parameters:
+2021-07-07 00:41:12,241:INFO:   <<< audio_dim: 128
+2021-07-07 00:41:12,241:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-07 00:41:12,241:INFO:   <<< audio_model: audio-base
+2021-07-07 00:41:12,241:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-07 00:41:12,241:INFO:   <<< batch_size: 16
+2021-07-07 00:41:12,241:INFO:   <<< bert_model: bert-base-chinese
+2021-07-07 00:41:12,241:INFO:   <<< bert_model_path: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/bert/pytorch_model.bin
+2021-07-07 00:41:12,241:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-07 00:41:12,241:INFO:   <<< coef_lr: 0.1
+2021-07-07 00:41:12,241:INFO:   <<< cross_model: cross-base
+2021-07-07 00:41:12,241:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-07 00:41:12,241:INFO:   <<< datatype: tagging
+2021-07-07 00:41:12,241:INFO:   <<< decoder_model: decoder-base
+2021-07-07 00:41:12,241:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-07 00:41:12,241:INFO:   <<< do_lower_case: True
+2021-07-07 00:41:12,241:INFO:   <<< do_pretrain: False
+2021-07-07 00:41:12,241:INFO:   <<< do_test: False
+2021-07-07 00:41:12,241:INFO:   <<< do_train: True
+2021-07-07 00:41:12,241:INFO:   <<< epochs: 15
+2021-07-07 00:41:12,242:INFO:   <<< feature_framerate: 1
+2021-07-07 00:41:12,242:INFO:   <<< fp16: False
+2021-07-07 00:41:12,242:INFO:   <<< fp16_opt_level: O1
+2021-07-07 00:41:12,242:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-07 00:41:12,242:INFO:   <<< hard_negative_rate: 0.5
+2021-07-07 00:41:12,242:INFO:   <<< init_model: /home/tione/notebook/taac-2021-神奈川冲浪里/pretrained_models/UniVL_Pretrained_models/pytorch_model.bin.pretrain
+2021-07-07 00:41:12,242:INFO:   <<< k_fold: 5
+2021-07-07 00:41:12,242:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-07 00:41:12,242:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-07 00:41:12,242:INFO:   <<< local_rank: 0
+2021-07-07 00:41:12,242:INFO:   <<< lr: 3e-05
+2021-07-07 00:41:12,242:INFO:   <<< lr_decay: 0.9
+2021-07-07 00:41:12,242:INFO:   <<< margin: 0.1
+2021-07-07 00:41:12,242:INFO:   <<< max_frames: 100
+2021-07-07 00:41:12,242:INFO:   <<< max_sequence: 100
+2021-07-07 00:41:12,242:INFO:   <<< max_words: 200
+2021-07-07 00:41:12,242:INFO:   <<< n_display: 10
+2021-07-07 00:41:12,242:INFO:   <<< n_gpu: 1
+2021-07-07 00:41:12,242:INFO:   <<< n_pair: 1
+2021-07-07 00:41:12,242:INFO:   <<< negative_weighting: 1
+2021-07-07 00:41:12,242:INFO:   <<< num_labels: 82
+2021-07-07 00:41:12,242:INFO:   <<< num_thread_reader: 12
+2021-07-07 00:41:12,242:INFO:   <<< output_dir: ckpts/ckpt/tagging10_fold
+2021-07-07 00:41:12,242:INFO:   <<< output_json_file: None
+2021-07-07 00:41:12,242:INFO:   <<< sampled_use_mil: False
+2021-07-07 00:41:12,242:INFO:   <<< seed: 666
+2021-07-07 00:41:12,243:INFO:   <<< text_num_hidden_layers: 12
+2021-07-07 00:41:12,243:INFO:   <<< use_mil: False
+2021-07-07 00:41:12,243:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-07 00:41:12,243:INFO:   <<< video_dim: 1024
+2021-07-07 00:41:12,243:INFO:   <<< video_features_path: /home/tione/notebook/taac-2021-神奈川冲浪里/pre/VIT_L_train_5k_features
+2021-07-07 00:41:12,243:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-07 00:41:12,243:INFO:   <<< visual_model: visual-base
+2021-07-07 00:41:12,243:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-07 00:41:12,243:INFO:   <<< warmup_proportion: 0.1
+2021-07-07 00:41:12,243:INFO:   <<< world_size: 0
+2021-07-07 00:41:12,243:INFO: device: cuda:0 n_gpu: 1
+2021-07-07 00:41:13,522:INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at /home/tione/.pytorch_pretrained_bert/8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+2021-07-07 00:41:13,574:INFO: ***** k_fold traing:5 *****
+2021-07-07 00:41:13,586:INFO: ***** 1 fold strat *****
+2021-07-07 01:11:36,615:INFO: Effective parameters:
+2021-07-07 01:11:36,615:INFO:   <<< audio_dim: 128
+2021-07-07 01:11:36,615:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-07 01:11:36,615:INFO:   <<< audio_model: audio-base
+2021-07-07 01:11:36,615:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-07 01:11:36,615:INFO:   <<< batch_size: 16
+2021-07-07 01:11:36,615:INFO:   <<< bert_model: bert-base-chinese
+2021-07-07 01:11:36,615:INFO:   <<< bert_model_path: None
+2021-07-07 01:11:36,615:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-07 01:11:36,615:INFO:   <<< coef_lr: 0.1
+2021-07-07 01:11:36,615:INFO:   <<< cross_model: cross-base
+2021-07-07 01:11:36,615:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-07 01:11:36,616:INFO:   <<< datatype: tagging
+2021-07-07 01:11:36,616:INFO:   <<< decoder_model: decoder-base
+2021-07-07 01:11:36,616:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-07 01:11:36,616:INFO:   <<< do_lower_case: True
+2021-07-07 01:11:36,616:INFO:   <<< do_pretrain: False
+2021-07-07 01:11:36,616:INFO:   <<< do_test: False
+2021-07-07 01:11:36,616:INFO:   <<< do_train: True
+2021-07-07 01:11:36,616:INFO:   <<< epochs: 15
+2021-07-07 01:11:36,616:INFO:   <<< feature_framerate: 1
+2021-07-07 01:11:36,616:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-07 01:11:36,616:INFO:   <<< hard_negative_rate: 0.5
+2021-07-07 01:11:36,616:INFO:   <<< init_model: /home/tione/notebook/taac-2021-神奈川冲浪里/pretrained_models/UniVL_Pretrained_models/pytorch_model.bin.pretrain
+2021-07-07 01:11:36,616:INFO:   <<< k_fold: 5
+2021-07-07 01:11:36,616:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-07 01:11:36,616:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-07 01:11:36,616:INFO:   <<< local_rank: 0
+2021-07-07 01:11:36,616:INFO:   <<< lr: 3e-05
+2021-07-07 01:11:36,616:INFO:   <<< lr_decay: 0.9
+2021-07-07 01:11:36,616:INFO:   <<< margin: 0.1
+2021-07-07 01:11:36,616:INFO:   <<< max_frames: 100
+2021-07-07 01:11:36,616:INFO:   <<< max_sequence: 100
+2021-07-07 01:11:36,616:INFO:   <<< max_words: 200
+2021-07-07 01:11:36,616:INFO:   <<< n_display: 10
+2021-07-07 01:11:36,616:INFO:   <<< n_gpu: 1
+2021-07-07 01:11:36,616:INFO:   <<< n_pair: 1
+2021-07-07 01:11:36,616:INFO:   <<< negative_weighting: 1
+2021-07-07 01:11:36,616:INFO:   <<< num_labels: 82
+2021-07-07 01:11:36,616:INFO:   <<< num_thread_reader: 12
+2021-07-07 01:11:36,616:INFO:   <<< output_dir: ckpts/ckpt/tagging10_fold
+2021-07-07 01:11:36,617:INFO:   <<< output_json_file: None
+2021-07-07 01:11:36,617:INFO:   <<< sampled_use_mil: False
+2021-07-07 01:11:36,617:INFO:   <<< seed: 666
+2021-07-07 01:11:36,617:INFO:   <<< text_num_hidden_layers: 12
+2021-07-07 01:11:36,617:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-07 01:11:36,617:INFO:   <<< video_dim: 1024
+2021-07-07 01:11:36,617:INFO:   <<< video_features_path: /home/tione/notebook/taac-2021-神奈川冲浪里/pre/VIT_L_train_5k_features
+2021-07-07 01:11:36,617:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-07 01:11:36,617:INFO:   <<< visual_model: visual-base
+2021-07-07 01:11:36,617:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-07 01:11:36,617:INFO:   <<< warmup_proportion: 0.1
+2021-07-07 01:11:36,617:INFO:   <<< world_size: 0
+2021-07-07 01:11:36,617:INFO: device: cuda:0 n_gpu: 1
+2021-07-07 01:11:42,603:INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at /home/tione/.pytorch_pretrained_bert/8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+2021-07-07 01:11:42,653:INFO: ***** k_fold traing:5 *****
+2021-07-07 01:11:42,664:INFO: ***** 1 fold strat *****
+2021-07-07 01:12:39,229:INFO: Effective parameters:
+2021-07-07 01:12:39,230:INFO:   <<< audio_dim: 128
+2021-07-07 01:12:39,230:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-07 01:12:39,230:INFO:   <<< audio_model: audio-base
+2021-07-07 01:12:39,230:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-07 01:12:39,230:INFO:   <<< batch_size: 16
+2021-07-07 01:12:39,230:INFO:   <<< bert_model: bert-base-chinese
+2021-07-07 01:12:39,230:INFO:   <<< bert_model_path: None
+2021-07-07 01:12:39,230:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-07 01:12:39,230:INFO:   <<< coef_lr: 0.1
+2021-07-07 01:12:39,230:INFO:   <<< cross_model: cross-base
+2021-07-07 01:12:39,230:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-07 01:12:39,230:INFO:   <<< datatype: tagging
+2021-07-07 01:12:39,230:INFO:   <<< decoder_model: decoder-base
+2021-07-07 01:12:39,230:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-07 01:12:39,230:INFO:   <<< do_lower_case: True
+2021-07-07 01:12:39,230:INFO:   <<< do_pretrain: False
+2021-07-07 01:12:39,230:INFO:   <<< do_test: False
+2021-07-07 01:12:39,230:INFO:   <<< do_train: True
+2021-07-07 01:12:39,230:INFO:   <<< epochs: 15
+2021-07-07 01:12:39,230:INFO:   <<< feature_framerate: 1
+2021-07-07 01:12:39,230:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-07 01:12:39,230:INFO:   <<< hard_negative_rate: 0.5
+2021-07-07 01:12:39,230:INFO:   <<< init_model: /home/tione/notebook/11111/pretrained_models/UniVL_Pretrained_models/pytorch_model.bin.pretrain
+2021-07-07 01:12:39,231:INFO:   <<< k_fold: 5
+2021-07-07 01:12:39,231:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-07 01:12:39,231:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-07 01:12:39,231:INFO:   <<< local_rank: 0
+2021-07-07 01:12:39,231:INFO:   <<< lr: 3e-05
+2021-07-07 01:12:39,231:INFO:   <<< lr_decay: 0.9
+2021-07-07 01:12:39,231:INFO:   <<< margin: 0.1
+2021-07-07 01:12:39,231:INFO:   <<< max_frames: 100
+2021-07-07 01:12:39,231:INFO:   <<< max_sequence: 100
+2021-07-07 01:12:39,231:INFO:   <<< max_words: 200
+2021-07-07 01:12:39,231:INFO:   <<< n_display: 10
+2021-07-07 01:12:39,231:INFO:   <<< n_gpu: 1
+2021-07-07 01:12:39,231:INFO:   <<< n_pair: 1
+2021-07-07 01:12:39,231:INFO:   <<< negative_weighting: 1
+2021-07-07 01:12:39,231:INFO:   <<< num_labels: 82
+2021-07-07 01:12:39,231:INFO:   <<< num_thread_reader: 12
+2021-07-07 01:12:39,231:INFO:   <<< output_dir: ckpts/ckpt/tagging10_fold
+2021-07-07 01:12:39,231:INFO:   <<< output_json_file: None
+2021-07-07 01:12:39,231:INFO:   <<< sampled_use_mil: False
+2021-07-07 01:12:39,231:INFO:   <<< seed: 666
+2021-07-07 01:12:39,231:INFO:   <<< text_num_hidden_layers: 12
+2021-07-07 01:12:39,231:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-07 01:12:39,231:INFO:   <<< video_dim: 1024
+2021-07-07 01:12:39,231:INFO:   <<< video_features_path: /home/tione/notebook/taac-2021-神奈川冲浪里/pre/VIT_L_train_5k_features
+2021-07-07 01:12:39,232:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-07 01:12:39,232:INFO:   <<< visual_model: visual-base
+2021-07-07 01:12:39,232:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-07 01:12:39,232:INFO:   <<< warmup_proportion: 0.1
+2021-07-07 01:12:39,232:INFO:   <<< world_size: 0
+2021-07-07 01:12:39,232:INFO: device: cuda:0 n_gpu: 1
+2021-07-07 01:12:40,208:INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at /home/tione/.pytorch_pretrained_bert/8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+2021-07-07 01:12:40,271:INFO: ***** k_fold traing:5 *****
+2021-07-07 01:12:40,277:INFO: ***** 1 fold strat *****
+2021-07-07 01:14:29,303:INFO: Effective parameters:
+2021-07-07 01:14:29,303:INFO:   <<< audio_dim: 128
+2021-07-07 01:14:29,303:INFO:   <<< audio_features_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/audio_npy/Vggish/tagging
+2021-07-07 01:14:29,303:INFO:   <<< audio_model: audio-base
+2021-07-07 01:14:29,303:INFO:   <<< audio_num_hidden_layers: 3
+2021-07-07 01:14:29,303:INFO:   <<< batch_size: 16
+2021-07-07 01:14:29,303:INFO:   <<< bert_model: bert-base-chinese
+2021-07-07 01:14:29,304:INFO:   <<< bert_model_path: None
+2021-07-07 01:14:29,304:INFO:   <<< cache_dir: /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache
+2021-07-07 01:14:29,304:INFO:   <<< coef_lr: 0.1
+2021-07-07 01:14:29,304:INFO:   <<< cross_model: cross-base
+2021-07-07 01:14:29,304:INFO:   <<< cross_num_hidden_layers: 2
+2021-07-07 01:14:29,304:INFO:   <<< datatype: tagging
+2021-07-07 01:14:29,304:INFO:   <<< decoder_model: decoder-base
+2021-07-07 01:14:29,304:INFO:   <<< decoder_num_hidden_layers: 3
+2021-07-07 01:14:29,304:INFO:   <<< do_lower_case: True
+2021-07-07 01:14:29,304:INFO:   <<< do_pretrain: False
+2021-07-07 01:14:29,304:INFO:   <<< do_test: False
+2021-07-07 01:14:29,304:INFO:   <<< do_train: True
+2021-07-07 01:14:29,304:INFO:   <<< epochs: 15
+2021-07-07 01:14:29,304:INFO:   <<< feature_framerate: 1
+2021-07-07 01:14:29,304:INFO:   <<< gradient_accumulation_steps: 1
+2021-07-07 01:14:29,304:INFO:   <<< hard_negative_rate: 0.5
+2021-07-07 01:14:29,304:INFO:   <<< init_model: /home/tione/notebook/11111/pretrained_models/UniVL_Pretrained_models/pytorch_model.bin.pretrain
+2021-07-07 01:14:29,304:INFO:   <<< k_fold: 5
+2021-07-07 01:14:29,304:INFO:   <<< label_info_path: /home/tione/notebook/algo-2021/dataset/tagging/GroundTruth/tagging_info.txt
+2021-07-07 01:14:29,304:INFO:   <<< label_path: /home/tione/notebook/algo-2021/dataset/label_id.txt
+2021-07-07 01:14:29,304:INFO:   <<< local_rank: 0
+2021-07-07 01:14:29,304:INFO:   <<< lr: 3e-05
+2021-07-07 01:14:29,304:INFO:   <<< lr_decay: 0.9
+2021-07-07 01:14:29,304:INFO:   <<< margin: 0.1
+2021-07-07 01:14:29,305:INFO:   <<< max_frames: 100
+2021-07-07 01:14:29,305:INFO:   <<< max_sequence: 100
+2021-07-07 01:14:29,305:INFO:   <<< max_words: 200
+2021-07-07 01:14:29,305:INFO:   <<< n_display: 10
+2021-07-07 01:14:29,305:INFO:   <<< n_gpu: 1
+2021-07-07 01:14:29,305:INFO:   <<< n_pair: 1
+2021-07-07 01:14:29,305:INFO:   <<< negative_weighting: 1
+2021-07-07 01:14:29,305:INFO:   <<< num_labels: 82
+2021-07-07 01:14:29,305:INFO:   <<< num_thread_reader: 12
+2021-07-07 01:14:29,305:INFO:   <<< output_dir: ckpts/ckpt/tagging10_fold
+2021-07-07 01:14:29,305:INFO:   <<< output_json_file: None
+2021-07-07 01:14:29,305:INFO:   <<< sampled_use_mil: False
+2021-07-07 01:14:29,305:INFO:   <<< seed: 666
+2021-07-07 01:14:29,305:INFO:   <<< text_num_hidden_layers: 12
+2021-07-07 01:14:29,305:INFO:   <<< video_caption_path: /home/tione/notebook/algo-2021/dataset/tagging/tagging_dataset_train_5k/text_txt/tagging
+2021-07-07 01:14:29,305:INFO:   <<< video_dim: 1024
+2021-07-07 01:14:29,305:INFO:   <<< video_features_path: /home/tione/notebook/taac-2021-神奈川冲浪里/pre/VIT_L_train_5k_features
+2021-07-07 01:14:29,305:INFO:   <<< video_path: /home/tione/notebook/algo-2021/dataset/videos/video_5k/train_5k
+2021-07-07 01:14:29,305:INFO:   <<< visual_model: visual-base
+2021-07-07 01:14:29,305:INFO:   <<< visual_num_hidden_layers: 6
+2021-07-07 01:14:29,305:INFO:   <<< warmup_proportion: 0.1
+2021-07-07 01:14:29,305:INFO:   <<< world_size: 0
+2021-07-07 01:14:29,306:INFO: device: cuda:0 n_gpu: 1
+2021-07-07 01:14:30,315:INFO: loading vocabulary file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese-vocab.txt from cache at /home/tione/.pytorch_pretrained_bert/8a0c070123c1f794c42a29c6904beb7c1b8715741e235bee04aca2c7636fc83f.9b42061518a39ca00b8b52059fd2bede8daa613f8a8671500e518a8c29de8c00
+2021-07-07 01:14:30,365:INFO: ***** k_fold traing:5 *****
+2021-07-07 01:14:30,375:INFO: ***** 1 fold strat *****
+2021-07-07 01:14:33,173:INFO: loading archive file https://s3.amazonaws.com/models.huggingface.co/bert/bert-base-chinese.tar.gz from cache at /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache/42d4a64dda3243ffeca7ec268d5544122e67d9d06b971608796b483925716512.02ac7d664cff08d793eb00d6aac1d04368a1322435e5fe0a27c70b0b3a85327f
+2021-07-07 01:14:33,175:INFO: extracting archive file /home/tione/notebook/cmy/tione/notebook/univl/tagging_unvil/tagging/UniVL/cache/42d4a64dda3243ffeca7ec268d5544122e67d9d06b971608796b483925716512.02ac7d664cff08d793eb00d6aac1d04368a1322435e5fe0a27c70b0b3a85327f to temp dir /tmp/tmpd2cym9ps
+2021-07-07 01:14:37,023:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "directionality": "bidi",
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 12,
+  "pooler_fc_size": 768,
+  "pooler_num_attention_heads": 12,
+  "pooler_num_fc_layers": 3,
+  "pooler_size_per_head": 128,
+  "pooler_type": "first_token_transform",
+  "type_vocab_size": 2,
+  "vocab_size": 21128
+}
+
+2021-07-07 01:14:37,104:INFO: loading archive file /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/visual-base
+2021-07-07 01:14:37,104:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 1,
+  "type_vocab_size": 2,
+  "vocab_size": 1024
+}
+
+2021-07-07 01:14:37,105:INFO: Weight doesn't exsits. /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/visual-base/visual_pytorch_model.bin
+2021-07-07 01:14:37,105:INFO: loading archive file /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/audio-base
+2021-07-07 01:14:37,105:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 512,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 1,
+  "type_vocab_size": 2,
+  "vocab_size": 128
+}
+
+2021-07-07 01:14:37,105:INFO: Weight doesn't exsits. /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/audio-base/audio_model.bin
+2021-07-07 01:14:37,105:INFO: loading archive file /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/cross-base
+2021-07-07 01:14:37,105:INFO: Model config {
+  "attention_probs_dropout_prob": 0.1,
+  "hidden_act": "gelu",
+  "hidden_dropout_prob": 0.1,
+  "hidden_size": 768,
+  "initializer_range": 0.02,
+  "intermediate_size": 3072,
+  "max_position_embeddings": 1024,
+  "num_attention_heads": 12,
+  "num_hidden_layers": 2,
+  "type_vocab_size": 2,
+  "vocab_size": 768
+}
+
+2021-07-07 01:14:37,106:INFO: Weight doesn't exsits. /home/tione/notebook/taac-2021-神奈川冲浪里/src/models/cross-base/cross_pytorch_model.bin
+2021-07-07 01:14:37,106:WARNING: Set bert_config.num_hidden_layers: 12.
+2021-07-07 01:14:38,564:WARNING: Set visual_config.num_hidden_layers: 6.
+2021-07-07 01:14:39,206:WARNING: Set audio_config.num_hidden_layers: 3.
+2021-07-07 01:14:39,588:WARNING: Set cross_config.num_hidden_layers: 2.
+2021-07-07 01:14:42,605:INFO: --------------------
+2021-07-07 01:14:42,606:INFO: Weights from pretrained model not used in Tagging_UniVL: 
+   cls.predictions.bias
+   cls.predictions.transform.dense.weight
+   cls.predictions.transform.dense.bias
+   cls.predictions.transform.LayerNorm.weight
+   cls.predictions.transform.LayerNorm.bias
+   cls.predictions.decoder.weight
+   cls_visual.predictions.weight
+   cls_visual.predictions.bias
+   cls_visual.predictions.transform.dense.weight
+   cls_visual.predictions.transform.dense.bias
+   cls_visual.predictions.transform.LayerNorm.weight
+   cls_visual.predictions.transform.LayerNorm.bias
+   cls_audio.predictions.weight
+   cls_audio.predictions.bias
+   cls_audio.predictions.transform.dense.weight
+   cls_audio.predictions.transform.dense.bias
+   cls_audio.predictions.transform.LayerNorm.weight
+   cls_audio.predictions.transform.LayerNorm.bias
+2021-07-07 01:16:29,531:INFO: ***** Running training *****
+2021-07-07 01:16:29,531:INFO:   Num examples = 4000
+2021-07-07 01:16:29,532:INFO:   Batch size = 16
+2021-07-07 01:16:29,532:INFO:   Num steps = 3750
