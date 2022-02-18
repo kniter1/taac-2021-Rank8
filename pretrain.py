@@ -150,7 +150,7 @@ def init_device(args, local_rank):
 
     return device, n_gpu
 
-def init_model(args, device, n_gpu, local_rank): #初始化模型 加载预训练UniVL
+def init_model(args, device, n_gpu, local_rank): #初始化模型 加载预训练模型
 
     if args.init_model:
         model_state_dict = torch.load(args.init_model, map_location='cpu') #如果需要加载模型

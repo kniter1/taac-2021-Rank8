@@ -110,7 +110,7 @@ class TAGGING_DataSet(Dataset):
         return video2label
 
 
-    def _get_text(self, video_id, caption): #MSRVTT数据集一个video对应好几个句子，所以这里使用了加载
+    def _get_text(self, video_id, caption): 
 
         words = self.tokenizer.tokenize(caption)
        # print('!!!!!!!!!!INFO:words:', words)

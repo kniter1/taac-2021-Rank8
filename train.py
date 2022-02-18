@@ -20,7 +20,7 @@ import torch.utils.data as data
 from util import parallel_apply, get_logger
 from src.dataloaders.tagging_dataloader import TAGGING_DataSet
 from src.dataloaders.tagging_dataloader import TAGGING_Train_DataSet
-#torch.distributed.init_process_group(backend="nccl")
+#torch.distributed.init_process_group(backend="nccl") #是否采用多卡训练
 
 global logger
 """
@@ -161,7 +161,7 @@ def init_device(args, local_rank):
 
     return device, n_gpu
 
-def init_model(args, device, n_gpu, local_rank): #初始化模型 加载预训练UniVL
+def init_model(args, device, n_gpu, local_rank): #初始化模型 加载预训练模型
 
     if args.init_model:
         model_state_dict = torch.load(args.init_model, map_location='cpu') #如果需要加载模型
@@ -513,7 +513,7 @@ def main():
     for current_fold in range(args.k_fold):   
         if args.local_rank == 0:
             logger.info('***** {} fold strat *****'.format(current_fold + 1))
-        model = init_model(args, device, n_gpu, args.local_rank)   #args把参数传进去
+        model = init_model(args, device, n_gpu, args.local_rank)   
         model = model.to(device)
         print('loading successful!')
         if args.do_train:
