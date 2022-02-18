@@ -107,4 +107,3 @@ UniVL [github](https://github.com/microsoft/UniVL)
 bert-base-chinese [github](https://github.com/huggingface/transformers)  
 注意，有时候代码可能因为http connection请求出错导致中断，此时需要重新运行一次即可
 
->>>>>>> master
