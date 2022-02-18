@@ -65,4 +65,7 @@ parser.add_argument('--save', type=str, default='/home/tione/notebook/test_5k_38
 args = parser.parse_args()
 video_path = args.video
 save_path = args.save
+start = time.time()
 get_video_frame(video_path, save_path, video_transforms)
+end = time.time()
+print('total time: {}'.format(end-start))

@@ -9,6 +9,7 @@ import torchvision
 from torchvision.transforms import transforms
 from PIL import Image
 import argparse
+import time
 total_frames = 100
 img_size = 384
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -22,7 +23,7 @@ model = VisionTransformer(image_size=(384, 384),
                  attn_dropout_rate=0.0,
                  dropout_rate=0.1,
                  feat_dim=None)
-state_dict = torch.load('/home/tione/notebook/taac-2021-神奈川冲浪里/pretrained_models/VIT-pretrained_models/imagenet21k+imagenet2012_ViT-L_16.pth', map_location='cpu')
+state_dict = torch.load('/home/tione/notebook/taac-2021-S/pretrained_models/VIT-pretrained_models/imagenet21k+imagenet2012_ViT-L_16.pth', map_location='cpu')
 model.load_state_dict(state_dict['state_dict'])
 model = model.to(device)
 class VideoDataset(Dataset):
@@ -72,4 +73,7 @@ parser.add_argument('--save', type=str, default='/home/tione/notebook/VIT_L_test
 args = parser.parse_args()
 video_frames_path = args.frame
 features_save_path = args.save
+start = time.time()
 extract_features(video_frames_path, features_save_path)
+end = time.time()
+print('total time:{}'.format(end-start))
