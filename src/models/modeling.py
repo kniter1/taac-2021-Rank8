@@ -57,13 +57,13 @@ class Tagging_Classifier(nn.Module):
         return output
 
     
-class TaggingUniVLPreTrainedModel(PreTrainedModel, nn.Module):   #预训练模型
+class UniVLPreTrainedModel(PreTrainedModel, nn.Module):   #预训练模型
     """ An abstract class to handle weights initialization and
         a simple interface for dowloading and loading pretrained models.
     """
     def __init__(self, bert_config, visual_config, audio_config, cross_config, *inputs, **kwargs):
         # utilize bert config as base config
-        super(TaggingUniVLPreTrainedModel, self).__init__(bert_config)
+        super(UniVLPreTrainedModel, self).__init__(bert_config)
 
         self.bert_config = bert_config
         self.visual_config = visual_config
@@ -149,7 +149,7 @@ def check_attr(target_name, task_config):
     return hasattr(task_config, target_name) and task_config.__dict__[target_name]
 
 
-class Tagging_UniVL(TaggingUniVLPreTrainedModel): 
+class Tagging_UniVL(UniVLPreTrainedModel): #UniVL模型
     def __init__(self, bert_config, visual_config, audio_config, cross_config, task_config):
         super(Tagging_UniVL, self).__init__(bert_config, visual_config, audio_config, cross_config)
         self.task_config = task_config
@@ -160,7 +160,6 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
         assert self.task_config.max_sequence <= audio_config.max_position_embeddings
         #最大句子长度和最大帧数都要<跨模态位置编码
         assert self.task_config.max_words + self.task_config.max_frames <= cross_config.max_position_embeddings
-
 
         # Text Encoder ===>
         bert_config = update_attr("bert_config", bert_config, "num_hidden_layers",
@@ -223,11 +222,15 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
         text_output, visual_output, audio_output, \
             bert_pooled_output, visual_pooled_output, audio_pooled_output = self.get_text_visual_audio_output(input_ids,attention_mask, video, video_mask, audio, audio_mask) 
 
-        
-        
-        
         """
         do pretrain:
+        二次预训练策略
+        1. masked language
+        2.masked video frame
+        3.masked audio frame
+        4.video text joint alignment
+        5.video audio joint alignment
+        6.text audio joint alignment
         """ 
         if self.task_config.do_pretrain:
             loss = 0.
@@ -244,10 +247,10 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
             text_cross_output, audio_cross_output, visual_cross_output = torch.split(vat_cross_output, [attention_mask.size(-1),audio_mask.size(-1), video_mask.size(-1)], dim=1)
             audio_cross_output_a,a_visual_cross_output = torch.split(va_cross_output, [audio_mask.size(-1), video_mask.size(-1)], dim=1)
             
-            alm_loss = self._calculate_mlm_loss(text_cross_output, text_token_labels)
+            alm_loss = self._calculate_mlm_loss(text_cross_output, text_token_labels) # bert masked language 损失
             loss += alm_loss
             
-            nce_loss_v = self._calculate_mfm_loss(visual_cross_output, video, video_mask, video_token_labels)
+            nce_loss_v = self._calculate_mfm_loss(visual_cross_output, video, video_mask, video_token_labels) # masked frame 损失， 采用nceloss
             loss += nce_loss_v
 
             nce_loss_va = self._calculate_mfm_loss(a_visual_cross_output, video, video_mask, video_token_labels)
@@ -259,8 +262,8 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
             nce_loss_av = self._calculate_mfm_loss(audio_cross_output_a, audio, audio_mask, audio_token_labels, video_flag=False)
             loss += nce_loss_av
             
-            sim_matrix_vt = self.get_similarity_logits(text_output, visual_output, attention_mask, video_mask,
-                                                    shaped=True, _pretrain_joint=True)
+            sim_matrix_vt = self.get_similarity_logits(text_output, visual_output, attention_mask, video_mask, 
+                                                    shaped=True, _pretrain_joint=True) #图文对齐
             sim_loss_joint_vt = self._pretrain_sim_loss_fct(sim_matrix_vt)
             loss += sim_loss_joint_vt
 
@@ -280,8 +283,7 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
             loss += sim_loss_audio_visual
 
             return loss
-        
-        
+          
         pooled_output, _, _ = self._get_cross_output(text_output, visual_output, audio_output, attention_mask, video_mask, audio_mask)
         cross_predict_scores = self.cross_classifier(pooled_output)
         text_predict_scores = self.text_classifier(bert_pooled_output)
@@ -289,13 +291,8 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
         audio_predict_scores = self.audio_classifier(audio_pooled_output)
         
         predict_scores = 0.5*((text_predict_scores+visual_predict_scores+audio_predict_scores)/3) + 0.5*cross_predict_scores
-        
 
-        
-                                                            
         if training:
-
-
             loss = 0.
             text_loss = Focalloss(text_predict_scores, ground_trunth_labels)
             visual_loss = Focalloss(visual_predict_scores, ground_trunth_labels)
@@ -342,9 +339,12 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
         video_mask = [B, L]
         audio = [B, L, D]
         audio_mask = [B, L]
+
+        输出维度：
+        sequence、visua、audio 为[B, L, D]
+        pooled output 是cls位置输出位 维度[B, D]
         """ #从联和输入中获取文字和视频输出
         
-
         encoded_layers, bert_pooled_output = self.bert(input_ids, attention_mask, output_all_encoded_layers=True)
         sequence_output = encoded_layers[-1] #[B, L, 768], [B,768]
 
@@ -357,26 +357,26 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
         return sequence_output, visual_output, audio_output, bert_pooled_output, visual_pooled_output, audio_pooled_output
 
 
-    def _get_cross_output(self, sequence_output, visual_output,  audio_output, attention_mask, video_mask, audio_mask):
+    def _get_cross_output(self, sequence_output, visual_output,  audio_output, attention_mask, video_mask, audio_mask): #cross model encoder 输出
         
-        va_concat_features = torch.cat((audio_output, visual_output), dim=1)
+        va_concat_features = torch.cat((audio_output, visual_output), dim=1) #video audio 融合
         va_concat_mask = torch.cat((audio_mask, video_mask), dim=1)
         text_type_ = torch.zeros_like(attention_mask)
         video_type_ = torch.ones_like(video_mask)
         audio_type_ =  torch.zeros_like(audio_mask)
   
         va_concat_type = torch.cat((audio_type_, video_type_), dim=1)
-        va_cross_layers, va_pooled_output = self.va_cross(va_concat_features, va_concat_type, va_concat_mask)
+        va_cross_layers, va_pooled_output = self.va_cross(va_concat_features, va_concat_type, va_concat_mask) #video audio cat在一起送入va cross modal encoder
 
         va_cross_output = va_cross_layers[-1]
-        vat_concat_features = torch.cat((sequence_output, va_cross_output), dim=1)
+        vat_concat_features = torch.cat((sequence_output, va_cross_output), dim=1) #va 融合后的特征和text cat在一起送入 vat cross modal encoder
         vat_concat_mask = torch.cat((attention_mask, va_concat_mask), dim=1)
         va_type_ = torch.ones_like(va_concat_mask)
         vat_concat_type = torch.cat((text_type_, va_type_), dim=1)
-        vat_cross_layers, vat_pooled_output = self.cross(vat_concat_features, vat_concat_type, vat_concat_mask)
-        vat_cross_output = vat_cross_layers[-1]
+        vat_cross_layers, vat_pooled_output = self.cross(vat_concat_features, vat_concat_type, vat_concat_mask) 
+        vat_cross_output = vat_cross_layers[-1] #[B, L, D]
   
-        return  vat_pooled_output, vat_cross_output, va_cross_output
+        return  vat_pooled_output, vat_cross_output, va_cross_output #其中pooled output 为cls输出位，维度[B, D]
 
     def interfence(self, input_ids, attention_mask, video, video_mask, audio, audio_mask):
         input_ids = input_ids.view(-1, input_ids.shape[-1]) #文本输入维度[B, L] L=max_word_size
@@ -399,7 +399,7 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
         return predict_scores
     
     def _calculate_mlm_loss(self, sequence_output_alm, pairs_token_labels):
-        alm_scores = self.cls(sequence_output_alm)
+        alm_scores = self.cls(sequence_output_alm) #通过bertonlymlmhead输出cls位置
         alm_loss = self.alm_loss_fct(alm_scores.view(-1, self.bert_config.vocab_size), pairs_token_labels.view(-1))
         return alm_loss
 
@@ -430,8 +430,8 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
         attention_mask_un = attention_mask.to(dtype=torch.float).unsqueeze(-1) 
         attention_mask_un[:, 0, :] = 0.
         sequence_output = sequence_output * attention_mask_un
-        text_out = torch.sum(sequence_output, dim=1) / torch.sum(attention_mask_un, dim=1, dtype=torch.float)    
-        video_mask_un = video_mask.to(dtype=torch.float).unsqueeze(-1)
+        text_out = torch.sum(sequence_output, dim=1) / torch.sum(attention_mask_un, dim=1, dtype=torch.float) #mean pooling
+        video_mask_un = video_mask.to(dtype=torch.float).unsqueeze(-1) 
         visual_output = visual_output * video_mask_un
         video_mask_un_sum = torch.sum(video_mask_un, dim=1, dtype=torch.float)
         video_mask_un_sum[video_mask_un_sum == 0.] = 1.
@@ -439,14 +439,13 @@ class Tagging_UniVL(TaggingUniVLPreTrainedModel):
 
         return text_out, video_out
 
-
     def get_similarity_logits(self, sequence_output, visual_output, attention_mask, video_mask, shaped=False, _pretrain_joint=False):
         if shaped is False:
             attention_mask = attention_mask.view(-1, attention_mask.shape[-1])
             video_mask = video_mask.view(-1, video_mask.shape[-1])
 
         text_out, video_out = self._mean_pooling_for_similarity(sequence_output, visual_output, attention_mask, video_mask)
-        retrieve_logits = torch.matmul(text_out, video_out.t())
+        retrieve_logits = torch.matmul(text_out, video_out.t()) #[B, B]
 
         return retrieve_logits
 

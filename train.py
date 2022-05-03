@@ -20,7 +20,7 @@ import torch.utils.data as data
 from util import parallel_apply, get_logger
 from src.dataloaders.tagging_dataloader import TAGGING_DataSet
 from src.dataloaders.tagging_dataloader import TAGGING_Train_DataSet
-#torch.distributed.init_process_group(backend="nccl") #是否采用多卡训练
+#torch.distributed.init_process_group(backend="nccl")
 
 global logger
 """
@@ -180,13 +180,13 @@ def init_model(args, device, n_gpu, local_rank): #初始化模型 加载预训�
 
     return model
 
-def prep_optimizer(args, model, num_train_optimization_steps, device, n_gpu, local_rank, coef_lr=1.):
+def prep_optimizer(args, model, num_train_optimization_steps, device, n_gpu, local_rank, coef_lr=1.): #初始化优化器
 
     if hasattr(model, 'module'):
         model = model.module
     
     freeze_layer = ['bert.encoder.layer.0.', 'bert.encoder.layer.1.', 'bert.encoder.layer.2.', 'bert.encoder.layer.3.','bert.encoder.layer.4.','bert.encoder.layer.5.']
-    for n, p in model.named_parameters():
+    for n, p in model.named_parameters():  #冻结bert部分层数
         for freeze in freeze_layer:
             if freeze in n:
                 p.requires_grad = False
@@ -194,7 +194,7 @@ def prep_optimizer(args, model, num_train_optimization_steps, device, n_gpu, loc
     param_optimizer = list(model.named_parameters())
     param_optimizer = list(filter(lambda p:p[1].requires_grad, param_optimizer))
 
-    no_decay = ['bias', 'LayerNorm.bias', 'LayerNorm.weight']
+    no_decay = ['bias', 'LayerNorm.bias', 'LayerNorm.weight'] #weight decay策略， 其中layer nrom 和 bias 不需要使用这个策略
 
     no_decay_param_tp = [(n, p) for n, p in param_optimizer if not any(nd in n for nd in no_decay)]
     decay_param_tp = [(n, p) for n, p in param_optimizer if any(nd in n for nd in no_decay)]
@@ -205,14 +205,14 @@ def prep_optimizer(args, model, num_train_optimization_steps, device, n_gpu, loc
     decay_bert_param_tp = [(n, p) for n, p in decay_param_tp if "audio." in n]
     decay_nobert_param_tp = [(n, p) for n, p in decay_param_tp if "audio." not in n]
 
-    optimizer_grouped_parameters = [
+    optimizer_grouped_parameters = [ #分层设置学习率
         {'params': [p for n, p in no_decay_bert_param_tp], 'weight_decay': 0.01, 'lr': args.lr * 1.0},
         {'params': [p for n, p in no_decay_nobert_param_tp], 'weight_decay': 0.01},
         {'params': [p for n, p in decay_bert_param_tp], 'weight_decay': 0.0, 'lr': args.lr * 1.0},
         {'params': [p for n, p in decay_nobert_param_tp], 'weight_decay': 0.0}
     ]
 
-    scheduler = None
+    scheduler = None #学习率更新策略在bert adam中已经实现，所以不需要实现scheduler
     optimizer = BertAdam(optimizer_grouped_parameters, lr=args.lr, warmup=args.warmup_proportion,
                          schedule='warmup_linear', t_total=num_train_optimization_steps, weight_decay=0.01,
                          max_grad_norm=1.0)
@@ -251,7 +251,7 @@ def get_video_id_list(args):
 
     return video_id_list
 
-def dataloader_tagging_train(args, tokenizer, video_list, current_fold):
+def dataloader_tagging_train(args, tokenizer, video_list, current_fold):  #初始化训练集dataloader
     train_video_list, val_video_list = get_k_fold_data(args.k_fold, current_fold, video_list)  
     train_dataset = TAGGING_Train_DataSet(
         video_list=train_video_list,
@@ -449,7 +449,7 @@ def eval_epoch(args, model, val_dataloader, device, n_gpu):
 
 
 
-def model_test(args, model, test_dataset, test_dataloader, device, n_gpu):
+def model_test(args, model, test_dataset, test_dataloader, device, n_gpu): #对测试集进行test
     model = model.to(device)
     model.eval()
     with torch.no_grad():
@@ -513,7 +513,7 @@ def main():
     for current_fold in range(args.k_fold):   
         if args.local_rank == 0:
             logger.info('***** {} fold strat *****'.format(current_fold + 1))
-        model = init_model(args, device, n_gpu, args.local_rank)   
+        model = init_model(args, device, n_gpu, args.local_rank)   #args把参数传进去
         model = model.to(device)
         print('loading successful!')
         if args.do_train:
@@ -558,8 +558,7 @@ def main():
                         if early_stop > 3:
                             break
                     logger.info("The best model is: {}, the gap is: {:.4f}".format(best_output_model_file, best_score))
-                
-                        
+                                   
             if args.local_rank == 0:
                 logger.info("{}/{} fold finished".format(current_fold+1, args.k_fold))
         

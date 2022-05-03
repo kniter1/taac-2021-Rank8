@@ -14,7 +14,7 @@ import random
 import time
 from src.models.tokenization import BertTokenizer
 
-class label:
+class label: #将label与index互相映射
     def __init__(self, label_path):
         self.label2index = {}
         self.index2label = {}
@@ -30,19 +30,19 @@ class label:
                 self.index2label[int(label_and_index[1])] = label_and_index[0]
                 self.count += 1
 
-class TAGGING_DataSet(Dataset):
+class TAGGING_DataSet(Dataset): #测试集的dataloader
     def __init__(
             self,
-            video_path,
-            label_path,
-            video_caption_path,
-            video_features_path,
-            audio_feature_path,
-            tokenizer,
-            max_words=400,
+            video_path, #原始视频路径
+            label_path, #标签特征路径
+            video_caption_path, # ASR文本路径 
+            video_features_path, #视频特征路径
+            audio_feature_path, #音频特征路径
+            tokenizer, #bert tokenizer
+            max_words=400, #最大的单词序列
             feature_framerate=1.0,
-            max_frames=100,
-            max_sequence=100
+            max_frames=100, #最大视频帧
+            max_sequence=100 #最大音频帧 
     ):
         self.video_list = self._get_video_id_list(video_path)
         self.video_caption_dict = self._get_video_caption(video_caption_path)
@@ -62,7 +62,7 @@ class TAGGING_DataSet(Dataset):
     def __len__(self):
         return len(self.video_list)
     
-    def _get_video_id_list(self, video_path):
+    def _get_video_id_list(self, video_path): #通过原始视频路径获取视频id
         video_id_list = []
         video_list = os.listdir(video_path)
         for video in video_list:
@@ -71,7 +71,7 @@ class TAGGING_DataSet(Dataset):
 
         return video_id_list
     
-    def _get_feature_dict(self, feature_path):
+    def _get_feature_dict(self, feature_path): #获取特征
         feature_dict = {}
         features_list = os.listdir(feature_path)
         for feature in features_list:
@@ -83,7 +83,7 @@ class TAGGING_DataSet(Dataset):
         
         return feature_dict
     
-    def _get_video_caption(self, video_caption_path):
+    def _get_video_caption(self, video_caption_path): #获取每个视频ASR描述
         video_caption_dict = {}
         caption_list = os.listdir(video_caption_path)
         for video_caption in caption_list:
@@ -96,7 +96,7 @@ class TAGGING_DataSet(Dataset):
 
         return video_caption_dict   
     
-    def _get_label(self, label_info_path):
+    def _get_label(self, label_info_path): # 获取标签
         video2label = {}
         with open(label_info_path, 'r', encoding='utf-8') as f:
             lines = f.readlines()
@@ -110,7 +110,7 @@ class TAGGING_DataSet(Dataset):
         return video2label
 
 
-    def _get_text(self, video_id, caption): 
+    def _get_text(self, video_id, caption): #通过bert tokenizer 分词
 
         words = self.tokenizer.tokenize(caption)
        # print('!!!!!!!!!!INFO:words:', words)
@@ -140,7 +140,7 @@ class TAGGING_DataSet(Dataset):
         return pairs_text, pairs_mask
 
 
-    def _get_video(self, video_id):
+    def _get_video(self, video_id): 
         video_mask = np.zeros((self.max_frames), dtype=np.long)
 
         video = np.zeros((self.max_frames, self.video_feature_size), dtype=np.float)
@@ -196,7 +196,7 @@ class TAGGING_DataSet(Dataset):
 
         return pairs_text, pairs_mask, video, video_mask, audio, audio_mask
 # %%
-class TAGGING_Train_DataSet(Dataset):
+class TAGGING_Train_DataSet(Dataset): #训练集的dataset
     def __init__(
             self,
             video_list,
@@ -283,7 +283,7 @@ class TAGGING_Train_DataSet(Dataset):
         # Mask Language Model <-----
         token_labels = []
         masked_tokens = words.copy()
-        for token_id, token in enumerate(masked_tokens):
+        for token_id, token in enumerate(masked_tokens): #bert mask机制
             if token_id == 0 or token_id == len(masked_tokens) - 1:
                 token_labels.append(-1)
                 continue
